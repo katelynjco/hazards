@@ -1,5 +1,6 @@
 const textElement = document.getElementById('text');
 const optionButtonsElement = document.getElementById('option-buttons');
+const optionButtons = document.getElementById('btn');
 
 let state = {};
 // requiredState: (currentState) => currentState.path;
@@ -9,9 +10,34 @@ function startGame() {
     showTextNode(1);
 }
 
+
+  // Typewriter Effect on Nodes
+let isTypewriterRunning = false;
+let timeoutId;
+  
+function animateText(txt) {
+    isTypewriterRunning = true;
+    let i = 0;
+    let speed = 10;
+    textElement.innerText = "";
+
+    function typeWriter() {
+      if (i < txt.length) {
+        textElement.innerHTML += txt.charAt(i);
+        i++;
+        timeoutId = setTimeout(typeWriter, speed);
+      } else {
+        isTypewriterRunning = false;
+      }
+    }
+  
+    typeWriter();
+    return timeoutId;
+}
+
 function showTextNode(textNodeIndex) {
     const textNode = textNodes.find(textNode => textNode.id === textNodeIndex);
-    textElement.innerText = textNode.text;
+    animateText(textNode.text);
     while (optionButtonsElement.firstChild) {
         optionButtonsElement.removeChild(optionButtonsElement.firstChild)
     }
@@ -32,6 +58,7 @@ function showOption(option) {
 }
 
 function selectOption(option) {
+    clearTimeout(timeoutId);
     const nextTextNodeId = option.nextText;
     if (nextTextNodeId <= 0) {
         return startGame();
@@ -133,7 +160,7 @@ const textNodes = [
     {
         // act: 2
         id: 7,
-        text: 'You pick up the object from the water and inspect it with some degree of awe. It is about a foot tall with an ovoid body a deep, metallic gold surface. The area encompassing the object*s middle appears to be transparent and glowing a gentle green. Overall, it looks expensive and will surely be missed. Maybe you could get some kind of reward for finding it? Or maybe you can trade it in for some coin?',
+        text: 'You pick up the object from the water and inspect it with some degree of awe. It is about a foot tall with an ovoid body and a deep, metallic blue surface. The area encompassing the object*s middle appears to be transparent and glowing a gentle green. Overall, it looks expensive and will surely be missed. Maybe you could get some kind of reward for finding it? Or maybe you can trade it in for some coin?',
         options: [
             {
                 text: 'Keep the object in your home, as décor',
