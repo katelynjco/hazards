@@ -2,11 +2,11 @@ const textElement = document.getElementById('text');
 const optionButtonsElement = document.getElementById('option-buttons');
 const optionButtons = document.getElementById('btn');
 
-let state = {};
+let state = {id: 1};
 // requiredState: (currentState) => currentState.path;
 
 function startGame() {
-    showTextNode(1);
+    showTextNode(state.id);
 }
 
 
@@ -91,7 +91,7 @@ const textNodes = [
         options: [
             {
                 text: 'RESTART FROM LAST CHECKPOINT',
-                nextText: -1
+                nextText: state.id
             }
         ]
     },
@@ -122,7 +122,7 @@ const textNodes = [
         options: [
             {
                 text: 'RESTART FROM LAST CHECKPOINT',
-                nextText: -1
+                nextText: state.id
             }
         ]
     },
@@ -183,7 +183,7 @@ const textNodes = [
         options: [
             {
                 text: 'RESTART FROM LAST CHECKPOINT',
-                nextText: -1
+                nextText: state.id
             }
         ]
     },
@@ -222,6 +222,7 @@ const textNodes = [
             {
                 text: 'Continue',
                 setState: {greenPath: true},
+                setState: {id: 20},
                 nextText: 20 
             }
         ]
@@ -289,14 +290,14 @@ const textNodes = [
         options: [
             {
                 text: 'RESTART FROM LAST CHECKPOINT',
-                nextText: -1
+                nextText: state.id
             }
         ]
     },
     {
         // act: 2
         id: 17,
-        text: 'The jeweler shakes his head, "I\'m serious, that\'s my best offer." As you look down in disappointment, the jeweler notices and adds, "But don\'t let that discourage you. There are other options to consider. You could take it to some collectors who might be interested in unusual pieces like this, but they\'re hard to come by." He takes a moment to think before continuing, "However, I do have another suggestion for you. Take it to the citadel of mages. They have a keen eye for these kinds of things and could probably give you a better idea of its worth." Feeling a mix of disappointment and curiosity, you thank the jeweler for his time and make your way back through the marketplace. The idea of taking the object to the citadel of mages fills you with both excitement and trepidation, but you know that it\'s the best chance you have of uncovering its true value.',
+        text: 'The jeweler shakes his head, "I\'m serious, that\'s my best offer." As you look down in disappointment, the jeweler notices and adds, "But don\'t let that discourage you. There are other options to consider. You could take it to some collectors who might be interested in unusual pieces like this, but they\'re hard to come by." He takes a moment to think before continuing, "However, I do have another suggestion for you. Take it to the citadel of mages. They have a keen eye for these kinds of things and could probably give you a better idea of its worth."',
         options: [
             {
                 text: 'Accept jeweler\'s deal',
@@ -343,7 +344,18 @@ const textNodes = [
             {
                 text: 'Continue',
                 setState: {purplePath: true},
+                setState: {id: 20},
                 nextText: 20 
+            }
+        ]
+    },
+    {
+        // act: 3
+        id: 20,
+        text: 'As the sun begins to dip below the horizon, casting an orange glow across the sky, you start to look for a suitable place to make camp. You scan the surrounding area, taking note of the terrain and the available resources. You see a clearing nearby with plenty of firewood, but it\'s also exposed and could be vulnerable to predators. Alternatively, you spot a cave in the distance that could provide sturdy shelter and protection, though you\'re unsure of what could be hiding inside. A third option is camping by the river, where the water acts as a natural barrier against attackers from at least one direction. You consider your choices.',
+        options: [
+            {
+                 
             }
         ]
     },
