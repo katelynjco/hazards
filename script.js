@@ -555,7 +555,7 @@ const textNodes = [
         options: [
             {
                 text: 'Refuse their offer',
-                nextText: null
+                nextText: 36
             },
             {
                 text: 'Join them by the fire',
@@ -566,11 +566,11 @@ const textNodes = [
     {
         // act: 3
         id: 33,
-        text: 'Grateful for their generosity, you express your appreciation and accept their kind offer. You take a place by the fire, relishing in the warmth that chases away the chill of the crisp breeze that accompanies looming grey clouds. As you take a closer look at the men, you notice that they are all wearing the same faded mage robes made of mottled velvet, with intricate patterns woven around the sleeves and hoods. Despite the wear, you can tell that these garmets were once a lush, vibrant green. The strangers strike up a conversation with you, and you recount the details of your journey thus far. You reach into your pack and retrieve the object, holding it up for the men to see. Their eyes widen with greed as they gaze upon it.',
+        text: 'Grateful for their generosity, you express your appreciation and accept their kind offer. You take a place by the fire, relishing in the warmth that chases away the chill of the crisp breeze accompanying looming grey clouds. As you take a closer look at the men, you notice that they are all wearing the same faded mage robes made of mottled velvet, with intricate patterns woven around the sleeves and hoods. Despite the wear, you can tell that these garments were once a lush, vibrant green. The strangers strike up a conversation with you, and you recount the details of your journey thus far. You reach into your pack and retrieve the object, holding it up for the men to see. Their eyes widen with greed as they gaze upon it.',
         options: [
             {
                 text: 'Continue',
-                nextText: null,
+                nextText: 45,
                 requiredState: (currentState) => currentState.purplePath === true
             },
             {
@@ -597,11 +597,221 @@ const textNodes = [
         text: 'One of the other men steps forward and addresses you. His voice is tinged with bitterness as he speaks, "Look, we\'re not bad people. We\'re just down on our luck, same as you. The only difference is that the empire caused our misfortune. We were forced to leave our home." He shrugs apologetically, "We\'re just trying to survive however we can." Despite the situation, you can\'t help but feel a pang of empathy for the strangers. You understand all too well how difficult life can be, and the King\'s unjust rule has made things even harder for everyone. Still, you can\'t just let them rob you. What do you do?',
         options: [
             {
-                text: 'TO BE CONTINUED',
-                nextText: 35,
+                text: 'Drop supplies and run!',
+                setState: {yellowPath: true},
+                nextText: 36
+            },
+            {
+                text: 'Defend yourself!',
+                nextText: 37
+            }
+        ]
+    },
+    {
+        // act: 3
+        id: 36,
+        text: 'The men start to stalk towards you, and you realize that you wouldn\'t be able to take all three of them at once. With that thought in mind, you quickly drop your supplies and turn to run up the road as fast as you can.',
+        options: [
+            {
+                text: 'Continue',
+                nextText: 50
             },
         ]
     },
+    {
+        // act: 3
+        id: 37,
+        text: 'What is your game plan?',
+        options: [
+            {
+                text: 'Use a distraction',
+                nextText: 40
+            },
+            {
+                text: 'Hit them with a haymaker',
+                nextText: 38
+            },
+            {
+                text: 'Go in swinging with your hammer',
+                nextText: 39
+            },
+        ]
+    },
+    {
+        // act: 3
+        // Ending
+        id: 38,
+        text: 'The men move closer to you, and you prepare to defend yourself. With a burst of adrenaline, you charge forward and manage to land a solid punch on the first man. But as you turn to face the others, you realize that they are too strong for you to fight off. Despite your best efforts, you quickly find yourself overwhelmed and taking a beating. Your vision blurs, and you feel your consciousness slipping away.',
+        options: [
+            {
+                text: 'RESTART FROM LAST CHECKPOINT',
+                nextText: 20
+            },
+            {
+                text: 'RESTART FROM BEGINNING',
+                nextText: 1
+            }
+        ]
+    },
+    {
+        // act: 3
+        id: 39,
+        text: 'You reach into your pack and feel the reassuring weight of your trusty hammer. With a confident flourish, you pull it out and let out a fierce battle cry as you charge toward the men. Your hammer comes down with a powerful swing, connecting with the closest man and sending him crumpling to the ground. The other two men turn and run toward the treeline, but not before one of them throws a fireball at you. You manage to jump out of the way but are badly singed by the blast.',
+        options: [
+            {
+                text: 'Continue',
+                nextText: 50
+            }
+        ]
+    },
+    {
+        // act: 3
+        id: 40,
+        text: 'How will you distract the men?',
+        options: [
+            {
+                text: 'Throw the egg at them!',
+                nextText: 41
+            },
+            {
+                text: 'Rob them first!',
+                nextText: 38
+            },
+            {
+                text: 'Threaten to destroy the egg!',
+                nextText: 42
+            },
+        ]
+    },
+    {
+        // act: 3
+        // Ending
+        id: 41,
+        text: 'You tightly grip the object in your hand and heave it at the men. Their faces pale as they scramble backwards, but it\'s too late. The egg crashes to the ground, landing on a nearby stone with a loud cracking sound. The egg splits open down the middle, and the gentle green glow from within intensifies. The mages look even more terrified now, and a sudden wave of nausea hits you like a ton of bricks. You collapse, slipping out of consciousness.',
+        options: [
+            {
+                text: 'RESTART FROM LAST CHECKPOINT',
+                nextText: 20
+            },
+            {
+                text: 'RESTART FROM BEGINNING',
+                nextText: 1
+            }
+        ]
+    },
+    {
+        // act: 3
+        id: 42,
+        text: 'You draw your hammer from your pack and hold the head against the object. "What if I smash it?" you demand, putting as much malice into your voice as you can muster. One of the men turns pale at the suggestion, but another laughs mockingly. "After coming all this way? I doubt you\'d be so quick to destroy something of such potential value," he sneers, taking a step closer. "Just hand it over, and we\'ll let you go on your way."',
+        options: [
+            {
+                text: 'Bluff harder',
+                nextText: 44
+            },
+            {
+                text: 'I wasn\'t bluffing...',
+                nextText: 43
+            }
+        ]
+    },
+    {
+        // act: 3
+        // Ending
+        id: 43,
+        text: 'You let out a crazed laugh as you raise your hammer high above your head and bring it down with all your might onto the egg. It shatters into pieces with a deafening crack, and the green glow emanating from it intensifies. The men recoil in horror as the light washes over them. Suddenly, a powerful wave of nausea washes over you, and you collapse to the ground, consciousness slipping away.',
+        options: [
+            {
+                text: 'RESTART FROM LAST CHECKPOINT',
+                nextText: 20
+            },
+            {
+                text: 'RESTART FROM BEGINNING',
+                nextText: 1
+            }
+        ]
+    },
+    {
+        // act: 3
+        id: 44,
+        text: 'As you grip the handle of your hammer tightly and begin to swing it down towards the egg, the mages\' faces turn ashenas they realize what you\'re about to do. The air is thick with tension and the sound of your labored breaths. Just as you\'re about to strike, the one who has remained silent suddenly springs into action. He grabs the other two by the back of their robes and begins to drag them away towards the trees, his movements quick and fluid like a panther. You watch them disappear into the darkness, and a sense of relief washes over you. You lower your hammer, feeling a mixture of disappointment and satisfaction.',
+        options: [
+            {
+                text: 'Continue',
+                nextText: 50
+            }
+        ]
+    },
+    {
+        // act: 3
+        id: 45,
+        text: '"You know, we\'re mages," one of the men says enthusiastically, his gaze fixed on the object. "We could take the egg to the citadel for you and save you the trouble. We\'d be happy to deliver the payment directly to your village." The man\'s words sound too good to be true, and a sense of unease washes over you.',
+        options: [
+            {
+                text: 'Accept',
+                nextText: 46
+            },
+            {
+                text: 'Reject',
+                nextText: 47
+            }
+        ]
+    },
+    {
+        // act: 3
+        // Ending
+        id: 46,
+        text: 'As you walk back to your village, you can\'t help but feel a sense of unease. You begin to second-guess your decision to trust those strangers with the precious object. What if they were lying about delivering it to the citadel? What if they were planning to keep it for themselves? You try to shake off the feeling and focus on getting home. The journey back is uneventful, and you arrive in your village exhausted but relieved. However, as you try to catch up on some sleep, you can\'t help but feel that something is off. The village seems quieter than usual, and the weather takes a turn for the worse. Thick snowflakes fall from the sky, quickly turning into a blizzard. As the days turn into weeks, the storm shows no signs of letting up. The snow isn\'t melting like it should, and the sky remains dark and gray. You try to keep warm by huddling close to your fire, but the cold creeps in anyway. Your food supply dwindles rapidly, and you begin to suffer from the effects of exposure. You wonder how long you can keep going like this. The last thing you remember is the eerie silence outside your cabin, and the realization that your time has run out. With a heavy heart, you slip away into the quiet embrace of the snowstorm.',
+        options: [
+            {
+                text: 'RESTART FROM LAST CHECKPOINT',
+                nextText: 20
+            },
+            {
+                text: 'RESTART FROM BEGINNING',
+                nextText: 1
+            }
+        ]
+    },
+    {
+        // act: 3
+        id: 47,
+        text: 'You give a polite but firm refusal, taking a step back towards the road. However, the men move to block your path, and one of them speaks up with a menacing tone. "For your own good, I\'m going to recommend dropping the pack and egg, and turning back the way you came." As you observe the other two strangers, you notice their discomfort and avoidance of eye contact. It becomes clear to you that these men are not merely offering help, but rather attempting to rob you.',
+        options: [
+            {
+                text: 'Continue',
+                nextText: 35
+            }
+        ]
+    },
+    // Act 4
+    {
+        // act: 4
+        id: 50,
+        text: 'You continue on your journey. As the day wears on, fatigue sets in and you feel the weight of exhaustion bearing down on you. With the sun casting long shadows across the ground, you begin to search for a suitable place to make camp. Your eyes scan the surroundings, looking for any signs of shelter or resources. In the distance, you spot a clearing that catches your attention, with an abundance of firewood. However, its exposed location raises concerns about potential predator attacks. As you continue your search, you notice a cave entrance nearby, which offers a promising option for sturdy shelter and protection from the elements. But uncertainty about what may lurk inside gives you pause. Finally, you come across an abandoned shack, but you\'re unsure about its structural integrity. You carefully consider the risks and benefits of each.',
+        options: [
+            {
+                text: 'Continue',
+                nextText: 5000
+            }
+        ]
+    },
+
+// END DEMO
+    {
+        // END DEMO
+        id: 5000,
+        text: 'To be continued...',
+        options: [
+            {
+                text: 'RESTART FROM LAST CHECKPOINT',
+                nextText: 20
+            },
+            {
+                text: 'RESTART FROM BEGINNING',
+                nextText: 1
+            }
+        ]
+    }
 ]
 
 startGame();
