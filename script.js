@@ -67,6 +67,7 @@ function selectOption(option) {
 }
 
 const textNodes = [
+    // ACT 1
     {
         // act: 1
         // CHECKPOINT
@@ -98,7 +99,7 @@ const textNodes = [
     {
         // act: 1
         id: 3,
-        text: "As you step outside, a cool breeze brushes against your face, carrying the scent of freshly cut grass and blooming wildflowers. The sun is shining bright in the sky, promising a beautiful day ahead. You glance over at the nearby stream, the sparkling water inviting you to come and fish. Excited, you grab your fishing pole and take a moment to consider your options. You could head to the downstream where the water is deeper, or try your luck upstream where the fish might be more plentiful. What will you do?",
+        text: "As you step outside, a cool breeze brushes against your face, carrying the scent of early blooming wildflowers. The sun is shining bright in the sky, promising a beautiful day ahead. You glance over at the nearby stream, the sparkling water inviting you to come and fish. Excited, you grab your fishing pole and take a moment to consider your options. You could head to the downstream where the water is deeper, or try your luck upstream where the fish might be more plentiful. What will you do?",
         options: [
             {
                 text: 'Change your mind and go home',
@@ -156,10 +157,11 @@ const textNodes = [
             }
         ]
     },
+    // ACT 2
     {
         // act: 2
         id: 7,
-        text: 'You extract it from the water and inspect it with some degree of awe. The object is about a foot tall, with an ovoid body and a deep, metallic blue surface that seems to shift and change in the light. The area encompassing the it\'s middle appears to be transparent, and you can see a gentle green glow emanating from within. You feel a sense of astonishment and curiosity as you hold the object in your hands. It looks expensive and valuable, and you can\'t help but wonder who it belongs to. Maybe you could return it to its rightful owner and receive a reward for your honesty. Or perhaps you could trade it in for some coin and use the money to make a better life for yourself.',
+        text: 'You extract it from the water and inspect it with some degree of awe. The object is about a foot tall, with an ovoid body and a deep, metallic blue surface that seems to shift and change in the light. The area encompassing it\'s middle appears to be transparent, and you can see a gentle green glow emanating from within. You feel a sense of astonishment and curiosity as you hold the object in your hands. It looks valuable and you can\'t help but wonder who it belongs to. Maybe you could return it to its rightful owner and receive a reward for your honesty. Or perhaps you could trade it in for some coin and use the money to make a better life for yourself.',
         options: [
             {
                 text: 'Keep the object in your home, as décor',
@@ -221,8 +223,11 @@ const textNodes = [
         options: [
             {
                 text: 'Continue',
-                setState: {greenPath: true},
-                setState: {id: 20},
+                setState: {
+                    purplePath: false,
+                    greenPath: true,
+                    id: 20
+                },
                 nextText: 20 
             }
         ]
@@ -271,7 +276,7 @@ const textNodes = [
     {
         // act: 2
         id: 15,
-        text: 'The jeweler examines the object with a practiced eye, turning it over in his hands and studying it from all angles. After a few moments, he looks up at you with a smirk. "You know, I\'ve never seen anything quite like this before. It\'s certainly an unusual piece. Unfortunately, I can\'t give you an accurate appraisal of its value. It could be worth a fortune, or it could be completely worthless. I can give you a few gold pieces for it. That\'s about what I\'ll probably be able to sell it for"',
+        text: 'The jeweler examines the object with a practiced eye, turning it over in his hands and studying it from all angles. After a few moments, he looks up at you with a smirk. "You know, I\'ve never seen anything quite like this before. It\'s certainly an unusual piece. Unfortunately, I can\'t give you an accurate appraisal of its value. It could be worth a fortune, or it could be completely worthless. I can give you a few gold pieces for it. That\'s about what I\'ll probably be able to sell it for."',
         options: [
             {
                 text: 'Attempt to haggle',
@@ -343,20 +348,258 @@ const textNodes = [
         options: [
             {
                 text: 'Continue',
-                setState: {purplePath: true},
-                setState: {id: 20},
+                setState: {
+                    purplePath: true,
+                    greenPath: false,
+                    id: 20
+                },
                 nextText: 20 
             }
         ]
     },
+    // ACT 3
     {
         // act: 3
         id: 20,
         text: 'As the sun begins to dip below the horizon, casting an orange glow across the sky, you start to look for a suitable place to make camp. You scan the surrounding area, taking note of the terrain and the available resources. You see a clearing nearby with plenty of firewood, but it\'s also exposed and could be vulnerable to predators. Alternatively, you spot a cave in the distance that could provide sturdy shelter and protection, though you\'re unsure of what could be hiding inside. A third option is camping by the river, where the water acts as a natural barrier against attackers from at least one direction. You consider your choices.',
         options: [
             {
-                 
+                text: 'Camp in the clearing',
+                nextText: 24
+            },
+            {
+                text: 'Camp in the cave',
+                nextText: 21
+            },
+            {
+                text: 'Camp by the river',
+                nextText: 22
             }
+        ]
+    },
+    {
+        // act: 3
+        // ENDING
+        id: 21,
+        text: 'After much deliberation, you decide to take your chances with the cave. You cautiously make your way to the cave, navigating the treacherous ground. Inside, the cool and damp space is musty, with rocky walls and an uneven floor. Despite finding no signs of recent occupancy, an unsettling feeling creeps over you. As night falls, you light a fire and settle in. Every creak and rustle makes you jump, and your imagination runs wild. Just as you start to drift off, a deep growl shatters the silence. You reach for the hammer in your pack, but it\'s too late. The bear charges and attacks, tearing into your flesh. You make a fine meal.',
+        options: [
+            {
+                text: 'RESTART FROM LAST CHECKPOINT',
+                nextText: 20
+            },
+            {
+                text: 'RESTART FROM BEGINNING',
+                nextText: 1
+            }
+        ]
+    },
+    {
+        // act: 3
+        id: 22,
+        text: 'After careful consideration, you opt to camp by the river. You set up your tent and build a fire, feeling secure with the water behind you. As the night wears on, you drift off to sleep. You\'re abruptly awoken by the sound of rustling and footsteps. Your heart races as you sit up, ready to defend yourself. In the flickering light of the dying fire, you see several shadowy figures approaching your campsite. As they emerge from the darkness, you realize with a sinking feeling that they\'re bandits, armed and dangerous. They eye you suspiciously, weapons at the ready. What do you do?',
+        options: [
+            {
+                text: 'Drop supplies and run!',
+                setState: {yellowPath: true},
+                nextText: 24
+            },
+            {
+                text: 'Defend yourself!',
+                nextText: 23
+            }
+        ]
+    },
+    {
+        // act: 3
+        id: 23,
+        text: 'As you stand with your back against the river, you grip your trusty hammer tightly, taking comfort in its weight and familiarity. "I don\'t want any trouble," you say, trying to edge around the men who are blocking your path. But they only laugh and begin to advance towards you. With no other options, you raise your hammer in defense. The bandits rush forward, swinging their weapons at you. You manage to fend off their attacks, striking back with calculated blows of your own. However, the fight is not without consequence. Despite your best efforts, you sustain several injuries in the scuffle. But in the end, your determination and skill with the hammer prove too much for the men, and they retreat into the darkness, leaving you alone with your wounds and the realization that you must remain vigilant.',
+        options: [
+            {
+                text: 'Continue',
+                nextText: 24
+            }
+        ]
+    },
+    {
+        // act: 3
+        id: 24,
+        text: 'The rest of the night passes without incident, and the first rays of sunlight breaking the horizon wake you from your slumber. As you stretch and take in your surroundings, you feel a familiar pang of hunger in your stomach.',
+        options: [
+            {
+                text: 'Continue',
+                nextText: 25,
+                requiredState: (currentState) => currentState.yellowPath === true 
+            },
+            {
+                text: 'Eat a small breakfast from your pack',
+                nextText: 32,
+                requiredState: (currentState) => currentState.yellowPath === false || currentState.yellowPath === undefined
+            },
+        ]
+    },
+    {
+        // act: 3
+        id: 25,
+        text: 'Without supplies, the journey ahead will be challenging. The road often presents obstacles that make survival difficult, particularly when it comes to food. How do you plan to sustain yourself along the way?',
+        options: [
+            {
+                text: 'Eat the object',
+                nextText: 26,
+            },
+            {
+                text: 'Hunt for meat',
+                nextText: 27,
+            },
+            {
+                text: 'Forage for food',
+                nextText: 30,
+            }
+        ]
+    },
+    {
+        // act: 3
+        // Ending
+        id: 26,
+        text: 'You examine the object, and note its shape resembles that of an egg, which could indicate it\'s edible. You reach into your pack and retrieve your trusty hammer. After a strong swing, the egg cracks open with a loud noise, and you peer inside. However, a sudden dizziness overtakes you, and your stomach churns, causing you to lose your appetite. In no time, you collapse, succumbing to unconsciousness.',
+        options: [
+            {
+                text: 'RESTART FROM LAST CHECKPOINT',
+                nextText: 20
+            },
+            {
+                text: 'RESTART FROM BEGINNING',
+                nextText: 1
+            }
+        ]
+    },
+    {
+        // act: 3
+        id: 27,
+        text: 'What method will you use to hunt with?',
+        options: [
+            {
+                text: 'Fish',
+                nextText: 28
+            },
+            {
+                text: 'Set Traps',
+                nextText: 29
+            }
+        ]
+    },
+    {
+        // act: 3
+        id: 28,
+        text: 'With a satisfied burp, you lean back. Your hard work has paid off, and your hunger has been satiated.',
+        options: [
+            {
+                text: 'Continue',
+                nextText: 32
+            },
+        ]
+    },
+    {
+        // act: 3
+        id: 29,
+        text: 'Cursing under your breath, you slump back in frustration, realizing that your efforts have been in vain. With no tangible results to show for your endeavors, you make the tough decision to cut your losses and push ahead with your journey, despite your gnawing hunger.',
+        options: [
+            {
+                text: 'Continue',
+                nextText: 32
+            },
+        ]
+    },
+    {
+        // act: 3
+        id: 30,
+        text: 'You meander through the nearby woods and scavenge breakfast from the surrounding foliage. After some time, you assess your findings: a handful of plump, dark, round berries and some peculiar-looking pale mushrooms. What will you choose to eat?',
+        options: [
+            {
+                text: 'Eat neither',
+                nextText: 29
+            },
+            {
+                text: 'Eat both',
+                nextText: 31
+            },
+            {
+                text: 'Eat the mushrooms',
+                nextText: 31
+            },
+            {
+                text: 'Eat the berries',
+                nextText: 28
+            }
+        ]
+    },
+    {
+        // act: 3
+        // Ending
+        id: 31,
+        text: 'After a satisfying belch, you lean back, feeling content. Your efforts have paid off, and your hunger has been satiated. You take a moment to bask in the feeling before packing up your campsite and resuming your journey. As you trek on and make good headway, an unpleasant sensation begins to build in your gut. Cramps wrack your body, and your stomach empties itself in violent spasms. The pain becomes unbearable, and you gradually slip into unconsciousness.',
+        options: [
+            {
+                text: 'RESTART FROM LAST CHECKPOINT',
+                nextText: 20
+            },
+            {
+                text: 'RESTART FROM BEGINNING',
+                nextText: 1
+            }
+        ]
+    },
+    {
+        // act: 3
+        id: 32,
+        text: 'As you continue your journey, you cover some distance before stumbling upon three men gathered around a campfire just off the road. They\'re clad in ratty, faded robes, and their haggard appearance hints at a hard life. Upon noticing your approach, they acknowledge you with a friendly greeting and extend an invitation to join them by the fire.',
+        options: [
+            {
+                text: 'Refuse their offer',
+                nextText: null
+            },
+            {
+                text: 'Join them by the fire',
+                nextText: 33
+            },
+        ]
+    },
+    {
+        // act: 3
+        id: 33,
+        text: 'Grateful for their generosity, you express your appreciation and accept their kind offer. You take a place by the fire, relishing in the warmth that chases away the chill of the crisp breeze that accompanies looming grey clouds. As you take a closer look at the men, you notice that they are all wearing the same faded mage robes made of mottled velvet, with intricate patterns woven around the sleeves and hoods. Despite the wear, you can tell that these garmets were once a lush, vibrant green. The strangers strike up a conversation with you, and you recount the details of your journey thus far. You reach into your pack and retrieve the object, holding it up for the men to see. Their eyes widen with greed as they gaze upon it.',
+        options: [
+            {
+                text: 'Continue',
+                nextText: null,
+                requiredState: (currentState) => currentState.purplePath === true
+            },
+            {
+                text: 'Continue',
+                nextText: 34,
+                requiredState: (currentState) => currentState.greenPath === true 
+            }
+        ]
+    },
+    {
+        // act: 3
+        id: 34,
+        text: 'The expression on one of the men\'s faces begins to sour, and his tone takes on a menacing edge. "Headed to the capital, are you?" he sneers. "Well, you won\'t find what you\'re looking for there." He spits on the ground for emphasis. "Maybe it\'s best if you just hand over that egg and your pack, and turn back while you still can." As you look at the other two strangers, you notice that they seem uncomfortable and avoid eye contact with you. It dawns on you that these men are trying to rob you.',
+        options: [
+            {
+                text: 'Continue',
+                nextText: 35,
+            },
+        ]
+    },
+    {
+        // act: 3
+        id: 35,
+        text: 'One of the other men steps forward and addresses you. His voice is tinged with bitterness as he speaks, "Look, we\'re not bad people. We\'re just down on our luck, same as you. The only difference is that the empire caused our misfortune. We were forced to leave our home." He shrugs apologetically, "We\'re just trying to survive however we can." Despite the situation, you can\'t help but feel a pang of empathy for the strangers. You understand all too well how difficult life can be, and the King\'s unjust rule has made things even harder for everyone. Still, you can\'t just let them rob you. What do you do?',
+        options: [
+            {
+                text: 'TO BE CONTINUED',
+                nextText: 35,
+            },
         ]
     },
 ]
