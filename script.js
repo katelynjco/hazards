@@ -1,6 +1,15 @@
 const textElement = document.getElementById('text');
 const optionButtonsElement = document.getElementById('option-buttons');
-const optionButtons = document.getElementById('btn');
+const optionButtons = document.getElementsByClassName('btn');
+const title = document.querySelector('.title');
+const backButton = document.getElementById('back-btn');
+const speechSwitch = document.querySelector('.speech-switch input[type="checkbox"]');
+const musicSwitch = document.querySelector('.music-switch input[type="checkbox"]');
+const themeSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
+const themeToggle = document.getElementById('theme-slider');
+const audioElement = document.getElementById('audio');
+const iframe = document.querySelector('iframe');
+
 
 let state = {id: 1};
 // requiredState: (currentState) => currentState.path;
@@ -8,6 +17,10 @@ let state = {id: 1};
 function startGame() {
     showTextNode(state.id);
 }
+
+// Speech to Text
+// VoiceRSS Javascript SDK
+const VoiceRSS={speech:function(e){this._validate(e),this._request(e)},_validate:function(e){if(!e)throw"The settings are undefined";if(!e.key)throw"The API key is undefined";if(!e.src)throw"The text is undefined";if(!e.hl)throw"The language is undefined";if(e.c&&"auto"!=e.c.toLowerCase()){var a=!1;switch(e.c.toLowerCase()){case"mp3":a=(new Audio).canPlayType("audio/mpeg").replace("no","");break;case"wav":a=(new Audio).canPlayType("audio/wav").replace("no","");break;case"aac":a=(new Audio).canPlayType("audio/aac").replace("no","");break;case"ogg":a=(new Audio).canPlayType("audio/ogg").replace("no","");break;case"caf":a=(new Audio).canPlayType("audio/x-caf").replace("no","")}if(!a)throw"The browser does not support the audio codec "+e.c}},_request:function(e){var a=this._buildRequest(e),t=this._getXHR();t.onreadystatechange=function(){if(4==t.readyState&&200==t.status){if(0==t.responseText.indexOf("ERROR"))throw t.responseText;audioElement.src=t.responseText,audioElement.play()}},t.open("POST","https://api.voicerss.org/",!0),t.setRequestHeader("Content-Type","application/x-www-form-urlencoded; charset=UTF-8"),t.send(a)},_buildRequest:function(e){var a=e.c&&"auto"!=e.c.toLowerCase()?e.c:this._detectCodec();return"key="+(e.key||"")+"&src="+(e.src||"")+"&hl="+(e.hl||"")+"&r="+(e.r||"")+"&c="+(a||"")+"&f="+(e.f||"")+"&ssml="+(e.ssml||"")+"&b64=true"},_detectCodec:function(){var e=new Audio;return e.canPlayType("audio/mpeg").replace("no","")?"mp3":e.canPlayType("audio/wav").replace("no","")?"wav":e.canPlayType("audio/aac").replace("no","")?"aac":e.canPlayType("audio/ogg").replace("no","")?"ogg":e.canPlayType("audio/x-caf").replace("no","")?"caf":""},_getXHR:function(){try{return new XMLHttpRequest}catch(e){}try{return new ActiveXObject("Msxml3.XMLHTTP")}catch(e){}try{return new ActiveXObject("Msxml2.XMLHTTP.6.0")}catch(e){}try{return new ActiveXObject("Msxml2.XMLHTTP.3.0")}catch(e){}try{return new ActiveXObject("Msxml2.XMLHTTP")}catch(e){}try{return new ActiveXObject("Microsoft.XMLHTTP")}catch(e){}throw"The browser does not support HTTP request"}};
 
 
   // Typewriter Effect on Nodes
@@ -29,14 +42,33 @@ function animateText(txt) {
         isTypewriterRunning = false;
       }
     }
-  
+
     typeWriter();
     return timeoutId;
 }
 
 function showTextNode(textNodeIndex) {
+    // Pull and display text
     const textNode = textNodes.find(textNode => textNode.id === textNodeIndex);
-    animateText(textNode.text);
+    let text = textNode.text;
+    // Passing Text Node to VoiceRSS API
+    function tellMe(text) {
+        VoiceRSS.speech ({
+            key: 'f028771698b8436887263ba25fa03ed9',
+            src: text,
+            hl: 'en-us',
+            r: 0,
+            c: 'mp3',
+            f:'44khz_16bit_stereo',
+            ssml: false
+        });
+        }
+    // If toggle on, play speech to text
+    if(speechSwitch.checked === true) {
+            tellMe(text);
+    }
+    animateText(text);
+    // Option Butons
     while (optionButtonsElement.firstChild) {
         optionButtonsElement.removeChild(optionButtonsElement.firstChild)
     }
@@ -63,8 +95,84 @@ function selectOption(option) {
         return startGame();
     }
     state = Object.assign(state, option.setState);
+    audioElement.pause();
     showTextNode(nextTextNodeId);
 }
+
+function hideMenu() {
+    const menuContainer = document.getElementById('menu-container');
+    menuContainer.style.visibility = 'hidden';
+    
+}
+  
+function showMenu() {
+    const menuContainer = document.getElementById('menu-container');
+    menuContainer.style.visibility = 'inherit';
+}
+
+function switchTheme(event) {
+    if (event.target.checked) {
+        document.documentElement.setAttribute('data-theme', 'light');
+    } else {
+        document.documentElement.setAttribute('data-theme', 'dark');
+    }
+}
+
+
+// Youtube Api
+    var tag = document.createElement('script');
+
+    tag.src = "https://www.youtube.com/iframe_api";
+    var firstScriptTag = document.getElementsByTagName('script')[0];
+    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+      // 3. This function creates an <iframe> (and YouTube player)
+      //    after the API code downloads.
+    var player;
+    function onYouTubeIframeAPIReady() {
+        player = new YT.Player('player', {
+          height: '390',
+          width: '640',
+          videoId: 'wv-7hILtUI4?autoplay=1&loop=1',
+          playerVars: {
+            'playsinline': 1
+          },
+          events: {
+            'onReady': onPlayerReady,
+            'onStateChange': onPlayerStateChange
+          }
+        });
+        function playMusic (event) {
+            if (musicSwitch.checked === true) {
+                player.unMute();
+            } else {
+                player.mute();;
+            }
+        }
+        musicSwitch.addEventListener('change', playMusic);
+      }
+
+      // 4. The API will call this function when the video player is ready.
+    function onPlayerReady(event) {
+        player.mute();
+        event.target.setVolume(10)
+        event.target.playVideo(1);
+     }
+
+      // 5. The API calls this function when the player's state changes.
+      //    The function indicates that when playing a video (state=1),
+      //    the player should play for six seconds and then stop.
+    var done = false;
+    function onPlayerStateChange(event) {
+        if (event.data == YT.PlayerState.PLAYING && !done) {
+          setTimeout(stopVideo, 6000);
+          done = true;
+        }
+    }
+
+themeSwitch.addEventListener('change', switchTheme);
+title.addEventListener('click', showMenu);
+backButton.addEventListener('click', hideMenu);
 
 const textNodes = [
     // ACT 1

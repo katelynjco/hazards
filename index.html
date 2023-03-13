@@ -12,15 +12,47 @@
     <script defer src="script.js"></script>
 </head>
 <body>
-    <div class="title" id="title">Hazards Along the Way</div>
-    <div class="container">
-        <div id="text">Text</div>
-        <div id="option-buttons" class="btn-grid">
-            <button class="btn">Option 1</button>
-            <button class="btn">Option 2</button>
-            <button class="btn">Option 3</button>
-            <button class="btn">Option 4</button>
+    <audio id="audio" controls hidden></audio>
+    <div id="player-container" hidden>
+        <div id="player"></div>
+    </div>
+    <div class="menu-container" id="menu-container">
+        <div class="menu-title" id="menu-title">Hazards Along the Way</div>
+        <div class="inside-container">
+            <div id="menu-toggles" class="toggle-grid">
+                <div class="menu-text">Text to Speech</div>
+                <label class="speech-switch">
+                    <input type="checkbox">
+                    <div class="slider round" id ="speech-slider"></div>
+                </label>
+                <div class="menu-text">Music</div>
+                <label class="music-switch">
+                    <input type="checkbox">
+                    <div class="slider round" id ="music-slider"></div>
+                </label>
+                <div class="menu-text">Theme</div>
+                <label class="theme-switch">
+                    <input type="checkbox">
+                    <div class="slider round" id ="theme-slider"></div>
+                </label>
+            </div>
+            <div id="menu-btns" class="toggle-btn">
+                <button class="menu-btn" id="credits-btn">Credits</button>
+                <button class="menu-btn" id="back-btn">Back</button>
+            </div>
         </div>
-    </div> 
+    </div>
+    <div class="story-container" id="story-container">
+        <div class="title" id="title">Hazards Along the Way</div>
+        <div class="container">
+            <div id="text">Text</div>
+            <div id="option-buttons" class="btn-grid">
+                <button class="btn">Option 1</button>
+                <button class="btn">Option 2</button>
+                <button class="btn">Option 3</button>
+                <button class="btn">Option 4</button>
+            </div>
+        </div> 
+    </div>
 </body>
 </html>
