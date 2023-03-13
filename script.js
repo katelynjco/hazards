@@ -641,7 +641,7 @@ const textNodes = [
         // act: 3
         // Ending
         id: 38,
-        text: 'The men move closer to you, and you prepare to defend yourself. With a burst of adrenaline, you charge forward and manage to land a solid punch on the first man. But as you turn to face the others, you realize that they are too strong for you to fight off. Despite your best efforts, you quickly find yourself overwhelmed and taking a beating. Your vision blurs, and you feel your consciousness slipping away.',
+        text: 'The men move closer to you, their hostile intent clear. You steel yourself for a fight, bracing for impact. With a burst of adrenaline, you charge forward and let out a battle cry, hoping to intimidate the mages. "LEEEERRROOOYYY JEEEENNNKKKIIINNS!!!" you scream. You land a solid punch on the first man, but as you turn to face the others, you realize they are more powerful than you thought. Despite your best efforts, they overpower you, dealing blow after blow until you feel your body giving in. Your vision blurs, and you feel yourself slipping away into unconsciousness."',
         options: [
             {
                 text: 'RESTART FROM LAST CHECKPOINT',
@@ -718,7 +718,7 @@ const textNodes = [
         // act: 3
         // Ending
         id: 43,
-        text: 'You let out a crazed laugh as you raise your hammer high above your head and bring it down with all your might onto the egg. It shatters into pieces with a deafening crack, and the green glow emanating from it intensifies. The men recoil in horror as the light washes over them. Suddenly, a powerful wave of nausea washes over you, and you collapse to the ground, consciousness slipping away.',
+        text: 'You let out a crazed laugh as you raise your hammer high above your head and bring it down with all your might onto the egg. It shatters into pieces with a deafening crack, and the green glow emanating from it intensifies. The men recoil in horror. Suddenly, a powerful wave of nausea washes over you, and you collapse to the ground, consciousness slipping away.',
         options: [
             {
                 text: 'RESTART FROM LAST CHECKPOINT',
@@ -733,7 +733,7 @@ const textNodes = [
     {
         // act: 3
         id: 44,
-        text: 'As you grip the handle of your hammer tightly and begin to swing it down towards the egg, the mages\' faces turn ashenas they realize what you\'re about to do. The air is thick with tension and the sound of your labored breaths. Just as you\'re about to strike, the one who has remained silent suddenly springs into action. He grabs the other two by the back of their robes and begins to drag them away towards the trees, his movements quick and fluid like a panther. You watch them disappear into the darkness, and a sense of relief washes over you. You lower your hammer, feeling a mixture of disappointment and satisfaction.',
+        text: 'As you grip the handle of your hammer tightly and begin to swing it down towards the egg, the mages\' faces turn ashen as they realize what you\'re about to do. The air is thick with tension and the sound of your labored breaths. Just as you\'re about to strike, the one who has remained silent suddenly springs into action. He grabs the other two by the back of their robes and begins to drag them away towards the trees, his movements quick and fluid like a panther. You watch them disappear into the darkness, and a sense of relief washes over you. You lower your hammer, feeling a mixture of disappointment and satisfaction.',
         options: [
             {
                 text: 'Continue',
@@ -787,7 +787,7 @@ const textNodes = [
     {
         // act: 4
         id: 50,
-        text: 'You continue on your journey. As the day wears on, fatigue sets in and you feel the weight of exhaustion bearing down on you. With the sun casting long shadows across the ground, you begin to search for a suitable place to make camp. Your eyes scan the surroundings, looking for any signs of shelter or resources. In the distance, you spot a clearing that catches your attention, with an abundance of firewood. However, its exposed location raises concerns about potential predator attacks. As you continue your search, you notice a cave entrance nearby, which offers a promising option for sturdy shelter and protection from the elements. But uncertainty about what may lurk inside gives you pause. Finally, you come across an abandoned shack, but you\'re unsure about its structural integrity. You carefully consider the risks and benefits of each.',
+        text: 'You continue on your journey. As the day wears on, fatigue sets in and you feel the weight of exhaustion bearing down on you. With the sun casting long shadows across the ground, you begin to search for a suitable place to make camp. Your eyes scan the surroundings, looking for any signs of shelter or resources. In the distance, you spot a clearing that catches your attention, with an abundance of firewood. However, its exposed location raises concerns about potential predator attacks. As you continue your search, you notice a cave entrance nearby, which offers a promising option for sturdy shelter and protection from the elements. But uncertainty about what may lurk inside gives you pause. Finally, you come across an abandoned shack, but you\'re unsure about its structural integrity. You carefully consider your options.',
         options: [
             {
                 text: 'Continue',
