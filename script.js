@@ -133,9 +133,11 @@ function switchTheme(event) {
         player = new YT.Player('player', {
           height: '390',
           width: '640',
-          videoId: 'wv-7hILtUI4?autoplay=1&loop=1',
+          videoId: 'NZfECaaHJbo',
           playerVars: {
-            'playsinline': 1
+            'playsinline': 1,
+            playlist: 'NZfECaaHJbo',
+            loop: 1
           },
           events: {
             'onReady': onPlayerReady,
@@ -155,7 +157,8 @@ function switchTheme(event) {
       // 4. The API will call this function when the video player is ready.
     function onPlayerReady(event) {
         player.mute();
-        event.target.setVolume(10)
+        event.target.setPlaybackRate(0.75);
+        event.target.setVolume(35);
         event.target.playVideo(1);
      }
 
