@@ -133,10 +133,10 @@ function switchTheme(event) {
         player = new YT.Player('player', {
           height: '390',
           width: '640',
-          videoId: 'NZfECaaHJbo',
+          videoId: '-ae4GgctPaM',
           playerVars: {
             'playsinline': 1,
-            playlist: 'NZfECaaHJbo',
+            playlist: 'i0sHgijeBNM',
             loop: 1
           },
           events: {
@@ -158,7 +158,7 @@ function switchTheme(event) {
     function onPlayerReady(event) {
         player.mute();
         event.target.setPlaybackRate(0.75);
-        event.target.setVolume(35);
+        event.target.setVolume(15);
         event.target.playVideo(1);
      }
 
