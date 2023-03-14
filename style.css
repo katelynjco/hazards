@@ -17,8 +17,8 @@
     --secondary-color: #02889B;
     --text-color:rgb(4, 4, 4, 0.85);
     --on-primary: #F5F5F5;
-    --on-background: rgba(255, 255, 255, 0.9);
-    --on-background-alt: rgba(255, 255, 255, 0.7);
+    --on-background: rgba(245, 245, 245, 0.9);
+    --on-background-alt: rgba(245, 245, 245, 0.7);
     --background: #F5F5F5;
     --box-shadow: 0 5px 20px 1px rgba(0, 0, 0, 0.5);
   }
@@ -153,7 +153,7 @@ body {
 }
 
 .inside-container {
-    width:400px;
+    width:375px;
     padding: 10px;
     border: 2px solid;
     border-color: var(--primary-variant);
@@ -166,25 +166,31 @@ body {
     margin: 0 auto;
 }
 
+.menu-text {
+    text-align: justify;
+    font-size: 30px;
+    margin-left: 30px;
+}
+
 .toggle-grid {
     display: grid;
     grid-template-columns: repeat(2, auto);
     gap: 2px;
     margin-top: 20px;
 }
-.theme-switch {
-    display: inline-block;
-    height: 34px;
-    position: relative;
-    width: 60px;
-}
 
-.menu-text {
-    text-align: justify;
-    font-size: 30px;
-}
-  
-.theme-switch input {
+.checkmark {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: var(--text-color);
+  }
+
+.checkmark:after {
+    content: "";
+    position: absolute;
     display: none;
 }
 
@@ -192,60 +198,57 @@ body {
     display: inline-block;
     height: 34px;
     position: relative;
-    width: 60px;
+    width: 30px;
+}
+
+.speech-switch input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.speech-switch input:checked ~ .checkmark {
+    background-color: var(--primary-variant);
 }
   
-.speech-switch input {
-    display: none;
+.theme-switch {
+    display: inline-block;
+    height: 34px;
+    position: relative;
+    width: 30px;
+}
+  
+.theme-switch input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.theme-switch input:checked ~ .checkmark {
+    background-color: var(--primary-variant);
 }
 
 .music-switch {
     display: inline-block;
     height: 34px;
     position: relative;
-    width: 60px;
+    width: 30px;
 }
   
 .music-switch input {
-    display: none;
-}
-  
-.slider {
-    background: var(--primary-variant);
-    bottom: 0;
+    position: absolute;
+    opacity: 0;
     cursor: pointer;
-    left: 0;
-    position: absolute;
-    right: 0;
-    top: 0;
-    transition: 0.4s;
+    height: 0;
+    width: 0;
 }
-  
-.slider::before {
-    background: #fff;
-    bottom: 4px;
-    content: "";
-    height: 26px;
-    left: 4px;
-    position: absolute;
-    transition: 0.4s;
-    width: 26px;
-}
-  
-input:checked + .slider {
-    background: var(--secondary-color);
-}
-  
-input:checked + .slider::before {
-    transform: translateX(26px);
-}
-  
-.slider.round {
-    border-radius: 34px;
-}
-  
-.slider.round::before {
-    border-radius: 50%;
+
+.music-switch input:checked ~ .checkmark {
+    background-color: var(--primary-variant);
 }
 
 #menu-btns {

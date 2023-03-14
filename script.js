@@ -6,7 +6,6 @@ const backButton = document.getElementById('back-btn');
 const speechSwitch = document.querySelector('.speech-switch input[type="checkbox"]');
 const musicSwitch = document.querySelector('.music-switch input[type="checkbox"]');
 const themeSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
-const themeToggle = document.getElementById('theme-slider');
 const audioElement = document.getElementById('audio');
 const iframe = document.querySelector('iframe');
 
@@ -119,7 +118,7 @@ function switchTheme(event) {
 }
 
 
-// Youtube Api
+// Youtube Api for background music
     var tag = document.createElement('script');
 
     tag.src = "https://www.youtube.com/iframe_api";
@@ -156,9 +155,10 @@ function switchTheme(event) {
 
       // 4. The API will call this function when the video player is ready.
     function onPlayerReady(event) {
+        player.seekTo(0);
         player.mute();
         event.target.setPlaybackRate(0.75);
-        event.target.setVolume(15);
+        event.target.setVolume(20);
         event.target.playVideo(1);
      }
 
@@ -191,7 +191,7 @@ const textNodes = [
             },
             {
                 text: 'Find food',
-                nextText: 3
+                nextText: 3,
             }
         ]
     },
@@ -210,7 +210,7 @@ const textNodes = [
     {
         // act: 1
         id: 3,
-        text: "As you step outside, a cool breeze brushes against your face, carrying the scent of early blooming wildflowers. The sun is shining bright in the sky, promising a beautiful day ahead. You glance over at the nearby stream, the sparkling water inviting you to come and fish. Excited, you grab your fishing pole and take a moment to consider your options. You could head to the downstream where the water is deeper, or try your luck upstream where the fish might be more plentiful. What will you do?",
+        text: "As you step outside, a cool breeze brushes against your face, carrying the scent of early blooming wildflowers. The sun is shining bright in the sky, promising a beautiful day ahead. You glance over at the nearby stream, the sparkling water inviting you to come and fish. Excited, you grab your fishing pole and take a moment to consider your options. You could head downstream where the water is deeper, or try your luck upstream where the fish might be more plentiful. What will you do?",
         options: [
             {
                 text: 'Change your mind and go home',
@@ -256,7 +256,7 @@ const textNodes = [
     {
         // act: 1
         id: 6,
-        text: 'You trek down to the river, the sound of the rushing water growing louder with each step. As you walk along the bank, you scan the water for any signs of fish or other interesting things. Suddenly, you spot something glittering in the distance, caught between two large rocks. Curiosity piqued, you make your way over and examine the object more closely. It\'s lodged in tightly, but with some effort, you think you can dislodge it.',
+        text: 'You trek down river, the sound of the rushing water growing louder with each step. As you walk along the bank, you scan the water for any signs of fish or other interesting things. Suddenly, you spot something glittering in the distance, caught between two large rocks. Curiosity piqued, you make your way over and examine the object more closely. It\'s lodged in tightly, but with some effort, you think you can dislodge it.',
         options: [
             {
                 text: 'Pick up the object',
@@ -318,6 +318,7 @@ const textNodes = [
         options: [
             {
                 text: 'Yes',
+                setState: {yellowPath: false},
                 nextText: 9
             },
             {
@@ -844,7 +845,7 @@ const textNodes = [
     {
         // act: 3
         id: 44,
-        text: 'As you grip the handle of your hammer tightly and begin to swing it down towards the egg, the mages\' faces turn ashen as they realize what you\'re about to do. The air is thick with tension and the sound of your labored breaths. Just as you\'re about to strike, the one who has remained silent suddenly springs into action. He grabs the other two by the back of their robes and begins to drag them away towards the trees, his movements quick and fluid like a panther. You watch them disappear into the darkness, and a sense of relief washes over you. You lower your hammer, feeling a mixture of disappointment and satisfaction.',
+        text: 'As you grip the handle of your hammer tightly and begin to swing it down towards the egg, the mages\' faces turn ashen as they realize what you\'re about to do. The air is thick with tension and the sound of your breathing. Just as you\'re about to strike, the one who has remained silent suddenly springs into action. He grabs the other two by the back of their robes and begins to drag them away towards the trees, his movements quick and fluid like a panther. You watch them disappear into the darkness, and a sense of relief washes over you. You lower your hammer, feeling satisfied.',
         options: [
             {
                 text: 'Continue',
@@ -901,7 +902,459 @@ const textNodes = [
         text: 'You continue on your journey. As the day wears on, fatigue sets in and you feel the weight of exhaustion bearing down on you. With the sun casting long shadows across the ground, you begin to search for a suitable place to make camp. Your eyes scan the surroundings, looking for any signs of shelter or resources. In the distance, you spot a clearing that catches your attention, with an abundance of firewood. However, its exposed location raises concerns about potential predator attacks. As you continue your search, you notice a cave entrance nearby, which offers a promising option for sturdy shelter and protection from the elements. But uncertainty about what may lurk inside gives you pause. Finally, you come across an abandoned shack, but you\'re unsure about its structural integrity. You carefully consider your options.',
         options: [
             {
+                text: 'Camp in the clearing',
+                setState: {id: 50},
+                nextText: 53
+            },
+            {
+                text: 'Camp in the shack',
+                setState: {id: 50},
+                nextText: 52
+            },
+            {
+                text: 'Camp by the cave',
+                setState: {id: 50},
+                nextText: 51
+            }
+        ]
+    },
+    {
+        // act: 4
+        // ENDING
+        id: 51,
+        text: 'After much consideration, you make the decision to take a chance with the cave. You carefully make your way through the hazardous terrain and enter the cave, which is cool and damp, with rough walls and an uneven floor. Despite not finding any indications of recent human activity, an uneasy feeling starts to creep up on you. As night falls, you build a fire and settle down. Every noise and movement makes you startle, and your mind begins to race. Just as you begin to doze off, a low growl breaks the silence. You reach for the hammer in your backpack, but it\'s too late. The bear charges at you, attacking and ripping your flesh. You make a fine meal.',
+        options: [
+            {
+                text: 'RESTART FROM LAST CHECKPOINT',
+                nextText: 50
+            },
+            {
+                text: 'RESTART FROM BEGINNING',
+                nextText: 1
+            }
+        ]
+    },
+    {
+        // act: 4
+        id: 52,
+        text: 'The remainder of the night goes by uneventfully, and the initial beams of sunlight peeking over the horizon rouse you from your sleep. You stretch and observe your surroundings, experiencing a recognizable twinge of hunger in your belly.',
+        options: [
+            {
                 text: 'Continue',
+                nextText: 57,
+                requiredState: (currentState) => currentState.yellowPath === true 
+            },
+            {
+                text: 'Eat a small breakfast from your pack',
+                nextText: 64,
+                requiredState: (currentState) => currentState.yellowPath === false || currentState.yellowPath === undefined
+            },
+        ]
+    },
+    {
+        // act: 4
+        id: 53,
+        text: 'You opt to take your chances in the clearing, and with an abundance of wood, you successfully build a roaring fire. You settle beside the flames and gradually drift off to sleep. However, the rustling of leaves abruptly awakens you. As you look up, you notice a large grey wolf at the edge of the clearing, intently staring at you. A shiver runs down your spine, and you quickly scan the tree line behind it, spotting numerous pairs of eyes glaring at you from the darkness. What do you do?',
+        options: [
+            {
+                text: 'Defend yourself!',
+                nextText: 56
+            },
+            {
+                text: 'Drop supplies and run!',
+                setState: {yellowPath: true},
+                nextText: 55
+            },
+            {
+                text: 'Try to placate the wolf',
+                nextText: 54,
+                requiredState: (currentState) => currentState.yellowPath === false || currentState.yellowPath === undefined
+            }
+        ]
+    },
+    {
+        // act: 4
+        id: 54,
+        text: 'You begin to speak in a soft tone to the wolf, complimenting its beauty while maintaining a safe distance. Carefully, you reach into your pack, taking out some jerky you had packed for your journey, and toss it to the animal. The wolf carefully sniffs the offering before devouring it. After finishing the snack, it sniffs towards your direction and seems content. Gradually, the pack of wolves retreat from the firelight, and you release a sigh of relief.',
+        options: [
+            {
+                text: 'Continue',
+                setState: {wolfFren: true},
+                nextText: 52
+            },
+        ]
+    },
+    {
+        // act: 4
+        id: 55,
+        text: 'As you gaze at the wolf, a sense of impending doom washes over you, and you realize that you wouldn\'t survive this encounter. In a moment of panic, you hastily grab your pack and sprint in the opposite direction, nimbly hurdling over branches and rocks in your path. As you navigate your way out of the clearing, you hear a coughing sound that almost resembles laughter emanating from behind you.',
+        options: [
+            {
+                text: 'Continue',
+                nextText: 52
+            },
+        ]
+    },
+    {
+        // act: 4
+        id: 56,
+        text: 'You swiftly scramble towards your pack, retrieving your trusty hammer. The wolf\'s ears flatten against its head as it bares its teeth, emitting a menacing snarl. Without hesitation, you raise your hammer, and the animal lunges towards you, sinking its teeth into your leg. With a forceful blow, you bring the hammer down, dislodging the creature. It limps away, retreating towards the treeline, and the menacing eyes lurking in the darkness vanish. Though you were successful in fending off the animals, you sustained severe injuries in the process.',
+        options: [
+            {
+                text: 'Continue',
+                nextText: 52
+            },
+        ]
+    },
+
+    {
+        // act: 4
+        id: 57,
+        text: 'Without supplies, the journey ahead will be challenging. The road often presents obstacles that make survival difficult, particularly when it comes to food. How do you plan to sustain yourself along the way?',
+        options: [
+            {
+                text: 'Eat the object',
+                nextText: 58,
+            },
+            {
+                text: 'Forage for food',
+                nextText: 62,
+            },
+            {
+                text: 'Hunt for meat',
+                nextText: 59,
+            }
+        ]
+    },
+    {
+        // act: 4
+        // Ending
+        id: 58,
+        text: 'You examine the object, and note its shape resembles that of an egg, which could indicate it\'s edible. You reach into your pack and retrieve your trusty hammer. After a strong swing, the egg cracks open with a loud noise, and you peer inside. However, a sudden dizziness overtakes you, and your stomach churns, causing you to lose your appetite. In no time, you collapse, succumbing to unconsciousness.',
+        options: [
+            {
+                text: 'RESTART FROM LAST CHECKPOINT',
+                nextText: 50
+            },
+            {
+                text: 'RESTART FROM BEGINNING',
+                nextText: 1
+            }
+        ]
+    },
+    {
+        // act: 4
+        id: 59,
+        text: 'What method will you use to hunt with?',
+        options: [
+            {
+                text: 'Fish',
+                nextText: 61
+            },
+            {
+                text: 'Set Traps',
+                nextText: 60
+            }
+        ]
+    },
+    {
+        // act: 4
+        id: 60,
+        text: 'With a satisfied burp, you lean back. Your hard work has paid off, and your hunger has been satiated.',
+        options: [
+            {
+                text: 'Continue',
+                nextText: 64
+            },
+        ]
+    },
+    {
+        // act: 4
+        id: 61,
+        text: 'Cursing under your breath, you slump back in frustration, realizing that your efforts have been in vain. With no tangible results to show for your endeavors, you make the tough decision to cut your losses and push ahead with your journey, despite your gnawing hunger.',
+        options: [
+            {
+                text: 'Continue',
+                nextText: 64
+            },
+        ]
+    },
+    {
+        // act: 4
+        id: 62,
+        text: 'You meander through the nearby woods and scavenge breakfast from the surrounding foliage. After some time, you assess your findings: a handful of wide, bright orange mushrooms, and branch of hard, purple berries. What will you choose to eat?',
+        options: [
+            {
+                text: 'Eat neither',
+                nextText: 61
+            },
+            {
+                text: 'Eat both',
+                nextText: 63
+            },
+            {
+                text: 'Eat the mushrooms',
+                nextText: 60
+            },
+            {
+                text: 'Eat the berries',
+                nextText: 63
+            }
+        ]
+    },
+    {
+        // act: 4
+        // Ending
+        id: 63,
+        text: 'Following a satisfying belch, you lean back and feel a deep sense of satisfaction. Your efforts have paid off, and your hunger has finally been satiated. You take a moment to savor the feeling before packing up your campsite and resuming your journey. As you continue to trek, you make steady progress, but soon notice something is amiss. Your vision blurs, and your skin starts to itch. Breathing becomes laborious, and you feel like you\'re losing control over your body. Despite your best efforts, you gradually slip into unconsciousness.',
+        options: [
+            {
+                text: 'RESTART FROM LAST CHECKPOINT',
+                nextText: 50
+            },
+            {
+                text: 'RESTART FROM BEGINNING',
+                nextText: 1
+            }
+        ]
+    },
+    {
+        // act: 4
+        id: 64,
+        text: 'As you press on with your journey, the sky gradually darkens and turns a dismal shade of grey. The wind begins to pick up, howling fiercely and tearing through your clothes, leaving you shivering to the bone. Soon, raindrops start to pour down from the heavens, drenching you to your very core. Your heart sinks at the thought of carrying on in these treacherous conditions.',
+        options: [
+            {
+                text: 'Continue',
+                nextText: 65
+            },
+        ]
+    },
+    {
+        // act: 4
+        id: 65,
+        text: 'Just as you\'re about to lose hope, you stumble upon a lone traveling bard taking refuge from the elements under a makeshift lean-to, constructed against some nearby trees. Drapped over his body is a flowing red cloak, adorned with white trimmings. The hood is drawn down low, concealing his eyes from view, but you can make out a bushy beard sprouting from his cheeks and chin.  As the man strums his lute, a haunting melody fills the air, soothing your weary soul. The bard seems just as tired as you are from his own journey, but the warmth of his roaring campfire and the shelter of his lean-to beckon to you, making you long for a moment\'s respite to dry off your sodden clothes and warm your chilled bones.',
+        options: [
+            {
+                text: 'Rob the bard',
+                nextText: 66
+            },
+            {
+                text: 'Ask to share the fire',
+                nextText: 67
+            },
+            {
+                text: 'Continue on your journey',
+                nextText: 79
+            },
+        ]
+    },
+    {
+        // act: 4
+        // Ending
+        id: 66,
+        text: 'You move closer, reaching for your hammer and holding it steadily at the man\'s throat. "I don\'t want any trouble," you say firmly, "just give me your supplies and I\'ll be on my way." The bard\'s looks up at you, gaze meeting yours and revealing bloodshot eyes ringed with dark circles. Before you can react, he deftly grabs your hammer, pulling you in close as he plunges a long, curved dagger into your side. You gasp in shock and pain, falling to the ground as your vision fades. The stranger goes back to strumming his lute, and you feel your life slipping away as darkness overtakes you.',
+        options: [
+            {
+                text: 'RESTART FROM LAST CHECKPOINT',
+                nextText: 50
+            },
+            {
+                text: 'RESTART FROM BEGINNING',
+                nextText: 1
+            }
+        ]
+    },
+    {
+        // act: 4
+        id: 67,
+        text: 'Upon hearing your request to warm yourself by the fire, the man gestures to the open space opposite him, inviting you to take a seat. You offer your gratitude and gratefully settle down by the fire, relieved to find shelter from the harsh weather. As you steal a glance at the man across from you, you notice a friendly smile playing at the corners of his mouth, although his eyes remain obscured by the hood of his cloak. The sound of his lute playing provides a peaceful backdrop to your thoughts. It occurs to you that, as a traveling bard, the man might have interesting stories from his journey that could offer clarity for your own path.',
+        options: [
+            {
+                text: 'Ask questions',
+                nextText: 68
+            },
+            {
+                text: 'Continue on your journey',
+                nextText: 78
+            },
+        ]
+    },
+    {
+        // act: 4
+        id: 68,
+        text: 'You take a deep breath and gingerly break the silence, carefully gauging the man\'s reaction as you recount your journey so far. The bard listens intently, nodding thoughtfully as you speak, though you leave out the details about the egg. When you finish, you turn to him and ask if he might have any insight to offer. "Depends what you\'re seeking clarity on," he replies, his voice warm and inviting.',
+        options: [
+            {
+                text: 'Why are mages being displaced?',
+                nextText: 69
+            },
+            {
+                text: 'What can you tell me about dragons?',
+                nextText: 72
+            },
+            {
+                text: 'What can you tell me about the citadel?',
+                nextText: 74,
+                requiredState: (currentState) => currentState.greenPath === false || currentState.greenPath === undefined
+            },
+            {
+                text: 'What can you tell me about the capital?',
+                nextText: 76,
+                requiredState: (currentState) => currentState.purplePath === false || currentState.purplePath === undefined
+            },
+            {
+                text: 'Continue on your journey',
+                nextText: 78
+            }
+        ]
+    },
+    {
+        // act: 4
+        id: 69,
+        text: '"The mages of the citadel practice a form of magic known as alchemy," the bard explains, leaning forward slightly as he speaks. "It\'s a powerful craft, but also quite dangerous in the wrong hands." He pauses for a moment, considering his next words carefully. "There are whispers of a group of mages who delved into forbidden magics, straying beyond the boundaries of what was acceptable. The empire discovered their activities and dealt with them harshly."',
+        options: [
+            {
+                text: 'Continue',
+                nextText: 70
+            }
+        ]
+    },
+    {
+        // act: 4
+        id: 70,
+        text: '"As a consequence of these forbidden experiments, the empire has cracked down on the citadel, punishing its members severely," the bard explains with a shake of his head. "Many mages were executed publicly, while others managed to escape. However, those who remained were imprisoned within the citadel and are now closely monitored by soldiers of the empire. The citadel\'s power and numbers have been greatly reduced, and its members live in fear of further retribution."',
+        options: [
+            {
+                text: 'Continue',
+                nextText: 71
+            }
+        ]
+    },
+    {
+        // act: 4
+        id: 71,
+        text: 'The fire crackles in the background, casting flickering shadows across the small clearing. You sit in silence, lost in thought as you contemplate the information that has been shared. The bard strums his lute once more, the haunting melody providing a backdrop to your introspection.',
+        options: [
+            {
+                text: 'Why are mages being displaced?',
+                nextText: 69
+            },
+            {
+                text: 'What can you tell me about dragons?',
+                nextText: 72
+            },
+            {
+                text: 'What can you tell me about the citadel?',
+                nextText: 74,
+                requiredState: (currentState) => currentState.greenPath === false || currentState.greenPath === undefined
+            },
+            {
+                text: 'What can you tell me about the capital?',
+                nextText: 76,
+                requiredState: (currentState) => currentState.purplePath === false || currentState.purplePath === undefined
+            },
+            {
+                text: 'Continue on your journey',
+                nextText: 78
+            }
+        ]
+    },
+    {
+        // act: 4
+        id: 72,
+        text: 'The bard leans back and smiles, "Ah, dragons... majestic beasts, feared and revered by all who knew of them. Once, they ruled the skies, their wings casting shadows across the lands. In the early days of civilization, the dragons were worshipped by the people of the empire. They were seen as divine beings, with the power to bless the land with bountiful harvests and protect the people from harm. The Empire built grand temples and shrines in their honor, and it was believed that the dragons would answer the prayers of the faithful. But now, they are no more."',
+        options: [
+            {
+                text: 'Continue',
+                nextText: 73
+            }
+        ]
+    },
+    {
+        // act: 4
+        id: 73,
+        text: 'Sitting up again, the bard continues, "No one knows what happened to them, why they disappeared from our world. Some say they were hunted to extinction, their scales and bones used for magical purposes. Others believe they simply grew tired of our world, seeking new realms to explore. But regardless of the reason, their absence is felt deeply. The Empire mourns the loss of their deities, and their once-great power has waned in the years since the dragons\' departure. Legends still persist, of course. Whispers of dragon sightings in the mountains, tales of ancient treasures hoarded in their lairs. But these are mere rumors, fantasies spun by those who long for the days when the skies were ruled by the creatures."',
+        options: [
+            {
+                text: 'Continue',
+                nextText: 71
+            }
+        ]
+    },
+    {
+        // act: 4
+        id: 74,
+        text: 'The bard nods thoughtfully, "The Citadel of Mages, one of the greatest bastions of magic in all the land. The tower itself is a sight to behold, perched high on a rocky cliff face, with a winding path leading up to it that seems almost impossible to climb. The mages who reside within its walls are some of the most powerful and skilled practitioners of alchemy you will ever encounter. The importance of the mages to the Empire cannot be overstated. Their knowledge and skill in the magical arts are essential for the defense and prosperity of the realm. The Empire has long recognized the value of magic in both war and peace, and the mages of the Citadel are the guardians of that knowledge."',
+        options: [
+            {
+                text: 'Continue',
+                nextText: 75
+            }
+        ]
+    },
+    {
+        // act: 4
+        id: 75,
+        text: 'Leaning forward, the bard continues, "But with great power comes great responsibility, as they say. The mages are constantly under scrutiny from the Empire, who closely monitor their activities to ensure that their magic is not used for nefarious purposes. The consequences of a rogue mage wielding the power of alchemy could be catastrophic. Despite this, the mages continue to push the boundaries of their craft, experimenting with new forms of alchemy and expanding their understanding of the magical forces that shape the world. It is a never-ending pursuit of knowledge and power."',
+        options: [
+            {
+                text: 'Continue',
+                nextText: 71
+            }
+        ]
+    },
+    {
+        // act: 4
+        id: 76,
+        text: 'The bard nods thoughtfully, "The empire\'s capital, known simply as The Capital, is a sight to behold. Positioned on a rocky hill overlooking the river and the road that leads to it, it boasts massive fortified gates that see a constant stream of foot traffic. Inside the city walls stands a towering castle, the seat of the empire\'s power and the residence of the king. From there, he governs the empire with a strict hand, ensuring that his people are kept safe and that his rule is absolute."',
+        options: [
+            {
+                text: 'Continue',
+                nextText: 77
+            }
+        ]
+    },
+    {
+        // act: 4
+        id: 77,
+        text: 'Leaning forward, the bard continues, "The king\'s influence extends far beyond the castle walls, however. He has taken a keen interest in the mages of the citadel, recognizing their power and importance in the empire\'s defense and war efforts. In recent years, he even installed his brother-in-law as their governor. Despite the king\'s strict rule, The Capital remains a bustling hub of activity and trade. Merchants from all over the world come to ply their wares, and the its markets are a riot of color and noise."',
+        options: [
+            {
+                text: 'Continue',
+                nextText: 71
+            }
+        ]
+    },
+    {
+        // act: 4
+        id: 78,
+        text: 'After some time of resting and regaining your strength, you feel a renewed sense of energy pulsing through your veins. With a deep breath, you prepare to brave the harsh winds and biting cold once more, but not before bidding the bard farewell. You express your gratitude again before heading down the road, the haunting melody of the lute lingering in your mind. It\'s as though the music is playing you off.',
+        options: [
+            {
+                text: 'Continue',
+                nextText: 79
+            }
+        ]
+    },
+// Act 5
+    {
+        // act: 5
+        id: 79,
+        text: 'As you press on, weariness creeps into your bones and the elements weigh heavily upon you. With the sky turning black and shadows deeping across the landscape, you scour your surroundings for a safe haven to rest for the night. A clearing in the distance catches your eye, rich with firewood for warmth. However, its exposed location raises the fear of lurking predators. A nearby cave entrance seems a promising refuge against the weather, but the dangers within are unknown and unsettling. Finally, an Inn on the horizon comes into view, but the sight of its questionable patrons gives you pause. You weigh your options carefully.',
+        options: [
+            {
+                text: 'Camp in the cave',
+                setState: {id: 79},
+                nextText: 5000
+            },
+            {
+                text: 'Camp in the clearing',
+                setState: {id: 79},
+                nextText: 5000
+            },
+            {
+                text: 'Stay at the Inn',
+                setState: {id: 79},
                 nextText: 5000
             }
         ]
