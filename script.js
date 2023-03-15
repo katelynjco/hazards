@@ -1222,7 +1222,7 @@ const textNodes = [
     {
         // act: 4
         id: 70,
-        text: '"As a consequence of these forbidden experiments, the empire has cracked down on the citadel, punishing its members severely," the bard explains with a shake of his head. "Many mages were executed publicly, while others managed to escape. However, those who remained were imprisoned within the citadel and are now closely monitored by soldiers of the empire. The citadel\'s power and numbers have been greatly reduced, and its members live in fear of further retribution."',
+        text: '"As a consequence of these forbidden experiments, the empire has cracked down on the citadel." the bard explains with a shake of his head. "Many mages were executed publicly, while a small number managed to escape. However, those who remained were imprisoned within the citadel and are now closely monitored by soldiers of the empire. The citadel\'s power and numbers have been greatly reduced, and its members live in fear of further retribution."',
         options: [
             {
                 text: 'Continue',
@@ -1273,7 +1273,7 @@ const textNodes = [
     {
         // act: 4
         id: 73,
-        text: 'Sitting up again, the bard continues, "No one knows what happened to them, why they disappeared from our world. Some say they were hunted to extinction, their scales and bones used for magical purposes. Others believe they simply grew tired of our world, seeking new realms to explore. But regardless of the reason, their absence is felt deeply. The Empire mourns the loss of their deities, and their once-great power has waned in the years since the dragons\' departure. Legends still persist, of course. Whispers of dragon sightings in the mountains, tales of ancient treasures hoarded in their lairs. But these are mere rumors, fantasies spun by those who long for the days when the skies were ruled by the creatures."',
+        text: 'Sitting up again, the bard continues, "No one knows what happened to them, why they disappeared. Some say they were hunted to extinction, their scales and bones used for magical purposes. Others believe they simply grew tired of our world, seeking new realms to explore. But regardless of the reason, their absence is felt deeply. The Empire mourns the loss of their deities, and their once-great power has waned in the years since the dragons\' departure. Legends still persist, of course. Whispers of dragon sightings in the snow-capped mountains, tales of ancient treasures hoarded in their lairs. But these are mere rumors, fantasies spun by those who long for the days when the skies were ruled by the creatures."',
         options: [
             {
                 text: 'Continue',
@@ -1340,23 +1340,526 @@ const textNodes = [
     {
         // act: 5
         id: 79,
-        text: 'As you press on, weariness creeps into your bones and the elements weigh heavily upon you. With the sky turning black and shadows deeping across the landscape, you scour your surroundings for a safe haven to rest for the night. A clearing in the distance catches your eye, rich with firewood for warmth. However, its exposed location raises the fear of lurking predators. A nearby cave entrance seems a promising refuge against the weather, but the dangers within are unknown and unsettling. Finally, an Inn on the horizon comes into view, but the sight of its questionable patrons gives you pause. You weigh your options carefully.',
+        text: 'As you press on, weariness creeps into your bones and the elements weigh heavily upon you. With the sky turning black and shadows deeping across the landscape, you scour your surroundings for a safe haven to rest for the night. A clearing in the distance catches your eye, rich with firewood for warmth. However, its exposed location raises the fear of lurking predators. A nearby cave entrance seems a promising refuge against the weather, but the dangers within are unknown and unsettling. Finally, an inn on the horizon comes into view, but the sight of its questionable patrons gives you pause. You weigh your options carefully.',
         options: [
             {
                 text: 'Camp in the cave',
                 setState: {id: 79},
-                nextText: 5000
+                nextText: 81
             },
             {
                 text: 'Camp in the clearing',
                 setState: {id: 79},
-                nextText: 5000
+                nextText: 80
             },
             {
                 text: 'Stay at the Inn',
                 setState: {id: 79},
-                nextText: 5000
+                nextText: 82
             }
+        ]
+    },
+    {
+        // act: 5
+        // ENDING
+        id: 80,
+        text: 'After carefully considering your options, you decide to take a chance and stay in the clearing. Despite finding plenty of wood, it is damp, making it difficult to start a fire. As darkness descends, you try in vain but ultimately give up. With no other option, you hastily construct a makeshift lean-to on the edge of the clearing. However, as the night wears on, and the temperature continues to drop. Without any source of warmth, you begin to feel the effects of hypothermia.',
+        options: [
+            {
+                text: 'RESTART FROM LAST CHECKPOINT',
+                nextText: 79
+            },
+            {
+                text: 'RESTART FROM BEGINNING',
+                nextText: 1
+            }
+        ]
+    },
+    {
+        // act: 4
+        id: 81,
+        text: 'The rest of the night passes without incident, and you are awakened by the first rays of sunlight peeking over the horizon. After stretching and taking a look around, you feel a familiar pang of hunger in your stomach.',
+        options: [
+            {
+                text: 'Continue',
+                nextText: 92,
+                requiredState: (currentState) => currentState.yellowPath === true 
+            },
+            {
+                text: 'Eat a small breakfast from your pack',
+                nextText: 99,
+                requiredState: (currentState) => currentState.yellowPath === false || currentState.yellowPath === undefined
+            },
+        ]
+    },
+    {
+        // act: 5
+        id: 82,
+        text: 'Despite the uneasiness that had been creeping over you, you make the decision to head for the inn. As you step inside, the welcoming warmth of the hearth engulfs you and you feel a sense of relief wash over you. The beds are pricey, but you can afford a small bed in a shared room. Luckily the room appears to be otherwise unoccupied. You collapse onto the bed, exhausted from your journey, and before you know it, you\'re sound asleep.',
+        options: [
+            {
+                text: 'Continue',
+                nextText: 83
+            },
+        ]
+    },
+    {
+        // act: 5
+        id: 83,
+        text: 'Suddenly, you awaken to find yourself being roughly pulled out of bed by a group of strangers. You try to resist, but their grip is strong. You realize with horror that you\'ve being kidnapped by those who you can only guess to be slavers. The room is dark and you can barely make out their faces, but you see the glint of steel in one of their hands. What do you do?',
+        options: [
+            {
+                text: 'Drop supplies and run!',
+                nextText: 85
+            },
+            {
+                text: 'Defend yourself!',
+                nextText: 84
+            },
+        ]
+    },
+    {
+        // act: 5
+        id: 84,
+        text: 'As one of the abductors wraps rope around your ankles, you instinctively lash out with a fierce kick, catching him square in the temple. He crumples to the ground, stunned. Seizing the opportunity, you quickly free your arms from the other men\'s grasp and scramble for your pack. Your hand closes around the handle of your trusty hammer, and you swing it with all your might in a blind fury. The hammer connects with a resounding thud, and you hear one of your assailants yelp in pain. Encouraged, you keep swinging, driving them back with each blow. The would-be kidnappers quickly turn tail, fleeing into the night. Breathless and shaken, you sink to the ground, heart pounding.',
+        options: [
+            {
+                text: 'Continue',
+                nextText: 81
+            },
+        ]
+    },
+    {
+        // act: 5
+        id: 85,
+        text: 'As one of the abductors wraps rope around your ankles, you try to wrench yourself away, but they\'re too strong. The men hold you firmly, preventing any chance of escape. Panic sets in as you realize you\'re helpless. Desperately, you try to wriggle free, but the ropes are too tight. You can feel the rough fibers cutting into your skin, and you start to feel lightheaded from the strain. As your captors begin to drag you away, you make one last attempt to escape, but it\'s futile. Your body is trapped, and there\'s no way out.',
+        options: [
+            {
+                text: 'Continue',
+                nextText: 86
+            },
+        ]
+    },
+    {
+        // act: 5
+        id: 86,
+        text: 'A hood is roughly pulled over your head, obscuring your vision, and you feel yourself being lifted onto the back of a horse. The animal begins to move, its gait uneven and jarring. You try to steady yourself, but the constant motion soon makes you feel sick and disoriented. Time passes in a blur, and you have no idea how long you\'ve been riding.  As the horse continues on its path, the weather grows colder and the wind becomes harsher. Despite your best efforts, you can\'t stop shivering, and your fingers start to go numb.',
+        options: [
+            {
+                text: 'Continue',
+                nextText: 87
+            },
+        ]
+    },
+    {
+        // act: 5
+        id: 87,
+        text: 'Finally, the horse comes to a stop, and you\'re yanked off its back. Your body protests as you\'re hoisted over someone\'s shoulder, the pressure on your stomach uncomfortable. The hood obscures your vision, but you can hear the crunch of snow underfoot and the wind howling through the trees. You\'re too disoriented to struggle, and you feel a twinge of admiration for the man\'s strength as he carries you along effortlessly.',
+        options: [
+            {
+                text: 'Continue',
+                nextText: 88
+            },
+        ]
+    },
+    {
+        // act: 5
+        id: 88,
+        text: 'You are dropped onto a stone floor, the thud echoing throughout the room. You hear your captors muttering amongst themselves, their voices low and indistinguishable. Suddenly, footsteps approach and the men fall silent. A new voice addresses the room, "How went your hunt?" Your heart races as you strain to listen, but your abductors keep their voices inaudible as they reply. You hear the newcomer again, "The manner of its arrival is a sign!" Giddy laughter bounces off the walls and sends a shiver up your spine. "Come! We celebrate tonight and speak to the gods tomorrow!" The men walk off, leaving you to sit in your soiled clothes. You intermittently doze as the night passes, your body aching.',
+        options: [
+            {
+                text: 'Continue',
+                nextText: 89
+            },
+        ]
+    },
+    {
+        // act: 5
+        id: 89,
+        text: 'You\'re roughly grabbed and placed on a familiar shoulder. The man carries you outside, and eventually drops you onto cold stone. The hood is ripped off your face, and you blink in the harsh sunlight, your eyes hurting. As your vision adjusts, you see a large group of people gathered before you, all clad in soft blue robes, their faces gaunt and pale from the cold. You\'re still bound, lying on a waist-high slab of stone. A man dressed in a more ornate azure robe looms over you and addresses the crowd.',
+        options: [
+            {
+                text: 'Continue',
+                nextText: 90
+            },
+        ]
+    },
+    {
+        // act: 5
+        id: 90,
+        text: '"Brothers and sisters, our time has come!" he shouts, his voice echoing across the stone altar. "The dragons have abandoned us, but we will not let their legacy die! We will bring them back, and we will show them that we are worthy of their divine attention!" He holds up the glimmering, ornate egg-shaped object that was found in your possession. "Fate has delivered unto us a sign!" he declares. "This egg, this gift from the gods themselves, is proof that our cause is just! We must continue to sacrifice and appease the dragons, to show them that we are willing to spill blood and offer our lives for their return!" The cultists cheer, their faces twisted into wild grins. You try to struggle against your bonds, but it\'s no use.',
+        options: [
+            {
+                text: 'Continue',
+                nextText: 91
+            },
+        ]
+    },
+    {
+        // act: 5
+        // Ending
+        id: 91,
+        text: 'The man\'s eyes meet yours, and he speaks directly to you. "You will not be the first to offer yourself to the dragons. But you will be the spark that ignites the flame of their blessed return." He raises his voice, "And when they come, they will see that we are their loyal servants, their faithful acolytes, and they will reward us with the power and glory that we so rightfully deserve!" With a final, crazed laugh, the man brings a large ivory knife into view and plunges it into your heart. Your vision fades and and the gathering erupts into chaotic celebration.',
+        options: [
+            {
+                text: 'RESTART FROM LAST CHECKPOINT',
+                nextText: 79
+            },
+            {
+                text: 'RESTART FROM BEGINNING',
+                nextText: 1
+            }
+        ]
+    },
+    {
+        // act: 5
+        id: 92,
+        text: 'Without supplies, the journey ahead will be challenging. The road often presents obstacles that make survival difficult, particularly when it comes to food. How do you plan to sustain yourself along the way?',
+        options: [
+            {
+                text: 'Eat the object',
+                nextText: 93,
+            },
+            {
+                text: 'Hunt for meat',
+                nextText: 94,
+            },
+            {
+                text: 'Forage for food',
+                nextText: 97,
+            }
+        ]
+    },
+    {
+        // act: 5
+        // Ending
+        id: 93,
+        text: 'You examine the object, and note its shape resembles that of an egg, which could indicate it\'s edible. You reach into your pack and retrieve your trusty hammer. After a strong swing, the egg cracks open with a loud noise, and you peer inside. However, a sudden dizziness overtakes you, and your stomach churns, causing you to lose your appetite. In no time, you collapse, succumbing to unconsciousness.',
+        options: [
+            {
+                text: 'RESTART FROM LAST CHECKPOINT',
+                nextText: 79
+            },
+            {
+                text: 'RESTART FROM BEGINNING',
+                nextText: 1
+            }
+        ]
+    },
+    {
+        // act: 5
+        id: 94,
+        text: 'What method will you use to hunt with?',
+        options: [
+            {
+                text: 'Fish',
+                nextText: 95
+            },
+            {
+                text: 'Set Traps',
+                nextText: 96
+            }
+        ]
+    },
+    {
+        // act: 5
+        id: 95,
+        text: 'With a satisfied burp, you lean back. Your hard work has paid off, and your hunger has been satiated.',
+        options: [
+            {
+                text: 'Continue',
+                nextText: 99
+            },
+        ]
+    },
+    {
+        // act: 5
+        id: 96,
+        text: 'Cursing under your breath, you slump back in frustration, realizing that your efforts have been in vain. With no tangible results to show for your endeavors, you make the tough decision to cut your losses and push ahead with your journey, despite your gnawing hunger.',
+        options: [
+            {
+                text: 'Continue',
+                nextText: 99
+            },
+        ]
+    },
+    {
+        // act: 5
+        id: 97,
+        text: 'You meander through the nearby woods and scavenge breakfast from the surrounding foliage. After some time, you assess your findings: a handful of round, vibrant red berries, and assorment of webbed brown mushrooms. What will you choose to eat?',
+        options: [
+            {
+                text: 'Eat neither',
+                nextText: 96
+            },
+            {
+                text: 'Eat both',
+                nextText: 98
+            },
+            {
+                text: 'Eat the mushrooms',
+                nextText: 98
+            },
+            {
+                text: 'Eat the berries',
+                nextText: 95
+            }
+        ]
+    },
+    {
+        // act: 5
+        // Ending
+        id: 98,
+        text: 'Following a satisfying belch, you lean back and feel a deep sense of satisfaction. Your hard work has paid off, and your appetite is finally appeased. You take a moment to relish the feeling before gathering your belongings and continuing your expedition. As you make steady strides, you start to feel unwell. Your head throbs, your stomach churns, and your heart rate becomes irregular. Eventually, you slip into unconsciousness.',
+        options: [
+            {
+                text: 'RESTART FROM LAST CHECKPOINT',
+                nextText: 79
+            },
+            {
+                text: 'RESTART FROM BEGINNING',
+                nextText: 1
+            }
+        ]
+    },
+    {
+        // act: 5
+        id: 99,
+        text: 'As you press on with your journey, you feel a sense of gratitude that the rain has finally subsided, although the sky remains gloomy and the wind relentless. With the prospect of better weather ahead, you begin to believe that you might reach your destination before nightfall.',
+        options: [
+            {
+                text: 'Continue',
+                nextText: 100
+            },
+        ]
+    },
+    {
+        // act: 5
+        id: 100,
+        text: 'After a short while, you encounter a group of six men who have barricaded the road with an overturned wagon. Their appearance is menacing, and they may even be mercenaries. As you draw near, one of them greets you with a wave, "There\'s a toll to continue this way, there is." What do you do?',
+        options: [
+            {
+                text: 'Pay toll',
+                nextText: 103
+            },
+            {
+                text: 'Fight!',
+                nextText: 102
+            },
+            {
+                text: 'Drop supplies and run!',
+                nextText: 101
+            },
+            {
+                text: 'Bluff',
+                nextText: 105,
+                requiredState: (currentState) => currentState.greenPath === false || currentState.greenPath === undefined
+            },
+            {
+                text: 'Bluff',
+                nextText: 104,
+                requiredState: (currentState) => currentState.purplePath === false || currentState.purplePath === undefined
+            },
+        ]
+    },
+    {
+        // act: 5
+        // Ending
+        id: 101,
+        text: 'As you abandon your belongings and flee towards the safety of the trees, a dull thud echoes through the air, and suddenly, an arrow pierces through your chest. You crumple to the ground, succumbing to unconsciousness.',
+        options: [
+            {
+                text: 'RESTART FROM LAST CHECKPOINT',
+                nextText: 79
+            },
+            {
+                text: 'RESTART FROM BEGINNING',
+                nextText: 1
+            }
+        ]
+    },
+    {
+        // act: 5
+        // Ending
+        id: 102,
+        text: 'As you reach into your pack, your fingers brush against the familiar heft of your hammer. With a burst of self-assurance, you draw it out and let out a battle cry as you charge towards the group of men. However, their laughter is deafening as they effortlessly overpower you. The odds of facing six opponents on your own are dismal, even under the most favorable circumstances.',
+        options: [
+            {
+                text: 'RESTART FROM LAST CHECKPOINT',
+                nextText: 79
+            },
+            {
+                text: 'RESTART FROM BEGINNING',
+                nextText: 1
+            }
+        ]
+    },
+    {
+        // act: 5
+        id: 103,
+        text: 'Resigned to the situation, you opt to pay the toll and retrieve your coin purse from your pocket. As you pour out the meager contents into your palm, the mercenaries snicker in contempt. "Is that all you\'ve got?" one of them taunts. "I suppose we\'ll have to take the rest out of your hide." The men advance and beat you savagely until you are bruised and bloodied, then fling you onto the other side of the overturned wagon. You lay there writhing in agony for a few moments before gathering the strength to rise and hobble away, battered and broken.',
+        options: [
+            {
+                text: 'Continue on your Journey',
+                nextText: 113
+            }
+        ]
+    },
+    {
+        // act: 5
+        id: 104,
+        text: 'You approach the group of menacing-looking mercenaries blocking your path, feeling a mix of trepidation and resolve. With a steely gaze, you lock eyes with the apparent leader and speak up, "I couldn\'t help but overhear that the Empire is hiring mercenaries to do their dirty work. But, I wonder, do they know about the extra income you seem to be making from your little side hustle here?" The mercenaries exchange uneasy looks, realizing that they have been caught in their illicit scheme. After a tense moment, the leader grudgingly steps aside, allowing you to pass without further incident.',
+        options: [
+            {
+                text: 'Continue',
+                nextText: 106
+            }
+        ]
+    },
+    {
+        // act: 5
+        id: 105,
+        text: 'Approaching the group of menacing-looking mercenaries blocking your path, you adopt an air of authority. With a confident tone, you declare, "I am a mage from the Citadel of Mages, and I have reason to believe that you are extorting travelers passing through this road. Such behavior is unacceptable and will not be tolerated." The mercenaries exchange uneasy looks, realizing that they have been caught in their illicit scheme. After a tense moment, the leader grudgingly steps aside, allowing you to pass without further incident.',
+        options: [
+            {
+                text: 'Continue',
+                nextText: 106
+            }
+        ]
+    },
+    {
+        // act: 5
+        id: 106,
+        text: 'As you pass by the men you pause. They may have valuable information that could be useful to your journey. The decision weighs heavily on your mind: do you take the risk and try to extract information from them or continue on your journey without further delay?',
+        options: [
+            {
+                text: 'Continue on your journey',
+                nextText: 113
+            },
+            {
+                text: 'Ask Questions',
+                nextText: 107
+            }
+        ]
+    },
+    {
+        // act: 5
+        id: 107,
+        text: 'You take a deep breath and summon your courage, determined to break the tense silence that has fallen over the group of mercenaries. With a careful eye, you gauge their reactions as you recount your journey so far. As you finish your story, the awkward tension in the air becomes even more pronounced, leaving you unsure of how to proceed.',
+        options: [
+            {
+                text: 'Why are mages being displaced?',
+                nextText: 108
+            },
+            {
+                text: 'What can you tell me about dragons?',
+                nextText: 110
+            },
+            {
+                text: 'What can you tell me about the citadel?',
+                nextText: 111,
+                requiredState: (currentState) => currentState.greenPath === false || currentState.greenPath === undefined
+            },
+            {
+                text: 'What can you tell me about the capital?',
+                nextText: 112,
+                requiredState: (currentState) => currentState.purplePath === false || currentState.purplePath === undefined
+            },
+            {
+                text: 'Continue on your journey',
+                nextText: 113
+            }
+        ]
+    },
+    {
+        // act: 5
+        id: 108,
+        text: 'One of the men lets out a hearty laugh, his eyes glinting with amusement. "Looks like they made an enemy of the empire, eh?" he remarks with a smirk.',
+        options: [
+            {
+                text: 'Continue',
+                nextText: 109
+            }
+        ]
+    },
+    {
+        // act: 5
+        id: 109,
+        text: 'An awkward silence fills the air once more, and you can feel the mercenaries\' hostile gazes fixed on you. Their expressions suggest that they are not pleased with your presence.',
+        options: [
+            {
+                text: 'Why are mages being displaced?',
+                nextText: 108
+            },
+            {
+                text: 'What can you tell me about dragons?',
+                nextText: 110
+            },
+            {
+                text: 'What can you tell me about the citadel?',
+                nextText: 111,
+                requiredState: (currentState) => currentState.greenPath === false || currentState.greenPath === undefined
+            },
+            {
+                text: 'What can you tell me about the capital?',
+                nextText: 112,
+                requiredState: (currentState) => currentState.purplePath === false || currentState.purplePath === undefined
+            },
+            {
+                text: 'Continue on your journey',
+                nextText: 113
+            }
+        ]
+    },
+    {
+        // act: 5
+        id: 110,
+        text: 'The group bursts into laughter. "You want us to tell you a fairy tale while we\'re sitting here with weapons pointed your way?" one of them asks between fits of wheezing laughter.',
+        options: [
+            {
+                text: 'Continue',
+                nextText: 109
+            }
+        ]
+    },
+    {
+        // act: 5
+        id: 111,
+        text: 'One of the men shrugs and says, "Spooky stuff goes on in that place. We refuse work anywhere around there anymore." The way they shift uncomfortably and avoid eye contact with you suggests that they\'re hiding something, but it\'s difficult to tell what. You decide to press them for more information, but their guarded demeanor makes it clear that they\'re not willing eloaborate.',
+        options: [
+            {
+                text: 'Continue',
+                nextText: 109
+            }
+        ]
+    },
+    {
+        // act: 5
+        id: 112,
+        text: 'One of them simply shrugs and says, "It\'s big and they pay good." Their lack of enthusiasm for the topic is disappointing, but you sense that they may not have much experience or knowledge about the city.',
+        options: [
+            {
+                text: 'Continue',
+                nextText: 109
+            }
+        ]
+    },
+// Act 6
+    {
+        // act: 6
+        id: 113,
+        text: 'As you make your way down the road, your thoughts drift to the mysterious object in your possession. Its value and purpose remain unknown, and the excitement of unraveling its secrets fuels your eagerness to reach your destination. You quicken your pace, hungry to learn more.',
+        options: [
+            {
+                text: 'Continue',
+                nextText: 5000,
+                requiredState: (currentState) => currentState.greenPath === false || currentState.greenPath === undefined
+            },
+            {
+                text: 'Continue',
+                nextText: 5000,
+                requiredState: (currentState) => currentState.purplePath === false || currentState.purplePath === undefined
+            },
         ]
     },
 
@@ -1368,7 +1871,7 @@ const textNodes = [
         options: [
             {
                 text: 'RESTART FROM LAST CHECKPOINT',
-                nextText: 20
+                nextText: 79
             },
             {
                 text: 'RESTART FROM BEGINNING',
