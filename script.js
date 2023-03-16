@@ -1317,7 +1317,7 @@ const textNodes = [
     {
         // act: 4
         id: 77,
-        text: 'Leaning forward, the bard continues, "The king\'s influence extends far beyond the castle walls, however. He has taken a keen interest in the mages of the citadel, recognizing their power and importance in the empire\'s defense and war efforts. In recent years, he even installed his brother-in-law as their governor. Despite the king\'s strict rule, The Capital remains a bustling hub of activity and trade. Merchants from all over the world come to ply their wares, and the its markets are a riot of color and noise."',
+        text: 'Leaning forward, the bard continues, "The king\'s influence extends far beyond the castle walls, however. He has taken a keen interest in the mages of the citadel, recognizing their power and importance in the empire\'s defense and war efforts. In recent years, he even installed his queen as their governor. Despite the king\'s strict rule, The Capital remains a bustling hub of activity and trade. Merchants from all over the world come to ply their wares, and the its markets are a riot of color and noise."',
         options: [
             {
                 text: 'Continue',
@@ -1340,7 +1340,7 @@ const textNodes = [
     {
         // act: 5
         id: 79,
-        text: 'As you press on, weariness creeps into your bones and the elements weigh heavily upon you. With the sky turning black and shadows deeping across the landscape, you scour your surroundings for a safe haven to rest for the night. A clearing in the distance catches your eye, rich with firewood for warmth. However, its exposed location raises the fear of lurking predators. A nearby cave entrance seems a promising refuge against the weather, but the dangers within are unknown and unsettling. Finally, an inn on the horizon comes into view, but the sight of its questionable patrons gives you pause. You weigh your options carefully.',
+        text: 'As you press on, weariness creeps into your bones and the elements weigh heavily upon you. With the sky turning black and shadows deeping across the landscape, you scour your surroundings for a safe haven to rest for the night. A clearing in the distance catches your eye, rich with firewood for warmth. However, its exposed location raises the fear of lurking predators. A nearby cave entrance seems a promising refuge against the weather, but the dangers within are unknown and unsettling. Finally, an inn on the horizon comes into view, but you\'re unsure if it is even open. You weigh your options carefully.',
         options: [
             {
                 text: 'Camp in the cave',
@@ -1465,7 +1465,7 @@ const textNodes = [
     {
         // act: 5
         id: 88,
-        text: 'You are dropped onto a stone floor, the thud echoing throughout the room. You hear your captors muttering amongst themselves, their voices low and indistinguishable. Suddenly, footsteps approach and the men fall silent. A new voice addresses the room, "How went your hunt?" Your heart races as you strain to listen, but your abductors keep their voices inaudible as they reply. You hear the newcomer again, "The manner of its arrival is a sign!" Giddy laughter bounces off the walls and sends a shiver up your spine. "Come! We celebrate tonight and speak to the gods tomorrow!" The men walk off, leaving you to sit in your soiled clothes. You intermittently doze as the night passes, your body aching.',
+        text: 'You are dropped onto a stone floor, the thud echoing throughout the room. You hear your captors muttering amongst themselves, their voices low and indistinguishable. Suddenly, footsteps approach and the men fall silent. A new voice addresses the room, "How went your hunt?" Your heart races as you strain to listen, but your abductors keep their voices inaudible as they reply. You hear the newcomer again, "The manner of its arrival is a sign!" Giddy laughter bounces off the walls and sends a shiver up your spine. "Come! We celebrate tonight and speak to the gods tomorrow!" The group walks off, leaving you to sit in your soiled clothes. You intermittently doze as the night passes, your body aching.',
         options: [
             {
                 text: 'Continue',
@@ -1476,7 +1476,7 @@ const textNodes = [
     {
         // act: 5
         id: 89,
-        text: 'You\'re roughly grabbed and placed on a familiar shoulder. The man carries you outside, and eventually drops you onto cold stone. The hood is ripped off your face, and you blink in the harsh sunlight, your eyes hurting. As your vision adjusts, you see a large group of people gathered before you, all clad in soft blue robes, their faces gaunt and pale from the cold. You\'re still bound, lying on a waist-high slab of stone. A man dressed in a more ornate azure robe looms over you and addresses the crowd.',
+        text: 'You\'re roughly grabbed and placed on a familiar shoulder. The man carries you outside, and eventually drops you onto cold stone. The hood is ripped off your face, and you blink in the harsh sunlight, your eyes hurting. As your vision adjusts, you see a large group of people gathered before you, all clad in soft crimson robes, their faces gaunt and pale from the cold. You\'re still bound, lying on a waist-high slab of stone. A woman dressed in a more intricate, red robe looms over you and addresses the crowd.',
         options: [
             {
                 text: 'Continue',
@@ -1487,7 +1487,7 @@ const textNodes = [
     {
         // act: 5
         id: 90,
-        text: '"Brothers and sisters, our time has come!" he shouts, his voice echoing across the stone altar. "The dragons have abandoned us, but we will not let their legacy die! We will bring them back, and we will show them that we are worthy of their divine attention!" He holds up the glimmering, ornate egg-shaped object that was found in your possession. "Fate has delivered unto us a sign!" he declares. "This egg, this gift from the gods themselves, is proof that our cause is just! We must continue to sacrifice and appease the dragons, to show them that we are willing to spill blood and offer our lives for their return!" The cultists cheer, their faces twisted into wild grins. You try to struggle against your bonds, but it\'s no use.',
+        text: '"Brothers and sisters, our time has come!" she shouts, her voice echoing across the stone altar. "The dragons have abandoned us, but we will not let their legacy die! We will bring them back, and we will show them that we are worthy of their divine attention!" She holds up the glimmering, ornate egg-shaped object that was found in your possession. "Fate has delivered unto us a sign!" she declares. "This egg, this gift from the gods themselves, is proof that our cause is just! We must continue to sacrifice and appease the dragons, to show them that we are willing to spill blood and offer our lives for their return!" The cultists cheer, their faces twisted into wild grins. You try to struggle against your bonds, but it\'s no use.',
         options: [
             {
                 text: 'Continue',
@@ -1499,7 +1499,7 @@ const textNodes = [
         // act: 5
         // Ending
         id: 91,
-        text: 'The man\'s eyes meet yours, and he speaks directly to you. "You will not be the first to offer yourself to the dragons. But you will be the spark that ignites the flame of their blessed return." He raises his voice, "And when they come, they will see that we are their loyal servants, their faithful acolytes, and they will reward us with the power and glory that we so rightfully deserve!" With a final, crazed laugh, the man brings a large ivory knife into view and plunges it into your heart. Your vision fades and and the gathering erupts into chaotic celebration.',
+        text: 'The woman\'s eyes meet yours, and she speaks directly to you. "You will not be the first to offer yourself to the dragons. But you will be the spark that ignites the flame of their blessed return." She raises his voice, "And when they come, they will see that we are their loyal servants, their faithful acolytes, and they will reward us with the power and glory that we so rightfully deserve!" With a final, crazed laugh, the woman brings a large ivory knife into view and plunges it into your heart. Your vision fades and and the gathering erupts into chaotic celebration.',
         options: [
             {
                 text: 'RESTART FROM LAST CHECKPOINT',
@@ -1852,16 +1852,189 @@ const textNodes = [
         options: [
             {
                 text: 'Continue',
-                nextText: 5000,
+                setState: {id: 113},
+                nextText: 114,
                 requiredState: (currentState) => currentState.greenPath === false || currentState.greenPath === undefined
             },
             {
                 text: 'Continue',
+                setState: {id: 113},
                 nextText: 5000,
                 requiredState: (currentState) => currentState.purplePath === false || currentState.purplePath === undefined
             },
         ]
     },
+    {
+        // act: 6
+        id: 114,
+        text: 'As you make your way towards the Citadel, the dense trees gradually give way to reveal the imposing tower perched on the rocky cliff face. As you approach, you can feel the weight of its history and importance bearing down on you. The steeple itself is a magnificent sight to behold, rising up from the rocky cliff face and seeming to touch the sky. The winding path that leads up to it looks daunting, with steep inclines and sharp twists and turns. You can\'t help but wonder how the mages who reside within its walls manage to climb it every day. As you approach the path, you notice a boy with an ox standing nearby. He seems to be watching you intently, as though he\'s expecting something from you.',
+        options: [
+            {
+                text: 'Talk to the boy',
+                nextText: 116
+            },
+            {
+                text: 'Continue up the path',
+                nextText: 115
+            }
+        ]
+    },
+    {
+        // act: 6
+        id: 115,
+        text: 'As you start your ascent up the steep path towards the Citadel, you can feel the strain on your legs and the burning of your muscles. The path seems to go on endlessly, with each turn revealing another steep incline. Despite the challenge, your anticipation and excitement push you forward, determined to uncover the secrets and knowledge that lay within the walls of the tower. As you finally reach the top of the path, you\'re breathing heavily and your body is drenched in sweat. You take a moment to catch your breath and marvel at the stunning view from the top of the cliff. The beauty of the surrounding landscape is magnified from this height, and you can\'t help but feel a sense of awe and reverence.',
+        options: [
+            {
+                text: 'Continue',
+                nextText: 118
+            }
+        ]
+    },
+    {
+        // act: 6
+        id: 116,
+        text: 'You approach him cautiously, unsure of what to expect. The boy greets you warmly, his smile putting you at ease. He seems to sense your purpose and asks if you\'re here to see the mages within the Citadel. You nod, and the boy\'s eyes light up with excitement. He tells you that the governor is currently accepting visitors. He offers you a ride on his ox up the path, which at this point, seems like an appealing option after the tiring journey.',
+        options: [
+            {
+                text: 'Accept offer',
+                nextText: 117
+            },
+            {
+                text: 'Refuse offer',
+                nextText: 115
+            }
+        ]
+    },
+    {
+        // act: 6
+        id: 117,
+        text: 'You accept his kind offer and climb onto the ox\'s back, feeling its powerful muscles as it starts moving up the steep path. The boy seems to be a local, and you can\'t help but wonder what he knows about the Citadel and its residents. You ask him about the mages, and he tells you that they are some of the most powerful and skilled practitioners of alchemy in the land. He speaks with admiration and respect for their abilities, and you can sense his genuine awe for their magic. As you near the top, the boy expertly steers the the animal towards a small platform, and you dismount, feeling grateful for the ride. You thank the boy, and he waves goodbye with a big smile before returning down the path with the ox.',
+        options: [
+            {
+                text: 'Continue',
+                nextText: 118
+            }
+        ]
+    },
+    {
+        // act: 6
+        id: 118,
+        text: 'You approach the towering twin doors of the citadel, marveling at their size and sturdiness. The doors are made of solid oak and are elaborately decorated with an ornate iron knocker and a matching handle, sculpted to look like branches. You grasp the knocker firmly and strike the door, feeling the vibration echo through your hand and into your bones. After a few moments, one of the doors opens with a creak, revealing a glimpse of the citadel\'s interior. You\'re greeted by the warm smile of a woman wearing a thick, vibrant green robe. The robe\'s sleeves and hood are intricately woven with patterns that seem to shimmer in the light, lending an air of enchantment to her appearance. Her long, gray hair is tied back into a braid, which falls over her shoulder as she welcomes you inside.',
+        options: [
+            {
+                text: 'Continue',
+                nextText: 119
+            }
+        ]
+    },
+    {
+        // act: 6
+        id: 119,
+        text: 'As you step through the doors, you\'re immediately struck by the grandeur of the interior. The circular room is massive, with soaring ceilings and tall, arched windows that let in streams of sunlight. Multiple fireplaces line the walls, casting a warm glow that illuminates the overflowing bookcases and plush chairs and couches scattered throughout the room. The air is thick with the scent of old books and burning wood. The woman leads you to a cozy hearth with a small pot hanging over the flames. You settle into a comfortable armchair and she pours steaming tea into two delicate cups. The tea is fragrant and calming, and you feel yourself relax as you take a sip.',
+        options: [
+            {
+                text: 'Continue',
+                nextText: 120
+            }
+        ]
+    },
+    {
+        // act: 6
+        id: 120,
+        text: 'As you start to pull out the mysterious object from your bag, the woman\'s expression quickly changes. Her eyes widen with fear, and she frantically pushes it back into your bag before covering it with the flap. She urgently places a finger on her lips, gesturing for you to follow her out of the room. You can feel her grip tighten on your arm as she leads you up a a curved flight of stairs and through a labyrinth of hallways, before finally shoving you into a large room. "Stay here and don\'t move," she whispers before swiftly shutting the door behind her, leaving you alone once again.',
+        options: [
+            {
+                text: 'Continue',
+                nextText: 121
+            }
+        ]
+    },
+    {
+        // act: 6
+        id: 121,
+        text: 'As you take in the vast room, your attention is drawn to the magnificent view outside the windows overlooking the cliff face. The long wooden table in the center of the room is flanked by a few chairs and bookshelves, which match those in the hearth room below. Suddenly, the door bursts open, revealing a short and stocky man dressed in a long, more elaborately decorated green robe. The complex designs on his robe catch your eye, and he wastes no time in demanding that you tell him everything.',
+        options: [
+            {
+                text: 'Tell your story',
+                nextText: 123
+            },
+            {
+                text: 'Ask Questions',
+                nextText: 122
+            },
+        ]
+    },
+    {
+        // act: 6
+        id: 122,
+        text: 'After coming this far, you feel entitled to some answers before proceeding any further. They clearly know something about the egg-like object. You assertively request that he explain what they know about the egg-shaped object before you reveal your own story. His face contorts in anger as he responds, "Time is of the essence. We cannot waste it on trivialities. She will arrive shortly, and I need to know how you acquired the stone."',
+        options: [
+            {
+                text: 'Tell your story',
+                nextText: 123
+            }
+        ]
+    },
+    {
+        // act: 6
+        id: 123,
+        text: 'You quickly recount your tale, and pull out the mysterious object for the mage to inspect. His face contorts in shock and he mutters a curse under his breath. He promptly removes a stone from the wall, revealing a small cavity, and carefully places the object inside before replacing the stone. Turning to you, he grips your shoulders firmly and locks eyes with you. "You must not speak of this to the governor," he implores. "There will be dire consequences if she and the king become aware of its existence." Just then, the woman with the long braid enters the room, her face still visibly shaken. "The governor is here," she announces tremulously.',
+        options: [
+            {
+                text: 'Continue',
+                nextText: 124
+            }
+        ]
+    },
+    {
+        // act: 6
+        id: 124,
+        text: 'The two mages guide you through the labyrinthine corridors and down the stairs. Exiting through a side door, you find yourself in a courtyard that leads to a grand dining hall. Rows of long tables stretch across the room, with a raised platform at the center where the governor\'s table sits. The male mage quickly ushers you to a table in the back of the room and advises you to keep a low profile, but before he can finish, a commotion at the entrance catches your attention. Turning to look, you see a tall, regal woman entering the room. Her golden hair cascades down her back, and she moves with a graceful air of authority. As she approaches, you can feel her eyes fixed upon you and the mage beside you.',
+        options: [
+            {
+                text: 'Continue',
+                nextText: 125
+            }
+        ]
+    },
+    {
+        // act: 6
+        id: 125,
+        text: 'As she draws closer, you can\'t help but feel intimidated by her regal presence. Her elegant demeanor and the crown on her head only serve to further emphasize her authority. She greets you with a warm smile and turns to the mage standing beside you, "Ah, I heard we had a mysterious visitor. Is this the one?" The mage chuckles half-heartedly, "Just a relative visiting, Your Highness, nothing mysterious." He places his hand on your shoulder. The governor\'s face lights up, "Even better! Perhaps you can assist me in dealing with this stubborn Archmage." She motions towards her table, "Please, join me. You will have a place of honor at my side."',
+        options: [
+            {
+                text: 'Continue',
+                nextText: 126
+            }
+        ]
+    },
+    {
+        // act: 6
+        id: 126,
+        text: 'As she invites you to join her at the head table, you can\'t help but feel a sense of unease. The male mage, apparently the archmage, seems tense, and there\'s a hint of worry in his eyes. You\'re seated between the regent governor and a visiting duchess, while the archmage is on the governor\'s other side and keeps shooting you worried glances. Despite the tension, the meal commences, and the conversation flows freely. Her highness is a captivating storyteller, keeping you involved in the discussions going on around you. At some point the arxhmage gets up and leaves the room, shooting you a meaningful glance.',
+        options: [
+            {
+                text: 'Continue',
+                nextText: 127
+            }
+        ]
+    },
+    {
+        // act: 6
+        id: 127,
+        text: 'The meal gradually comes to an end, leaving you feeling pleasantly sated but somewhat disoriented from the sumptuous feast. As you lean back in your seat, the afterglow of the mead and the warmth of the hearth combine to create a cozy haze in your mind. You gaze over at the governer, the queen, whose hair appears to glow in the soft firelight, and she catches your eye with a dazzling smile. "I can\'t help but wonder, what really brings you here?" she inquires, fixing her gaze intently upon you.',
+        options: [
+            {
+                text: 'Tell her the truth',
+                nextText: 128
+            },
+            {
+                text: 'Lie to her',
+                nextText: 5000
+            }
+        ]
+    },
+
 
 // END DEMO
     {
