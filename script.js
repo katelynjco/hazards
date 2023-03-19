@@ -1295,7 +1295,7 @@ const textNodes = [
     {
         // act: 4
         id: 75,
-        text: 'Leaning forward, the bard continues, "But with great power comes great responsibility, as they say. The mages are constantly under scrutiny from the Empire, who closely monitor their activities to ensure that their magic is not used for nefarious purposes. The consequences of a rogue mage wielding the power of alchemy could be catastrophic. Despite this, the mages continue to push the boundaries of their craft, experimenting with new forms of alchemy and expanding their understanding of the magical forces that shape the world. It is a never-ending pursuit of knowledge and power."',
+        text: 'Leaning forward, the bard continues, "But with great power comes great responsibility, as they say. The mages are constantly under scrutiny from the Empire, who closely monitor their activities to ensure that their magic is not used for nefarious purposes. The king even appointed the queen as the mage\'s govonor. The consequences of a rogue mage wielding the power of alchemy could be catastrophic. Despite this, the mages continue to push the boundaries of their craft, experimenting with new forms of alchemy and expanding their understanding of the magical forces that shape the world. It is a never-ending pursuit of knowledge and power."',
         options: [
             {
                 text: 'Continue',
@@ -1306,7 +1306,7 @@ const textNodes = [
     {
         // act: 4
         id: 76,
-        text: 'The bard nods thoughtfully, "The empire\'s capital, known simply as The Capital, is a sight to behold. Positioned on a rocky hill overlooking the river and the road that leads to it, it boasts massive fortified gates that see a constant stream of foot traffic. Inside the city walls stands a towering castle, the seat of the empire\'s power and the residence of the king. From there, he governs the empire with a strict hand, ensuring that his people are kept safe and that his rule is absolute."',
+        text: 'The bard nods thoughtfully, "The empire\'s capital, known simply as The Capital, is a sight to behold. Positioned on a rocky hill overlooking the road that leads to it, it boasts massive fortified gates that see a constant stream of foot traffic. Inside the city walls stands a towering castle, the seat of the empire\'s power and the residence of the king. From there, he governs the empire with a strict hand, ensuring that his people are kept safe and that his rule is absolute."',
         options: [
             {
                 text: 'Continue',
@@ -1859,13 +1859,14 @@ const textNodes = [
             {
                 text: 'Continue',
                 setState: {id: 113},
-                nextText: 5000,
+                nextText: 150,
                 requiredState: (currentState) => currentState.purplePath === false || currentState.purplePath === undefined
             },
         ]
     },
+// Act 6A
     {
-        // act: 6
+        // act: 6A
         id: 114,
         text: 'As you make your way towards the Citadel, the dense trees gradually give way to reveal the imposing tower perched on the rocky cliff face. As you approach, you can feel the weight of its history and importance bearing down on you. The steeple itself is a magnificent sight to behold, rising up from the rocky cliff face and seeming to touch the sky. The winding path that leads up to it looks daunting, with steep inclines and sharp twists and turns. You can\'t help but wonder how the mages who reside within its walls manage to climb it every day. As you approach the path, you notice a boy with an ox standing nearby. He seems to be watching you intently, as though he\'s expecting something from you.',
         options: [
@@ -1880,7 +1881,7 @@ const textNodes = [
         ]
     },
     {
-        // act: 6
+        // act: 6A
         id: 115,
         text: 'As you start your ascent up the steep path towards the Citadel, you can feel the strain on your legs and the burning of your muscles. The path seems to go on endlessly, with each turn revealing another steep incline. Despite the challenge, your anticipation and excitement push you forward, determined to uncover the secrets and knowledge that lay within the walls of the tower. As you finally reach the top of the path, you\'re breathing heavily and your body is drenched in sweat. You take a moment to catch your breath and marvel at the stunning view from the top of the cliff. The beauty of the surrounding landscape is magnified from this height, and you can\'t help but feel a sense of awe and reverence.',
         options: [
@@ -1891,9 +1892,9 @@ const textNodes = [
         ]
     },
     {
-        // act: 6
+        // act: 6A
         id: 116,
-        text: 'You approach him cautiously, unsure of what to expect. The boy greets you warmly, his smile putting you at ease. He seems to sense your purpose and asks if you\'re here to see the mages within the Citadel. You nod, and the boy\'s eyes light up with excitement. He tells you that the governor is currently accepting visitors. He offers you a ride on his ox up the path, which at this point, seems like an appealing option after the tiring journey.',
+        text: 'You approach him cautiously, unsure of what to expect. The boy greets you warmly, his smile putting you at ease. He seems to sense your purpose and asks if you\'re here to see the mages within the Citadel. You nod, and the boy\'s eyes light up with excitement. He tells you that the governor regent is currently accepting visitors. He offers you a ride on his ox up the path, which at this point, seems like an appealing option after the tiring journey.',
         options: [
             {
                 text: 'Accept offer',
@@ -1906,7 +1907,7 @@ const textNodes = [
         ]
     },
     {
-        // act: 6
+        // act: 6A
         id: 117,
         text: 'You accept his kind offer and climb onto the ox\'s back, feeling its powerful muscles as it starts moving up the steep path. The boy seems to be a local, and you can\'t help but wonder what he knows about the Citadel and its residents. You ask him about the mages, and he tells you that they are some of the most powerful and skilled practitioners of alchemy in the land. He speaks with admiration and respect for their abilities, and you can sense his genuine awe for their magic. As you near the top, the boy expertly steers the the animal towards a small platform, and you dismount, feeling grateful for the ride. You thank the boy, and he waves goodbye with a big smile before returning down the path with the ox.',
         options: [
@@ -1917,7 +1918,7 @@ const textNodes = [
         ]
     },
     {
-        // act: 6
+        // act: 6A
         id: 118,
         text: 'You approach the towering twin doors of the citadel, marveling at their size and sturdiness. The doors are made of solid oak and are elaborately decorated with an ornate iron knocker and a matching handle, sculpted to look like branches. You grasp the knocker firmly and strike the door, feeling the vibration echo through your hand and into your bones. After a few moments, one of the doors opens with a creak, revealing a glimpse of the citadel\'s interior. You\'re greeted by the warm smile of a woman wearing a thick, vibrant green robe. The robe\'s sleeves and hood are intricately woven with patterns that seem to shimmer in the light, lending an air of enchantment to her appearance. Her long, gray hair is tied back into a braid, which falls over her shoulder as she welcomes you inside.',
         options: [
@@ -1928,7 +1929,7 @@ const textNodes = [
         ]
     },
     {
-        // act: 6
+        // act: 6A
         id: 119,
         text: 'As you step through the doors, you\'re immediately struck by the grandeur of the interior. The circular room is massive, with soaring ceilings and tall, arched windows that let in streams of sunlight. Multiple fireplaces line the walls, casting a warm glow that illuminates the overflowing bookcases and plush chairs and couches scattered throughout the room. The air is thick with the scent of old books and burning wood. The woman leads you to a cozy hearth with a small pot hanging over the flames. You settle into a comfortable armchair and she pours steaming tea into two delicate cups. The tea is fragrant and calming, and you feel yourself relax as you take a sip.',
         options: [
@@ -1939,7 +1940,7 @@ const textNodes = [
         ]
     },
     {
-        // act: 6
+        // act: 6A
         id: 120,
         text: 'As you start to pull out the mysterious object from your bag, the woman\'s expression quickly changes. Her eyes widen with fear, and she frantically pushes it back into your bag before covering it with the flap. She urgently places a finger on her lips, gesturing for you to follow her out of the room. You can feel her grip tighten on your arm as she leads you up a a curved flight of stairs and through a labyrinth of hallways, before finally shoving you into a large room. "Stay here and don\'t move," she whispers before swiftly shutting the door behind her, leaving you alone once again.',
         options: [
@@ -1950,7 +1951,7 @@ const textNodes = [
         ]
     },
     {
-        // act: 6
+        // act: 6A
         id: 121,
         text: 'As you take in the vast room, your attention is drawn to the magnificent view outside the windows overlooking the cliff face. The long wooden table in the center of the room is flanked by a few chairs and bookshelves, which match those in the hearth room below. Suddenly, the door bursts open, revealing a short and stocky man dressed in a long, more elaborately decorated green robe. The complex designs on his robe catch your eye, and he wastes no time in demanding that you tell him everything.',
         options: [
@@ -1965,9 +1966,9 @@ const textNodes = [
         ]
     },
     {
-        // act: 6
+        // act: 6A
         id: 122,
-        text: 'After coming this far, you feel entitled to some answers before proceeding any further. They clearly know something about the egg-like object. You assertively request that he explain what they know about the egg-shaped object before you reveal your own story. His face contorts in anger as he responds, "Time is of the essence. We cannot waste it on trivialities. She will arrive shortly, and I need to know how you acquired the stone."',
+        text: 'After coming this far, you feel entitled to some answers before proceeding any further. They clearly know something about the egg-like object. You demand that he explain what they know before you reveal your own story. His face twists in anger as he responds, "Time is of the essence. We cannot waste it on trivialities. She will arrive shortly, and I need to know how you acquired the stone."',
         options: [
             {
                 text: 'Tell your story',
@@ -1976,9 +1977,9 @@ const textNodes = [
         ]
     },
     {
-        // act: 6
+        // act: 6A
         id: 123,
-        text: 'You quickly recount your tale, and pull out the mysterious object for the mage to inspect. His face contorts in shock and he mutters a curse under his breath. He promptly removes a stone from the wall, revealing a small cavity, and carefully places the object inside before replacing the stone. Turning to you, he grips your shoulders firmly and locks eyes with you. "You must not speak of this to the governor," he implores. "There will be dire consequences if she and the king become aware of its existence." Just then, the woman with the long braid enters the room, her face still visibly shaken. "The governor is here," she announces tremulously.',
+        text: 'You quickly recount your tale, and pull out the mysterious object for the mage to inspect. His face contorts in shock and he mutters a curse under his breath. He promptly removes a rock from the wall, revealing a small cavity, and carefully places the object inside before replacing the rock. Turning to you, he grips your shoulders firmly and locks eyes with you. "You must not speak of this to the governor," he implores. "There will be dire consequences if she and the king become aware of its existence." Just then, the woman with the long braid enters the room, her face still visibly shaken. "The regent governor is here," she announces tremulously.',
         options: [
             {
                 text: 'Continue',
@@ -1987,9 +1988,9 @@ const textNodes = [
         ]
     },
     {
-        // act: 6
+        // act: 6A
         id: 124,
-        text: 'The two mages guide you through the labyrinthine corridors and down the stairs. Exiting through a side door, you find yourself in a courtyard that leads to a grand dining hall. Rows of long tables stretch across the room, with a raised platform at the center where the governor\'s table sits. The male mage quickly ushers you to a table in the back of the room and advises you to keep a low profile, but before he can finish, a commotion at the entrance catches your attention. Turning to look, you see a tall, regal woman entering the room. Her golden hair cascades down her back, and she moves with a graceful air of authority. As she approaches, you can feel her eyes fixed upon you and the mage beside you.',
+        text: 'The two mages guide you through the labyrinthine corridors and down the stairs. Exiting through a side door, you find yourself in a courtyard that leads to a grand dining hall. Rows of long tables stretch across the room, with a raised platform at the center where the governoring regent\'s table sits. The male mage quickly ushers you to a table in the back of the room and advises you to keep a low profile, but before he can finish, a commotion at the entrance catches your attention. Turning to look, you see a tall, regal woman entering the room. Her golden hair cascades down her back, and she moves with a graceful air of authority. As she approaches, you can feel her eyes fixed upon you and the mage beside you.',
         options: [
             {
                 text: 'Continue',
@@ -1998,9 +1999,9 @@ const textNodes = [
         ]
     },
     {
-        // act: 6
+        // act: 6A
         id: 125,
-        text: 'As she draws closer, you can\'t help but feel intimidated by her regal presence. Her elegant demeanor and the crown on her head only serve to further emphasize her authority. She greets you with a warm smile and turns to the mage standing beside you, "Ah, I heard we had a mysterious visitor. Is this the one?" The mage chuckles half-heartedly, "Just a relative visiting, Your Highness, nothing mysterious." He places his hand on your shoulder. The governor\'s face lights up, "Even better! Perhaps you can assist me in dealing with this stubborn Archmage." She motions towards her table, "Please, join me. You will have a place of honor at my side."',
+        text: 'As she draws closer, you can\'t help but feel intimidated by her regal presence. Her elegant demeanor and the crown on her head only serve to further emphasize her authority. She greets you with a warm smile and turns to the mage standing beside you, "Ah, I heard we had a mysterious visitor. Is this the one?" The mage chuckles half-heartedly, "Just a relative visiting, Your Highness, nothing mysterious." He places his hand on your shoulder. The regent\'s face lights up, "Even better! Perhaps you can assist me in dealing with this stubborn Archmage." She motions towards her table, "Please, join me. You will have a place of honor at my side."',
         options: [
             {
                 text: 'Continue',
@@ -2009,9 +2010,9 @@ const textNodes = [
         ]
     },
     {
-        // act: 6
+        // act: 6A
         id: 126,
-        text: 'As she invites you to join her at the head table, you can\'t help but feel a sense of unease. The male mage, apparently the archmage, seems tense, and there\'s a hint of worry in his eyes. You\'re seated between the regent governor and a visiting duchess, while the archmage is on the governor\'s other side and keeps shooting you worried glances. Despite the tension, the meal commences, and the conversation flows freely. Her highness is a captivating storyteller, keeping you involved in the discussions going on around you. At some point the arxhmage gets up and leaves the room, shooting you a meaningful glance.',
+        text: 'As she invites you to join her at the head table, you can\'t help but feel a sense of unease. The male mage, apparently the archmage, seems tense, and there\'s a hint of worry in his eyes. You\'re seated between the regent governor and a visiting duchess, while the archmage is on the governor\'s other side and keeps shooting you worried glances. Despite the tension, the meal commences, and the conversation flows freely. Her Highness is a captivating storyteller, keeping you involved in the discussions going on around you. As the evening wears on, the archmage abruptly stands and exits the room, shooting you a significant look before disappearing from sight. You wait for the opportune moment to follow him.',
         options: [
             {
                 text: 'Continue',
@@ -2020,9 +2021,9 @@ const textNodes = [
         ]
     },
     {
-        // act: 6
+        // act: 6A
         id: 127,
-        text: 'The meal gradually comes to an end, leaving you feeling pleasantly sated but somewhat disoriented from the sumptuous feast. As you lean back in your seat, the afterglow of the mead and the warmth of the hearth combine to create a cozy haze in your mind. You gaze over at the governer, the queen, whose hair appears to glow in the soft firelight, and she catches your eye with a dazzling smile. "I can\'t help but wonder, what really brings you here?" she inquires, fixing her gaze intently upon you.',
+        text: 'The feast gradually comes to an end, leaving you feeling pleasantly sated but somewhat disoriented from the resplendent dinner. As you lean back in your seat, the afterglow of the mead and the warmth of the hearth combine to create a cozy haze in your mind. You gaze over at the governor, the queen, whose hair appears to glow in the soft firelight, and she catches your eye with a dazzling smile. "I can\'t help but wonder, what really brings you here?" she inquires, fixing her gaze intently upon you.',
         options: [
             {
                 text: 'Tell her the truth',
@@ -2030,6 +2031,811 @@ const textNodes = [
             },
             {
                 text: 'Lie to her',
+                nextText: 142
+            }
+        ]
+    },
+    {
+        // act: 6A
+        id: 128,
+        text: 'You find yourself lost in her captivating look, and the fog in your head prevents you from withholding the truth. You recount your journey in its entirety, including the egg, and she listens intently without any visible reaction. However, as you finish your story, a pang of guilt overcomes you, and you plead with her to keep the object a secret. She nods solemnly in agreement, assuring you that she won\'t tell a soul. You let out a sigh of relief.',
+        options: [
+            {
+                text: 'Continue',
+                nextText: 129
+            }
+        ]
+    },
+    {
+        // act: 6A
+        id: 129,
+        text: 'The queen\'s beaming smile catches your attention once again, as she leans in closer and whispers in a hushed tone, "Did you know that the capital is hosting a grand festival in just a couple days?" You can feel her excitement as she continues, "I would be honored if you joined me for the festivities!" Your head is still spinning from the extravagant dinner and the mead, you consider her invitation, knowing that attending such a grand event with the queen herself would be an incredible experience.',
+        options: [
+            {
+                text: 'Accept offer',
+                nextText: 130
+            },
+            {
+                text: 'Decline offer',
+                nextText: 133
+            }
+        ]
+    },
+    {
+        // act: 6A
+        id: 130,
+        text: 'As you accept the queen\'s invitation, a surge of excitement rushes through you, causing your heart to race. The regent cheers, her face flushed with enthusiasm, and exclaims, "Wonderful! We set off tonight!" You can\'t believe it\'s happening so soon, and you pause, looking at her with a hint of confusion. "Tonight?" you repeat, trying to keep up with her enthusiasm. Her smile remains as bright as ever as she confirms, "Yes, tonight! The journey takes about a day by carriage, and I need to be there early to attend to some important matters." Despite feeling a bit overwhelmed, you can\'t help but feel honored and privileged to be traveling alongside the queen. She notices your hesitation and reassures you, "My guards will escort you to my carriage, and I\'ll join you shortly after. Everything will be taken care of."',
+        options: [
+            {
+                text: 'Continue',
+                nextText: 131
+            }
+        ]
+    },
+    {
+        // act: 6A
+        id: 131,
+        text: 'You can\'t help but feel a sense of disappointment as you realize there won\'t be a chance to speak to the archmage before departing. With a heavy heart, you allow yourself to be escorted outside and down the path. As you reach the bottom of the path, an elegant carriage awaits by the roadside, ready to transport you to the capital. You climb inside and wait for the queen, feeling a mix of excitement and nervousness. Eventually, she joins you, her warm smile putting you at ease. The two of you set off on the journey towards the capital, the carriage rolling along the winding roads. However, the weariness from your long journey catches up with you, causing you to drift off to sleep for much of the journey. You wake up intermittently, catching glimpses of the passing scenery and her majesty\'s regal form beside you.',
+        options: [
+            {
+                text: 'Continue',
+                nextText: 132
+            }
+        ]
+    },
+    {
+        // act: 6A
+        id: 132,
+        text: 'As the carriage pulls through the castle gate, a full day has passed, and the sky has turned dark once again. You feel a sense of awe as you are escorted inside the castle, marveling at the grandeur of the place. Your escort leads you to a large, elaborate room, where you find a comfortable, oversized bed and a warm plate of food waiting on the table. Despite sleeping for most of the journey, you still feel drowsy, and the idea of sinking into the soft mattress and feasting on the delicious meal is irresistible. After satisfying your hunger, you drift off into a deep sleep, enveloped in the luxurious comforts of the room. In the morning, you are awoken by a gentle knock on your door, and a page invites you to take part in the opening festivities of the festival. He passes along the queen\'s condolences for not being able to accompany you this morning and her promise to join you later in the day.',
+        options: [
+            {
+                text: 'Continue',
+                nextText: 5000
+                // TO 6B FESTIVAL
+            }
+        ]
+    },
+    {
+        // act: 6A
+        id: 133,
+        text: 'Your head still foggy, you decline the governor\'s offer with a heavy heart. "What a shame," she says, a hint of sadness in her voice, indicating her genuine disappointment. Dabbing her mouth, she gracefully rises from her seat and says, "If you\'ll excuse me, I do have matters to attend to. My guards will escort you to your quarters." With that, she sweeps elegantly out of the room, leaving you to your thoughts. Soon enough, you are escorted to a cozy room higher up in the tower. You crawl into the large, clean bed, feeling grateful for the comfort it provides. The afterglow of the mead and the warmth of the hearth lull you to sleep, and you drift off into a peaceful slumber.',
+        options: [
+            {
+                text: 'Continue',
+                nextText: 134
+            }
+        ]
+    },
+    {
+        // act: 6A
+        id: 134,
+        text: 'You awaken from a deep slumber that lasts for over a day, startled by the sound of your bedroom door crashing open. The archmage bursts in, his face red with fury as he scream uncontrollably, "You have doomed us! You fool! You have absolutely doomed us!" You sit up, rubbing the sleep from your eyes, attempting to understand what has caused the mage to act in such a frantic manner. "What\'s going on?" you ask, trying to make sense of the situation as the man rushes towards the small window in your room.',
+        options: [
+            {
+                text: 'Continue',
+                nextText: 135
+            }
+        ]
+    },
+    {
+        // act: 6A
+        id: 135,
+        text: 'You join the archmage at the window and are met with a terrifying sight. The grand dining hall where you had enjoyed a lavish meal the previous night is now engulfed in flames, and a circle of fire seems to have encompassed the entire tower. Your heart races as you turn to the archmage, feeling a sense of panic rising within you. "What\'s happening?" you ask urgently. In response, the archmage lets out a deranged laugh and grabs you by the shoulders, shaking you slightly. "They\'re going to bury us with the stone in this blasted tower," he says in a voice filled with angst. The archmage suddenly releases his grip on your shoulders, his face growing pale. He stiffly walks out of the room leaving you to follow.',
+        options: [
+            {
+                text: 'Follow the mage',
+                nextText: 136
+            },
+            {
+                text: 'Escape the tower',
+                nextText: 141
+            }
+        ]
+    },
+    {
+        // act: 6A
+        id: 136,
+        text: 'You notice the acrid smell of smoke hanging in the stairwell as you make your way down the stairs. You watch as the archmage walks into his office, seemingly in a daze. He picks up a large jug and pours himself a cup of mead, offering you one as well. You accept the cup, feeling a sense of numbness spreading throughout your body as you take a sip. As you turn towards the windows, your eyes widen in horror at the sight before you. A large trebuchet has been built at the bottom of the cliff, and a group of soldiers dressed in the empire\'s colors are loading it with a giant rock. Your heart feels like it has frozen in your chest as you realize what is about to happen.',
+        options: [
+            {
+                text: 'Continue',
+                nextText: 137
+            }
+        ]
+    },
+    {
+        // act: 6A
+        id: 137,
+        text: 'The archmage drops heavily into a nearby chair, swirling the mead in his glass. "I warned that witless fool not to mess with these powers," he mutters to himself, shaking his head in disbelief. "And the peabrain goes ahead and does it twice." He lets out a bitter laugh before chugging the rest of his cup and pouring himself another. As he does, the tower suddenly shakes violently, causing you both to stumble. You look out the window and see the soldiers loading another massive rock into the trebuchet.',
+        options: [
+            {
+                text: 'Continue',
+                nextText: 138
+            }
+        ]
+    },
+    {
+        // act: 6A
+        id: 139,
+        text: 'You turn to the archmage, feeling a sense of urgency rising within you. "What kind of power? Who has been meddling with it?" you ask, your voice tense. The man\'s eyes, bloodshot and wild, meet yours as he leans forward. "The power contained within that stone is beyond anything this world has ever seen. They have no idea what they will unleash when they knock this tower down," he says, gesturing towards the trebuchet outside. The tower shakes again, and you can hear the sound of stone breaking apart. "But, they are right to fear it," he mutters to himself, staring down at his cup.',
+        options: [
+            {
+                text: 'Continue',
+                nextText: 140
+            }
+        ]
+    },
+    {
+        // act: 6A
+        // ENDING
+        id: 140,
+        text: '"Fear what?!" You exclaim, on edge and desperate for answers. "What could possibly warrant burying people alive?!" Your voice rises with each word, your frustration palpable. The mage looks up at you again, his expression one of profound sadness. "The end of the world," he replies gravely. A loud explosion rocks the tower, and the room collapses in on itself, crushing everything inside.',
+        options: [
+            {
+                text: 'RESTART FROM LAST CHECKPOINT',
+                nextText: 113
+            },
+            {
+                text: 'RESTART FROM BEGINNING',
+                nextText: 1
+            }
+        ]
+    },
+    {
+        // act: 6A
+        id: 141,
+        text: 'As you descend the stairs, the acrid smell of smoke grows stronger and the air thickens with every step. You cover your nose with your shirt, but your eyes still sting from the fumes. Finally, you reach the large hearthroom at the tower\'s base, only to be met with an intense heat that nearly knocks you off your feet. Flames have broken the glass windows and engulfed the room. You spot the door and dash towards it, but as you pull the hot metal handle, you realize it\'s locked. Panic sets in as you try to pry the door open, but it won\'t budge, and the inferno closes in around you.',
+        options: [
+            {
+                text: 'RESTART FROM LAST CHECKPOINT',
+                nextText: 113
+            },
+            {
+                text: 'RESTART FROM BEGINNING',
+                nextText: 1
+            }
+        ]
+    },
+    {
+        // act: 6A
+        id: 142,
+        text: 'Despite the fog in your head, you manage to remember the archmage\'s lie. "I\'m visiting my mother\'s brother," you say with a smile, trying to distract her by telling the long story about your journey and all the encounters you had, omitting the strange egg. You linger on all the details, hoping to keep her from asking more questions.',
+        options: [
+            {
+                text: 'Continue',
+                nextText: 143
+            }
+        ]
+    },
+    {
+        // act: 6A
+        id: 143,
+        text: 'As you finish telling your story, you notice that the governor\'s expression remains unchanged. Studying her face closely, you wait for her response. After a moment of silence, she smiles and says, "Interesting." There\'s a long silence before she speaks again, "Thank you for being my guest of honor. I enjoyed your company and hope to see you again soon." With those words, she rises gracefully from her seat. "If you\'ll excuse me, I have some matters to attend to," she says, turning to leave, as her guards follow closely behind.',
+        options: [
+            {
+                text: 'Continue',
+                nextText: 144
+            }
+        ]
+    },
+    {
+        // act: 6A
+        id: 144,
+        text: 'Lost in thought, you\'re uncertain about what to do next. After a few minutes, the archmage appears in the doorway and signals for you to follow him. You silently comply and he leads you back to his office. After ushering you inside, he quietly shuts the door. The woman with the long braid is already present in the room, and both mages stare at you intently. "What did you reveal to her?" The man hisses after a moment, his voice low and urgent. You raise your hands in surrender and reply, "I swear I didn\'t say anything."',
+        options: [
+            {
+                text: 'Continue',
+                nextText: 145
+            }
+        ]
+    },
+    {
+        // act: 6A
+        id: 145,
+        text: 'The two mages exchange a quick glance before letting out audible sighs of relief. "Good," the man says, patting you on the shoulder. You shrug off his hand and demand an explanation. "Now tell me what this is all about! What did I find? Why can\'t the queen and king know about it?" Your voice rises with every word, frustration evident. They quiet you down and there\'s a long silence before the man finally speaks. "The stone you brought is a curse, a sin of my predecessor. It\'s in everyone\'s best interest if it\'s never mentioned again." He finishes harshly, refusing to elaborate when you press him for more information.',
+        options: [
+            {
+                text: 'Continue',
+                nextText: 146
+            }
+        ]
+    },
+    {
+        // act: 6A
+        id: 145,
+        text: '"I mean it, the less you know of it, the better. You\'re to go back to your village and forget you ever came here. Or better yet, there\'s a festival happening soon in the capital. You can attend and tell your village that\'s what you went to do in the first place." Disappointed, you sit silently, but the thought of a festival and seeing the capital cheers you up slightly. However, the woman with the braid steps in and suggests that you be allowed to rest from your long journey before setting out again. "It would be cruel to kick them out at this time of night," she stammers out. The archmage sighs and eventually agrees, but warns you sternly that if you mention the object again, you will no longer be welcome.',
+        options: [
+            {
+                text: 'Continue',
+                nextText: 146
+            }
+        ]
+    },
+    {
+        // act: 6A
+        id: 146,
+        text: 'You are led to a cozy room at the top of the tower, where a large and clean bed awaits you. You sink into the soft bedding and feel grateful for the comfort it provides. The warmth of the hearth and the lingering effects of the mead have a soothing effect on you, lulling you into a deep and peaceful slumber that lasts for over a day. When you finally awaken, you stretch lazily, feeling renewed and invigorated. As you gather your pack and head for the door, you can\'t help but feel appreciative of the hospitality of your hosts.',
+        options: [
+            {
+                text: 'Say goodbye',
+                nextText: 147
+            },
+            {
+                text: 'Journey to the festival',
+                nextText: 148
+            },
+        ]
+    },
+    {
+        // act: 6A
+        id: 147,
+        text: 'After a few wrong turns, you eventually make your way to the archmage\'s study. You pause to knock on the door before gently pushing it open. The mage glances up from his work, acknowledging your presence. You express your gratitude for the hospitality and inform him of your departure. He wishes you the best of luck and returns to his scattered parchments. You pause in the doorway, awkwardly, hoping he\'ll say something more. After a moment you leave and scan the area for the braided mage, but she\'s nowhere to be found. With a tinge of disappointment, you set out on your journey.',
+        options: [
+            {
+                text: 'Journey to the festival',
+                nextText: 148
+            },
+        ]
+    },
+    {
+        // act: 6A
+        id: 148,
+        text: 'You make your way to the festival, still lost in thought as you travel the winding road. After making some decent progress, you\'re hopeful that you\'ll reach the capital the next day. As you walk, you notice a commotion in the sky, drawing your attention upward. A vast cloud looms ominously in the distance, covering much of the horizon. Its size and darkness leave you uneasy, you quicken your pace hoping to get a better view, and your heart sinks at the sight before you. The cloud is a massive, swirling mass of black and red, resembling a furious inferno. The edges are jagged and menacing, and the sound of an explosion reverberates through your bones. Your mind races as you try to make sense of what you\'re seeing.',
+        options: [
+            {
+                text: 'Continue',
+                nextText: 149
+            },
+        ]
+    },
+    {
+        // act: 6A
+        id: 149,
+        text: 'The cloud is a fearsome sight to behold, stretching far and wide across the sky with an ominous presence that chills you to the bone. As you gaze up at it, you can see that the its top is rounded and massive, with a texture that seems to writhe and twist resembling flames of hellfire, like it\'s alive with some terrible force that threatens to consume everything in its path. You can tell that something catastrophic has happened in the capital and your mind races with worry for the safety of your loved ones back home. You feel torn between continuing on to investigate and hurrying back to your village to make sure they\'re okay. What will you decide to do?',
+        options: [
+            {
+                text: 'Continue to the capital',
+                nextText: 5000
+                // TO ACT 7
+            },
+            {
+                text: 'Journey home',
+                nextText: 5000
+                // TO ACT 7
+            }
+        ]
+    },
+// ACT 6B
+    {
+        // act: 6B
+        id: 150,
+        text: 'As you continue on your journey towards The Capital, the dense foliage gradually thins out, revealing massive fortified gates positioned on a rocky hill overlooking the road. Beyond the gates lies The Capital, a magnificent sight to behold. The towering castle stands proud and strong within the city walls, serving as both the seat of the empire\'s power and the king\'s residence. The line of people waiting to enter the city gates captures your attention, causing you to pause and contemplate your next move. It occurs to you that perhaps it would be wise to conceal the mysterious egg you possess before approaching the gates. After all, you don\'t want to attract any unnecessary attention or suspicion.',
+        options: [
+            {
+                text: 'Hide the object',
+                nextText: 153
+            },
+            {
+                text: 'Don\'t hide the object',
+                nextText: 151
+            }
+        ]
+    },
+    {
+        // act: 6B
+        id: 151,
+        text: 'Despite your better judgment, you decide against hiding the egg and instead leave it exposed, simply covered by the flap of your pack as it rests atop your belongings. You approach the end of the line of people waiting to enter the capital and join the queue, eager to uncover the secrets that await you within the city walls. The line moves slowly, and the wait is tedious. A woman with a group of restless children falls in behind you, and you silently curse your luck.',
+        options: [
+            {
+                text: 'Continue',
+                nextText: 152
+            },
+        ]
+    },
+    {
+        // act: 6B
+        // ENDING
+        id: 152,
+        text: 'Suddenly, one of the children tugs on your pack with all their might and exclaims, "Is that a dragon egg?" You feel the straps give way, and your backpack hits the ground with a loud thud. The object rolls out of it, marred with a sickening crack. A wave of nausea washes over you, and your head spins as you try to comprehend the gravity of the situation. As you struggle to keep your balance, you feel a strange sensation wash over you. The world begins to spin faster and faster, and before you know it, you are consumed by unconsciousness.',
+        options: [
+            {
+                text: 'RESTART FROM LAST CHECKPOINT',
+                nextText: 113
+            },
+            {
+                text: 'RESTART FROM BEGINNING',
+                nextText: 1
+            }
+        ]
+    },
+    {
+        // act: 6B
+        id: 153,
+        text: 'You take great care in securing the object at the bottom of your pack, wrapping it in a cloth to ensure its safety. The weight of the mysterious item a constant reminder of the excitement and anticipation that fuels your journey. As you join the queue to enter the city, you can\'t help but feel a sense of nervousness creeping in. A woman and her children behind you are becoming increasingly restless, and you feel their eyes on your back as you wait. Finally, after what feels like an eternity, it\'s your turn to approach the colossal gates.',
+        options: [
+            {
+                text: 'Continue',
+                nextText: 154
+            },
+        ]
+    },
+    {
+        // act: 6B
+        id: 154,
+        text: 'A bored-looking guard eyes you up and down before addressing you. "Just you then?" he says, his tone indicating that he\'s seen countless travelers like you before. You nod, doing your best to appear calm and collected. The guard looks at you skeptically, and you can feel your heart racing as he waits for you to provide more information.',
+        options: [
+            {
+                text: 'I\'m here on buisness',
+                nextText: 155
+            },
+            {
+                text: 'I\'m just visiting',
+                nextText: 157
+            }
+        ]
+    },
+    {
+        // act: 6B
+        id: 155,
+        text: 'You step toward the guard with a sense of unease, aware that the object you carry may draw unwanted attention. You decide to keep your explanation brief, telling the guard that you\'re seeking a buyer for a rare item. The guard studies you for a moment before summoning another soldier and motioning for you to follow him into the guard tower. As you enter the sparsely furnished room, a chill runs down your spine.',
+        options: [
+            {
+                text: 'Continue',
+                nextText: 156
+            },
+        ]
+    },
+    {
+        // act: 6B
+        id: 156,
+        text: 'You watch nervously as the guard removes each of your belongings from your pack, including the wrapped object. With a sharp intake of breath, he carefully unwraps it, revealing the mysterious item within. "This is the object you\'re looking to sell?" he asks incredulously. You nod, but before you can react, a sudden blow to the back of your head sends you tumbling into darkness.',
+        options: [
+            {
+                text: 'Continue',
+                nextText: 159
+            },
+        ]
+    },
+    {
+        // act: 6B
+        id: 157,
+        text: 'You approach the guard with caution, knowing that the object you carry may raise suspicion. You choose your words carefully, stating that you\'re a family member here to visit. The guard looks at you skeptically, and you feel a cold sweat forming on your brow. "What part of the city do they live in?" he asks, his tone uninterested. Panic rises within you as you realize you\'re not familiar with the city. "Um, the market," you stammer out, hoping it\'s a common enough answer. The guard studies you for a moment before summoning another soldier and motioning for you to follow him into the guard tower.',
+        options: [
+            {
+                text: 'Continue',
+                nextText: 158
+            },
+        ]
+    },
+    {
+        // act: 6B
+        id: 158,
+        text: 'As you enter the sparsely furnished room, a chill runs down your spine. You watch nervously as the guard removes each of your belongings from your pack, including the wrapped object. With a sharp intake of breath, he carefully unwraps it, revealing the mysterious item within. "What is this?" he asks incredulously, staring at it in disbelief. Before you can respond, a sudden blow to the back of your head sends you tumbling into darkness.',
+        options: [
+            {
+                text: 'Continue',
+                nextText: 159
+            },
+        ]
+    },
+    {
+        // act: 6B
+        id: 159,
+        text: 'As you slowly regain consciousness, the realization of your situation sets in. You find yourself in a small, dimly-lit cell, with rough stone walls and a cold floor. A small bed of hay in the corner and a chamberpot at the far end are the only furnishings. The flickering light of a torch on the other side of the iron bars casts eerie shadows across the room. You wince as you touch the back of your head, feeling a dull ache from the blow that knocked you out.',
+        options: [
+            {
+                text: 'Continue',
+                nextText: 160
+            },
+        ]
+    },
+    {
+        // act: 6B
+        id: 160,
+        text: 'You wait in silence, feeling the weight of the cold stone against your back. Suddenly, you hear a loud clanging noise echoing down the hallway. As the sound grows louder, you realize that it\'s the jangling of metal keys. Within moments, a portly, sad-looking man appears carrying a tray of food. He slides the tray under the bars and into your cell with a snide comment, "Dinner is ready!" without waiting for a response, he turns and heads back down the hallway, the sound of his footsteps echoing in the distance.',
+        options: [
+            {
+                text: 'Continue',
+                nextText: 161
+            },
+        ]
+    },
+    {
+        // act: 6B
+        id: 161,
+        text: 'As you inspect the tray, you find a meager meal consisting of a cup of water and a loaf of stale bread. You can feel your stomach grumbling with hunger as you take a sip of water and break off a piece of bread. Your mind races with questions while you eat. Time seems to crawl by, but eventually, the clanging of metal returns, this time louder and echoing. A small squad of guards appears before your cell and begins to escort you through the maze of cells. The sound of their footsteps bounces off the walls, and the flickering torches cast eerie shadows around you. You can\'t help but wonder where they\'re taking you and what fate awaits you.',
+        options: [
+            {
+                text: 'Continue',
+                nextText: 162
+            },
+        ]
+    },
+    {
+        // act: 6B
+        id: 162,
+        text: 'You step into a room through the grand entrance of the ornate wooden doors, admiring the intricate carvings etched into their surface. The chamber you enter is breathtaking, with towering vaulted ceilings. Sunlight streams in through large stained glass windows, casting colorful patterns on the plush crimson carpet. Your gaze is drawn towards the end of the room, where a majestic couple sits upon a raised platform, surrounded by a retinue of guards. The man is regal, with piercing dark eyes and jet black hair, adorned with a sizable crown. Beside him, the woman exudes a serene beauty, her hair cascading like spun gold, wearing a smaller yet still impressive headpiece.',
+        options: [
+            {
+                text: 'Continue',
+                nextText: 163
+            },
+        ]
+    },
+    {
+        // act: 6B
+        id: 163,
+        text: 'Before you can take in more of your surroundings, you\'re shoved from behind by a brutish guard, causing you to stumble and fall to your knees. Your eyes flicker up to the royal couple as the king speaks with a commanding tone, his gaze fixed on you."You were caught in possession of a forbidden and highly dangerous item. Explain how you obtained it and what your purpose is for being here."',
+        options: [
+            {
+                text: 'Tell your story',
+                nextText: 166
+            },
+            {
+                text: 'Demand your own answers',
+                nextText: 164
+            }
+        ]
+    },
+    {
+        // act: 6B
+        id: 164,
+        text: 'You glare back at the king, mustering all the courage you have left. "I won\'t tell you anything until you give me some answers of my own," you say firmly, trying to keep the fear out of your voice. "Where is my pack? What is the item I found? Why is it so dangerous?" But before you can say more, one of the guards delivers a swift kick to your ribcage, knocking the breath out of you. The king\'s cruel laughter echoes in your ears. "Very well," he says. "If that\'s the way you want it."',
+        options: [
+            {
+                text: 'Continue',
+                nextText: 165
+            }
+        ]
+    },
+    {
+        // act: 6B
+        // ENDING
+        id: 165,
+        text: 'The guards haul you off the ground and drag you deeper into the dungeon. The torches grow dimmer and farther apart as you descend, and a musty smell fills the air. The sound of your footsteps is joined by the drip-drip of water echoing off the damp walls. After what feels like an eternity, you are shoved into a dank, empty cell and left alone with a small sack of hard moldy bread. Darkness engulfs you as the guards slam the door shut, leaving you to contemplate your fate. You wait for hours, then days, then weeks, but no one ever comes to your cell. Your bread runs out, and hunger gnaws at your insides. The only sound you can hear is the scurrying of rodents in the darkness. Eventually, your strength gives out, and you succumb to malnutrition, consumed by the darkness and despair of your prison.',
+        options: [
+            {
+                text: 'RESTART FROM LAST CHECKPOINT',
+                nextText: 113
+            },
+            {
+                text: 'RESTART FROM BEGINNING',
+                nextText: 1
+            }
+        ]
+    },
+    {
+        // act: 6B
+        id: 166,
+        text: 'As you recount your tale, the words spill out of your mouth in a torrent, fueled by your desperation to explain your situation. However, the king\'s face remains impassive as he listens to your words. You continue until you finish, and the king nods slowly, acknowledging your story with a measured response. "You\'ve given me much to ponder," he says, before dismissing you with a wave of his hand. Despite your protests, the guards haul you out of the room, leaving you to ponder your fate as you\'re taken back to your cell. Sitting on the hay in silence, you become lost in thought.',
+        options: [
+            {
+                text: 'Try to escape',
+                nextText: 167
+            },
+            {
+                text: 'Wait',
+                nextText: 184
+            }
+        ]
+    },
+    {
+        // act: 6B
+        id: 167,
+        text: 'You gaze at the coarse, prickly hay that makes up your bed, a plan slowly taking shape in your mind. You pluck some of the hay and begin weaving it together, your fingers deftly manipulating the strands into a dense stick. After some effort, you manage to extend your arm through the bars of your cell and use the improvised tool to pick the lock. The door creaks open, and you slip out, tucking the hay-stick into your pocket. Now free, you make your way through the maze-like corridors of the prison, the musty air clinging to your skin as you move quietly through the dimly-lit passageways.',
+        options: [
+            {
+                text: 'Continue',
+                nextText: 168
+            }
+        ]
+    },
+    {
+        // act: 6B
+        // maze room 1
+        id: 168,
+        text: 'You step into a dimly lit room, the silence is almost palpable. The space seems deserted, and you feel a sense of unease as you look around. To your right, you see a door set into the southern wall, while on the opposite side of the room, another door stands at the eastern wall. You pause for a moment, considering your options.',
+        options: [
+            {
+                text: 'Southern door',
+                // to room 6
+                nextText: 173
+            },
+            {
+                text: 'Eastern door',
+                // to room 2
+                nextText: 169
+            }
+        ]
+    },
+    {
+        // act: 6B
+        // maze room 2
+        id: 169,
+        text: 'As you step into the dimly lit room, you notice that there are three doors, including the one you just came through. The southern wall has a door, as does the eastern wall, and a third door stands on the northern wall. You take a moment to survey the room and consider your options.',
+        options: [
+            {
+                text: 'Northern door',
+                // to room 1
+                nextText: 177
+            },
+            {
+                text: 'Eastern door',
+                // to room 5
+                nextText: 172
+            },
+            {
+                text: 'Southern door',
+                // to room 3
+                nextText: 170
+            }
+        ]
+    },
+    {
+        // act: 6B
+        // maze room 3
+        id: 170,
+        text: 'As you step into the dimly lit room, you notice that there are two doors, including the one you just came through. The northern wall has a door, as does the eastern wall. You take a moment to survey the room and consider your options.',
+        options: [
+            {
+                text: 'Northern door',
+                // to room 2
+                nextText: 169
+            },
+            {
+                text: 'Eastern door',
+                // to room 4
+                nextText: 171
+            }
+        ]
+    },
+    {
+        // act: 6B
+        // maze room 4
+        id: 171,
+        text: 'As you step into the dimly lit room, you notice that there are four doors, including the one you just came through, one in each wall. You take a moment to survey the room and consider your options.',
+        options: [
+            {
+                text: 'Northern door',
+                // to room 5
+                nextText: 172
+            },
+            {
+                text: 'Eastern door',
+                // to room 9
+                nextText: 169
+            },
+            {
+                text: 'Southern door',
+                // exit
+                nextText: 180
+            },
+            {
+                text: 'Western door',
+                // to room 3
+                nextText: 170
+            }
+        ]
+    },
+    {
+        // act: 6B
+        // maze room 5
+        id: 172,
+        text: 'As you step into the dimly lit room, you notice that there are four doors, including the one you just came through, one in each wall. You take a moment to survey the room and consider your options.',
+        options: [
+            {
+                text: 'Northern door',
+                // to room 6
+                nextText: 173
+            },
+            {
+                text: 'Eastern door',
+                // to room 8
+                nextText: 175
+            },
+            {
+                text: 'Southern door',
+                // to room 4
+                nextText: 171
+            },
+            {
+                text: 'Western door',
+                // to room 2
+                nextText: 169
+            }
+        ]
+    },
+    {
+        // act: 6B
+        // maze room 6
+        id: 173,
+        text: 'As you step into the dimly lit room, you notice that there are three doors, including the one you just came through. The southern wall has a door, as does the eastern wall, and a third door stands on the western wall. You take a moment to survey the room and consider your options.',
+        options: [
+            {
+                text: 'Eastern door',
+                // to room 7
+                nextText: 174
+            },
+            {
+                text: 'Southern door',
+                // to room 5
+                nextText: 172
+            },
+            {
+                text: 'Western door',
+                // to room 1
+                nextText: 177
+            }
+        ]
+    },
+    {
+        // act: 6B
+        // maze room 7
+        id: 174,
+        text: 'As you step into the dimly lit room, you notice that there are two doors, including the one you just came through. The southern wall has a door, as does the western wall. You take a moment to survey the room and consider your options.',
+        options: [
+            {
+                text: 'Southern door',
+                // to room 8
+                nextText: 175
+            },
+            {
+                text: 'Western door',
+                // to room 6
+                nextText: 173
+            }
+        ]
+    },
+    {
+        // act: 6B
+        // maze room 8
+        id: 175,
+        text: 'As you step into the dimly lit room, you notice that there are three doors, including the one you just came through. The southern wall has a door, as does the western wall, and a third door stands on the northern wall. You take a moment to survey the room and consider your options.',
+        options: [
+            {
+                text: 'Northern door',
+                // to room 7
+                nextText: 174
+            },
+            {
+                text: 'Southern door',
+                // to room 9
+                nextText: 176
+            },
+            {
+                text: 'Western door',
+                // to room 5
+                nextText: 172
+            }
+        ]
+    },
+    {
+        // act: 6B
+        // maze room 9
+        id: 176,
+        text: 'As you step into the dimly lit room, you notice that there are two doors, including the one you just came through. The northern wall has a door, as does the western wall. You take a moment to survey the room and consider your options.',
+        options: [
+            {
+                text: 'Northern door',
+                // to room 8
+                nextText: 175
+            },
+            {
+                text: 'Western door',
+                // to room 4
+                nextText: 171
+            }
+        ]
+    },
+    {
+        // act: 6B
+        // maze room 1B
+        id: 177,
+        text: 'As you step into the dimly lit room, you notice that there are three doors, including the one you just came through. The southern wall has a door, as does the eastern wall, and a third door stands on the western wall. You take a moment to survey the room and consider your options.',
+        options: [
+            {
+                text: 'Eastern door',
+                // to room 6
+                nextText: 173
+            },
+            {
+                text: 'Southern door',
+                // to room 2
+                nextText: 169
+            },
+            {
+                text: 'Western door',
+                // Bad Exit
+                nextText: 178
+            }
+        ]
+    },
+    {
+        // act: 6B
+        // bad exit
+        id: 178,
+        text: 'As you continue to wander through the dimly lit rooms, you become increasingly disoriented. The lack of food and water has taken its toll, and your limbs feel heavy and sluggish. Your stomach grumbles with hunger, and your mouth is dry and parched. Despite your best efforts, you can\'t seem to find a way out, and the gloom around you seems to be closing in. Desperation sets in as you try to push on, but your strength is fading rapidly. Your movements become slower and more labored, and you begin to feel a creeping sense of hopelessness. The walls and floors of the dungeon seem to be mocking you.',
+        options: [
+            {
+                text: 'Continue',
+                nextText: 179
+            }
+        ]
+    },
+    {
+        // act: 6B
+        // ENDING
+        id: 179,
+        text: 'Finally, your body gives out, and you collapse to the ground, too weak to move. Your breathing is shallow and ragged, and your vision blurs as the darkness creeps in. With a heavy heart, you realize that your journey has come to an end, and you succumb to the ravages of malnutrition.',
+        options: [
+            {
+                text: 'RESTART FROM LAST CHECKPOINT',
+                nextText: 166
+            },
+            {
+                text: 'RESTART FROM BEGINNING',
+                nextText: 1
+            }
+        ]
+    },
+    {
+        // act: 6B
+        // good exit
+        id: 180,
+        text: 'You stand at the top of a dark, winding staircase and begin to make your way down. The air grows thick and putrid with each step, filling your nostrils with the unmistakable stench of sewage. Finally, you reach the bottom and find yourself standing in a large sewer tunnel. A pool of thick, smelly water dominates the center of the tunnel, and you pick your way along the edge, trying to avoid getting your boots wet.',
+        options: [
+            {
+                text: 'Continue',
+                nextText: 181
+            }
+        ]
+    },
+    {
+        // act: 6B
+        id: 181,
+        text: 'Despite your efforts, the water gradually seeps into your boots, soaking your feet and making every step a squelching, unpleasant experience. You continue on, the tunnel stretching out before you seemingly without end. Finally, after what feels like hours, you emerge from the dank, fetid sewer and breathe in the fresh air gratefully. Taking a moment to catch your breath, you carefully make your way through the trees, keeping a watchful eye out for any signs of danger. Eventually, you reach a road and begin to walk down it, weighing your options and trying to decide what to do next.',
+        options: [
+            {
+                text: 'Continue',
+                nextText: 182
+            }
+        ]
+    },
+    {
+        // act: 6A
+        id: 182,
+        text: 'You trudge down the road, lost in thought and barely aware of your surroundings. Suddenly, a commotion in the sky catches your attention, and you look up to see a vast cloud looming ominously in the distance. It stretches across much of the horizon, and its size and darkness make you feel uneasy. You quicken your pace, hoping to get a better view, and as you draw closer, your heart sinks at the sight before you. The cloud is a massive, swirling mass of black and red, resembling a furious inferno. The edges are jagged and menacing, and the explosion-like sound reverberates through your bones.',
+        options: [
+            {
+                text: 'Continue',
+                nextText: 183
+            },
+        ]
+    },
+    {
+        // act: 6A
+        id: 183,
+        text: 'The cloud is a fearsome sight, stretching far and wide across the sky with an ominous presence that chills you to the bone. As you gaze up at it, you can see that the top is rounded and massive, with a texture that seems to writhe and twist like flames of hellfire, giving it an otherworldly, almost alive quality. You feel torn between investigating the cloud and hurrying back to your village to make sure they\'re okay. What will you decide to do?',
+        options: [
+            {
+                text: 'Investigate the cloud',
+                nextText: 5000
+                // TO ACT 7
+            },
+            {
+                text: 'Journey home',
+                nextText: 5000
+                // TO ACT 7
+            }
+        ]
+    },
+    {
+        // act: 6B
+        id: 184,
+        text: 'As the pangs of hunger begin to gnaw at your stomach, you hear the distant clanging of metal, and you instinctively look up, anticipating the arrival of the portly jailor once more. However, to your surprise, you are greeted by the sight of the queen herself, flanked by two imposing guards. Despite feeling stunned, you can\'t help but notice the warmth in her smile as she approaches your cell. "I thought you could join me for dinner?" she says, her voice carrying a gentle and inviting tone. Your heart racing, you eagerly accept, rising to your feet and following the queen and her guards.',
+        options: [
+            {
+                text: 'Continue',
                 nextText: 5000
             }
         ]
@@ -2044,7 +2850,7 @@ const textNodes = [
         options: [
             {
                 text: 'RESTART FROM LAST CHECKPOINT',
-                nextText: 79
+                nextText: 113
             },
             {
                 text: 'RESTART FROM BEGINNING',
