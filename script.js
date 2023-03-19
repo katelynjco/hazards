@@ -2538,13 +2538,13 @@ const textNodes = [
         options: [
             {
                 text: 'Southern door',
-                // to room 6
-                nextText: 173
+                // to room 2
+                nextText: 169
             },
             {
                 text: 'Eastern door',
-                // to room 2
-                nextText: 169
+                // to room 6
+                nextText: 173
             }
         ]
     },
@@ -2802,9 +2802,9 @@ const textNodes = [
         ]
     },
     {
-        // act: 6A
+        // act: 6B
         id: 182,
-        text: 'You trudge down the road, lost in thought and barely aware of your surroundings. Suddenly, a commotion in the sky catches your attention, and you look up to see a vast cloud looming ominously in the distance. It stretches across much of the horizon, and its size and darkness make you feel uneasy. You quicken your pace, hoping to get a better view, and as you draw closer, your heart sinks at the sight before you. The cloud is a massive, swirling mass of black and red, resembling a furious inferno. The edges are jagged and menacing, and the explosion-like sound reverberates through your bones.',
+        text: 'You trudge down the road, lost in thought and barely aware of your surroundings. Suddenly, a commotion in the sky catches your attention, and you look up to see a vast cloud looming ominously in the distance. It stretches across much of the horizon, and its size and darkness make you feel uneasy. You quicken your pace, hoping to get a better view, and as you draw closer, your heart sinks at the sight before you. The cloud is a massive, swirling mass of black and red, resembling a furious inferno. The edges are jagged and menacing, and an explosion-like sound reverberates through your bones.',
         options: [
             {
                 text: 'Continue',
@@ -2813,9 +2813,9 @@ const textNodes = [
         ]
     },
     {
-        // act: 6A
+        // act: 6B
         id: 183,
-        text: 'The cloud is a fearsome sight, stretching far and wide across the sky with an ominous presence that chills you to the bone. As you gaze up at it, you can see that the top is rounded and massive, with a texture that seems to writhe and twist like flames of hellfire, giving it an otherworldly, almost alive quality. You feel torn between investigating the cloud and hurrying back to your village to make sure they\'re okay. What will you decide to do?',
+        text: 'The cloud is a fearsome sight, stretching far and wide across the sky with an ominous presence that chills you to the bone. As you gaze up at it, you can see that the top is rounded and massive, with a texture that seems to writhe and twist like flames of hellfire, giving it an otherworldly, almost alive quality. Your heart races as you realize that something catastrophic has happened, and you can\'t shake the worry for the safety of your loved ones back home. You feel torn between investigating the source of the cloud and hurrying back to your village to make sure they\'re okay. What will you decide to do?',
         options: [
             {
                 text: 'Investigate the cloud',
@@ -2832,7 +2832,7 @@ const textNodes = [
     {
         // act: 6B
         id: 184,
-        text: 'As the pangs of hunger begin to gnaw at your stomach, you hear the distant clanging of metal, and you instinctively look up, anticipating the arrival of the portly jailor once more. However, to your surprise, you are greeted by the sight of the queen herself, flanked by two imposing guards. Despite feeling stunned, you can\'t help but notice the warmth in her smile as she approaches your cell. "I thought you could join me for dinner?" she says, her voice carrying a gentle and inviting tone. Your heart racing, you eagerly accept, rising to your feet and following the queen and her guards.',
+        text: 'As the pangs of hunger begin to gnaw at your stomach, you hear the distant clanging of metal, and you instinctively look up, anticipating the arrival of the portly jailor once more. However, to your surprise, you are greeted by the sight of the queen herself, flanked by two imposing guards. Despite feeling stunned, you can\'t help but notice the warmth in her smile as she approaches your cell. "I thought you could join me for dinner?" she says, her voice carrying a gentle and inviting tone. Your heart racing, you eagerly accept, rising to your feet.',
         options: [
             {
                 text: 'Continue',
