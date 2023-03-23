@@ -175,7 +175,7 @@ function switchTheme(event) {
     var done = false;
     function onPlayerStateChange(event) {
         if (event.data == YT.PlayerState.PLAYING && !done) {
-          setTimeout(stopVideo, 6000);
+        //   setTimeout(stopVideo, 6000);
           done = true;
         }
     }
@@ -210,7 +210,7 @@ const textNodes = [
         options: [
             {
                 text: 'RESTART FROM LAST CHECKPOINT',
-                nextText: state.id
+                nextText: 1
             }
         ]
     },
@@ -241,7 +241,7 @@ const textNodes = [
         options: [
             {
                 text: 'RESTART FROM LAST CHECKPOINT',
-                nextText: state.id
+                nextText: 1
             }
         ]
     },
@@ -303,7 +303,7 @@ const textNodes = [
         options: [
             {
                 text: 'RESTART FROM LAST CHECKPOINT',
-                nextText: state.id
+                nextText: 1
             }
         ]
     },
@@ -395,7 +395,7 @@ const textNodes = [
     {
         // act: 2
         id: 15,
-        text: 'The jeweler examines the object with a practiced eye, turning it over in his hands and studying it from all angles. After a few moments, he looks up at you with a smirk. "You know, I\'ve never seen anything quite like this before. It\'s certainly an unusual piece. Unfortunately, I can\'t give you an accurate appraisal of its value. It could be worth a fortune, or it could be completely worthless. I can give you a few gold pieces for it. That\'s about what I\'ll probably be able to sell it for."',
+        text: 'The jeweler examines the object with a practiced eye, turning it over in his hands and studying it from all angles. After a few moments, he looks up at you with a smirk. "You know, I\'ve never seen anything quite like this before. It\'s certainly an interesting piece. Unfortunately, I can\'t give you an accurate appraisal of its value. It could be worth a fortune, or it could be completely worthless. I can give you a few gold pieces for it. That\'s about what I\'ll probably be able to sell it for."',
         options: [
             {
                 text: 'Attempt to haggle',
@@ -414,7 +414,7 @@ const textNodes = [
         options: [
             {
                 text: 'RESTART FROM LAST CHECKPOINT',
-                nextText: state.id
+                nextText: 1
             }
         ]
     },
@@ -919,7 +919,7 @@ const textNodes = [
                 nextText: 52
             },
             {
-                text: 'Camp by the cave',
+                text: 'Camp in the cave',
                 setState: {id: 50},
                 nextText: 51
             }
@@ -1089,7 +1089,7 @@ const textNodes = [
     {
         // act: 4
         id: 62,
-        text: 'You meander through the nearby woods and scavenge breakfast from the surrounding foliage. After some time, you assess your findings: a handful of wide, bright orange mushrooms, and branch of hard, purple berries. What will you choose to eat?',
+        text: 'You meander through the nearby woods and scavenge breakfast from the surrounding foliage. After some time, you assess your findings: a handful of wide, bright orange mushrooms, and a branch of hard, purple berries. What will you choose to eat?',
         options: [
             {
                 text: 'Eat neither',
@@ -1159,7 +1159,7 @@ const textNodes = [
         // act: 4
         // Ending
         id: 66,
-        text: 'You move closer, reaching for your hammer and holding it steadily at the man\'s throat. "I don\'t want any trouble," you say firmly, "just give me your supplies and I\'ll be on my way." The bard\'s looks up at you, gaze meeting yours and revealing bloodshot eyes ringed with dark circles. Before you can react, he deftly grabs your hammer, pulling you in close as he plunges a long, curved dagger into your side. You gasp in shock and pain, falling to the ground as your vision fades. The stranger goes back to strumming his lute, and you feel your life slipping away as darkness overtakes you.',
+        text: 'You move closer, reaching for your hammer and holding it steadily at the man\'s throat. "I don\'t want any trouble," you say firmly, "just give me your supplies and I\'ll be on my way." The bard looks up at you, gaze meeting yours and revealing bloodshot eyes ringed with dark circles. Before you can react, he deftly grabs your hammer, pulling you in close as he plunges a long, curved dagger into your side. You gasp in shock and pain, falling to the ground as your vision fades. The stranger goes back to strumming his lute, and you feel your life slipping away as darkness overtakes you.',
         options: [
             {
                 text: 'RESTART FROM LAST CHECKPOINT',
@@ -1324,7 +1324,7 @@ const textNodes = [
     {
         // act: 4
         id: 77,
-        text: 'Leaning forward, the bard continues, "The king\'s influence extends far beyond the castle walls, however. He has taken a keen interest in the mages of the citadel, recognizing their power and importance in the empire\'s defense and war efforts. In recent years, he even installed his queen as their governor. Despite the king\'s strict rule, The Capital remains a bustling hub of activity and trade. Merchants from all over the world come to ply their wares, and the its markets are a riot of color and noise."',
+        text: 'Leaning forward, the bard continues, "The king\'s influence extends far beyond the castle walls, however. He has taken a keen interest in the mages of the citadel, recognizing their power and importance in the empire\'s defense and war efforts. In recent years, he even installed his queen as their governor. Despite the king\'s strict rule, The Capital remains a bustling hub of activity and trade. Merchants from all over the world come to ply their wares, and its markets are a riot of color and noise."',
         options: [
             {
                 text: 'Continue',
@@ -1370,7 +1370,7 @@ const textNodes = [
         // act: 5
         // ENDING
         id: 80,
-        text: 'After carefully considering your options, you decide to take a chance and stay in the clearing. Despite finding plenty of wood, it is damp, making it difficult to start a fire. As darkness descends, you try in vain but ultimately give up. With no other option, you hastily construct a makeshift lean-to on the edge of the clearing. However, as the night wears on, and the temperature continues to drop. Without any source of warmth, you begin to feel the effects of hypothermia.',
+        text: 'After carefully considering your options, you decide to take a chance and stay in the clearing. Despite finding plenty of wood, it is damp, making it difficult to start a fire. As darkness descends, you try in vain but ultimately give up. With no other option, you hastily construct a makeshift lean-to on the edge of the clearing. However, as the night wears on, the temperature continues to drop. Without any source of warmth, you begin to feel the effects of hypothermia.',
         options: [
             {
                 text: 'RESTART FROM LAST CHECKPOINT',
@@ -1413,7 +1413,7 @@ const textNodes = [
     {
         // act: 5
         id: 83,
-        text: 'Suddenly, you awaken to find yourself being roughly pulled out of bed by a group of strangers. You try to resist, but their grip is strong. You realize with horror that you\'ve being kidnapped by those who you can only guess to be slavers. The room is dark and you can barely make out their faces, but you see the glint of steel in one of their hands. What do you do?',
+        text: 'Suddenly, you awaken to find yourself being roughly pulled out of bed by a group of strangers. You try to resist, but their grip is strong. You realize with horror that you\'re being kidnapped by those who you can only guess to be slavers. The room is dark and you can barely make out their faces, but you see the glint of steel in one of their hands. What do you do?',
         options: [
             {
                 text: 'Drop supplies and run!',
@@ -1506,7 +1506,7 @@ const textNodes = [
         // act: 5
         // Ending
         id: 91,
-        text: 'The woman\'s eyes meet yours, and she speaks directly to you. "You will not be the first to offer yourself to the dragons. But you will be the spark that ignites the flame of their blessed return." She raises his voice, "And when they come, they will see that we are their loyal servants, their faithful acolytes, and they will reward us with the power and glory that we so rightfully deserve!" With a final, crazed laugh, the woman brings a large ivory knife into view and plunges it into your heart. Your vision fades and and the gathering erupts into chaotic celebration.',
+        text: 'The woman\'s eyes meet yours, and she speaks directly to you. "You will not be the first to offer yourself to the dragons. But you will be the spark that finally ignites the flame of their blessed return." She raises her voice, "And when they come, they will see that we are their loyal servants, their faithful acolytes, and they will reward us with the power and glory that we so rightfully deserve!" With a final, crazed laugh, the woman brings a large ivory knife into view and plunges it into your heart. Your vision fades and the gathering erupts into chaotic celebration.',
         options: [
             {
                 text: 'RESTART FROM LAST CHECKPOINT',
@@ -1593,7 +1593,7 @@ const textNodes = [
     {
         // act: 5
         id: 97,
-        text: 'You meander through the nearby woods and scavenge breakfast from the surrounding foliage. After some time, you assess your findings: a handful of round, vibrant red berries, and assorment of webbed brown mushrooms. What will you choose to eat?',
+        text: 'You meander through the nearby woods and scavenge breakfast from the surrounding foliage. After some time, you assess your findings: a handful of round, vibrant red berries, and assortment of webbed brown mushrooms. What will you choose to eat?',
         options: [
             {
                 text: 'Eat neither',
@@ -1726,7 +1726,7 @@ const textNodes = [
     {
         // act: 5
         id: 105,
-        text: 'Approaching the group of menacing-looking mercenaries blocking your path, you adopt an air of authority. With a confident tone, you declare, "I am a mage from the Citadel of Mages, and I have reason to believe that you are extorting travelers passing through this road. Such behavior is unacceptable and will not be tolerated." The mercenaries exchange uneasy looks, realizing that they have been caught in their illicit scheme. After a tense moment, the leader grudgingly steps aside, allowing you to pass without further incident.',
+        text: 'Approaching the group of menacing-looking mercenaries blocking your path, you adopt an air of authority. With a confident tone, you declare, "I am a mage from the Citadel, and I have reason to believe that you are extorting travelers passing through this road. Such behavior is unacceptable and will not be tolerated." The mercenaries exchange uneasy looks, realizing that they have been caught in their illicit scheme. After a tense moment, the leader grudgingly steps aside, allowing you to pass without further incident.',
         options: [
             {
                 text: 'Continue',
@@ -1916,7 +1916,7 @@ const textNodes = [
     {
         // act: 6A
         id: 117,
-        text: 'You accept his kind offer and climb onto the ox\'s back, feeling its powerful muscles as it starts moving up the steep path. The boy seems to be a local, and you can\'t help but wonder what he knows about the Citadel and its residents. You ask him about the mages, and he tells you that they are some of the most powerful and skilled practitioners of alchemy in the land. He speaks with admiration and respect for their abilities, and you can sense his genuine awe for their magic. As you near the top, the boy expertly steers the the animal towards a small platform, and you dismount, feeling grateful for the ride. You thank the boy, and he waves goodbye with a big smile before returning down the path with the ox.',
+        text: 'You accept his kind offer and climb onto the ox\'s back, feeling its powerful muscles as it starts moving up the steep path. The boy seems to be a local, and you can\'t help but wonder what he knows about the Citadel and its residents. You ask him about the mages, and he tells you that they are some of the most powerful and skilled practitioners of alchemy in the land. He speaks with admiration and respect for their abilities, and you can sense his genuine awe for their magic. As you near the top, the boy expertly steers the animal towards a small platform, and you dismount, feeling grateful for the ride. You thank the boy, and he waves goodbye with a big smile before returning down the path with the ox.',
         options: [
             {
                 text: 'Continue',
@@ -1949,7 +1949,7 @@ const textNodes = [
     {
         // act: 6A
         id: 120,
-        text: 'As you start to pull out the mysterious object from your bag, the woman\'s expression quickly changes. Her eyes widen with fear, and she frantically pushes it back into your bag before covering it with the flap. She urgently places a finger on her lips, gesturing for you to follow her out of the room. You can feel her grip tighten on your arm as she leads you up a a curved flight of stairs and through a labyrinth of hallways, before finally shoving you into a large room. "Stay here and don\'t move," she whispers before swiftly shutting the door behind her, leaving you alone once again.',
+        text: 'As you start to pull out the mysterious object from your bag, the woman\'s expression quickly changes. Her eyes widen with fear, and she frantically pushes it back into your pack before covering it with the flap. She urgently places a finger on her lips, gesturing for you to follow her out of the room. You can feel her grip tighten on your arm as she leads you up a curved flight of stairs and through a labyrinth of hallways, before finally shoving you into a large room. "Stay here and don\'t move," she whispers before swiftly shutting the door behind her, leaving you alone once again.',
         options: [
             {
                 text: 'Continue',
@@ -1960,7 +1960,7 @@ const textNodes = [
     {
         // act: 6A
         id: 121,
-        text: 'As you take in the vast room, your attention is drawn to the magnificent view outside the windows overlooking the cliff face. The long wooden table in the center of the room is flanked by a few chairs and bookshelves, which match those in the hearth room below. Suddenly, the door bursts open, revealing a short and stocky man dressed in a long, more elaborately decorated green robe. The complex designs on his robe catch your eye, and he wastes no time in demanding that you tell him everything.',
+        text: 'You take in the vast room and your attention is drawn to the magnificent view outside the windows overlooking the cliff face. The long wooden table in the center of the room is flanked by a few chairs and bookshelves, which match those in the hearth room below. Suddenly, the door bursts open, revealing a short and stocky man dressed in a long, more elaborately decorated green robe. The complex designs on his robe catch your eye, and he wastes no time in demanding that you tell him everything.',
         options: [
             {
                 text: 'Tell your story',
@@ -2116,7 +2116,7 @@ const textNodes = [
     {
         // act: 6A
         id: 134,
-        text: 'You awaken from a deep slumber that lasts for over a day, startled by the sound of your bedroom door crashing open. The archmage bursts in, his face red with fury as he scream uncontrollably, "You have doomed us! You fool! You have absolutely doomed us!" You sit up, rubbing the sleep from your eyes, attempting to understand what has caused the mage to act in such a frantic manner. "What\'s going on?" you ask, trying to make sense of the situation as the man rushes towards the small window in your room.',
+        text: 'You awaken from a deep slumber that lasts for over a day, startled by the sound of your bedroom door crashing open. The archmage bursts in, his face red with fury as he screams uncontrollably, "You have doomed us! You fool! You have absolutely doomed us!" You sit up, rubbing the sleep from your eyes, attempting to understand what has caused the mage to act in such a frantic manner. "What\'s going on?" you ask, trying to make sense of the situation as the man rushes towards the small window in your room.',
         options: [
             {
                 text: 'Continue',
@@ -2157,7 +2157,7 @@ const textNodes = [
         options: [
             {
                 text: 'Continue',
-                nextText: 138
+                nextText: 139
             }
         ]
     },
@@ -2191,7 +2191,7 @@ const textNodes = [
     {
         // act: 6A
         id: 141,
-        text: 'As you descend the stairs, the acrid smell of smoke grows stronger and the air thickens with every step. You cover your nose with your shirt, but your eyes still sting from the fumes. Finally, you reach the large hearthroom at the tower\'s base, only to be met with an intense heat that nearly knocks you off your feet. Flames have broken the glass windows and engulfed the room. You spot the door and dash towards it, but as you pull the hot metal handle, you realize it\'s locked. Panic sets in as you try to pry the door open, but it won\'t budge, and the inferno closes in around you.',
+        text: 'As you descend the stairs, the acrid smell of smoke grows stronger and the air thickens with every step. You cover your nose with your tunic, but your eyes still sting from the fumes. Finally, you reach the large hearthroom at the tower\'s base, only to be met with an intense heat that nearly knocks you off your feet. Flames have broken the glass windows and engulfed the room. You spot the door and dash towards it, but as you pull the hot metal handle, you realize it\'s locked. Panic sets in as you try to pry the door open, but it won\'t budge, and the inferno closes in around you.',
         options: [
             {
                 text: 'RESTART FROM LAST CHECKPOINT',
@@ -2298,10 +2298,10 @@ const textNodes = [
     {
         // act: 6A
         id: 149,
-        text: 'The cloud is a fearsome sight to behold, stretching far and wide across the sky with an ominous presence that chills you to the bone. As you gaze up at it, you can see that the its top is rounded and massive, with a texture that seems to writhe and twist resembling flames of hellfire, like it\'s alive with some terrible force that threatens to consume everything in its path. You can tell that something catastrophic has happened in the capital and your mind races with worry for the safety of your loved ones back home. You feel torn between continuing on to investigate and hurrying back to your village to make sure they\'re okay. What will you decide to do?',
+        text: 'The cloud is a fearsome sight to behold, stretching far and wide across the sky with an ominous presence that chills you to the bone. As you gaze up at it, you can see that its top is rounded and massive, with a texture that seems to writhe and twist resembling flames of hellfire, like it\'s alive with some terrible force that threatens to consume everything in its path. You can tell that something catastrophic has happened in the capital and your mind races with worry for the safety of your loved ones back home. You feel torn between continuing on to investigate and hurrying back to your village to make sure they\'re okay. What will you decide to do?',
         options: [
             {
-                text: 'Continue to the capital',
+                text: 'Investigate the cloud',
                 setState: {
                     brokenCapital: true,
                     brokenCitadel: false,
@@ -2416,7 +2416,7 @@ const textNodes = [
     {
         // act: 6B
         id: 157,
-        text: 'You approach the guard with caution, knowing that the object you carry may raise suspicion. You choose your words carefully, stating that you\'re a family member here to visit. The guard looks at you skeptically, and you feel a cold sweat forming on your brow. "What part of the city do they live in?" he asks, his tone uninterested. Panic rises within you as you realize you\'re not familiar with the city. "Um, the market," you stammer out, hoping it\'s a common enough answer. The guard studies you for a moment before summoning another soldier and motioning for you to follow him into the guard tower.',
+        text: 'You approach the guard with caution, knowing that the object you carry may raise suspicion. You choose your words carefully, stating that you\'re a family member here to visit. The guard looks at you, and you feel a cold sweat forming on your brow. "What part of the city do they live in?" he asks, his tone uninterested. Panic rises within you as you realize you\'re not familiar with the city. "Um, the market," you stammer out, hoping it\'s a common enough answer. The guard studies you for a moment before summoning another soldier and motioning for you to follow him into the guard tower.',
         options: [
             {
                 text: 'Continue',
@@ -2509,7 +2509,7 @@ const textNodes = [
         // act: 6B
         // ENDING
         id: 165,
-        text: 'The guards haul you off the ground and drag you deeper into the dungeon. The torches grow dimmer and farther apart as you descend, and a musty smell fills the air. The sound of your footsteps is joined by the drip-drip of water echoing off the damp walls. After what feels like an eternity, you are shoved into a dank, empty cell and left alone with a small sack of hard moldy bread. Darkness engulfs you as the guards slam the door shut, leaving you to contemplate your fate. You wait for hours, then days, then weeks, but no one ever comes to your cell. Your bread runs out, and hunger gnaws at your insides. The only sound you can hear is the scurrying of rodents in the darkness. Eventually, your strength gives out, and you succumb to malnutrition, consumed by the darkness and despair of your prison.',
+        text: 'The guards haul you off the ground and drag you deeper into the dungeon. The torches grow dimmer and farther apart as you descend, and a musty smell fills the air. The sound of your footsteps is joined by the drip-drip of water echoing off the damp walls. After what feels like an eternity, you are shoved into a dank, empty cell and left alone with a small sack of hard, moldy bread. Darkness engulfs you as the guards slam the door shut, leaving you to contemplate your fate. You wait for hours, then days, then weeks, but no one ever comes to your cell. Your bread runs out, and hunger gnaws at your insides. The only sound you can hear is the scurrying of rodents in the darkness. Eventually, your strength gives out, and you succumb to malnutrition, consumed by the darkness and despair of your prison.',
         options: [
             {
                 text: 'RESTART FROM LAST CHECKPOINT',
@@ -2892,7 +2892,7 @@ const textNodes = [
     {
         // act: 6B
         id: 187,
-        text: 'As you step into a colossal kitchen, you\'re greeted by a wave of heat and a tantalizing aroma that makes your mouth water. Several hearths blaze with crackling fires, while a large oven emits the scent of freshly baked bread. A sturdy table stands off to the side, flanked by long benches that invite you to sit down. As you take your seat across from the queen, she greets you with a warm smile. She nods to a large, muscular man in an apron who approaches with several trays of plates, which he sets down on the table with practiced ease. The clattering of the plates reveals an array of dishes that make your stomach growl in anticipation. You see roasted meats dripping with savory gravy, cheeses of various shapes and colors, pastries dusted with sugar and cinnamon, and mead poured into golden goblets. The queen encourages you to indulge and savor the feast before you. You do not hesitate to oblige, eagerly reaching for the nearest plate and relishing the flavors of each dish as you savor every bite.',
+        text: 'You\'re lead into a colossal kitchen, and greeted by a wave of heat and a tantalizing aroma that makes your mouth water. Several hearths blaze with crackling fires, while a large oven emits the scent of freshly baked bread. A sturdy table stands off to the side, flanked by long benches that invite you to sit down. As you take your seat across from the queen, she greets you with a warm smile. She nods to a large, muscular man in an apron who approaches with several trays, which he sets down on the table with practiced ease. The clattering of the plates reveals an array of dishes that make your stomach growl in anticipation. You see roasted meats dripping with savory gravy, cheeses of various shapes and colors, pastries dusted with sugar and cinnamon, and mead poured into golden goblets. The queen encourages you to indulge and savor the feast before you. You do not hesitate to oblige, eagerly reaching for the nearest plate and relishing the flavors of each dish as you savor every bite.',
         options: [
             {
                 text: 'Continue',
@@ -2903,7 +2903,7 @@ const textNodes = [
     {
         // act: 6B
         id: 188,
-        text: 'The queen interrogates you about your journey as you eat, digging into every detail with curiosity. You answer her honestly as you savor every bite of the food, feeling its warmth and flavor fill your mouth and stomach. Eventually, you can eat no more, and you lean back on the bench with a sigh of satisfaction. The queen signals to a guard, and you\'re escorted out of the kitchen and into the castle. You\'re lead through a maze of corridors and staircases until you reach a cozy bedroom with a large bed. The room is decorated with tapestries and paintings that depict scenes of nature. A fireplace crackles in the corner, casting a soft glow over everything. "I hope to speak with you again soon," the queen says with a smile as she closes the door behind you. You hear a metallic click and realize that she has locked you in. Your head buzzing from your feast, you crawl into the soft bed, feeling its plush pillows and blankets envelop you like a cocoon. You drift into a deep sleep, unsure of what awaits you.',
+        text: 'The queen interrogates you about your journey as you eat, digging into every detail with curiosity. You answer her honestly as you savor every bite of the food, feeling its warmth and flavor fill your mouth and stomach. Eventually, you can eat no more, and you lean back on the bench with a sigh of satisfaction. The queen signals to a guard, and you\'re escorted out of the kitchen and into the castle. You\'re lead through a maze of corridors and staircases until you reach a cozy bedroom with a large bed. The room is decorated with tapestries and paintings that depict scenes of nature. A fireplace crackles in the corner, casting a soft glow over everything. "I hope to speak with you again soon," her majesty says with a smile as she closes the door behind you. You hear a metallic click and realize that she has locked you in. Your head buzzing from your feast, you crawl into the soft bed, feeling its plush pillows and blankets envelop you like a cocoon. You drift into a deep sleep, unsure of what awaits you.',
         options: [
             {
                 text: 'Continue',
@@ -2955,7 +2955,7 @@ const textNodes = [
     {
         // act: 6B
         id: 192,
-        text: 'You\'re drawn towards a group of fire-eaters who are dressed like majestic dragons, their shimmering costumes reflecting in the sunlight. As you approach them, you\'re hit by the scorching heat of the flames and the deafening cheers of the mesmerized crowd. The performers move with remarkable agility, their bodies resembling the mythical beasts they\'re portraying, spewing fire high into the sky. The flames twirl, dance, and coalesce into stunning patterns and shapes, captivating your attention. The crowd roars in excitement, and you can feel the adrenaline rushing through your veins. Suddenly, the performers halt in their tracks, gazing up at the sky with a mix of fear and wonder. A profound silence falls over the audience, and you follow their gaze, feeling a knot of anxiety in your stomach.',
+        text: 'You\'re drawn towards a group of fire-eaters who are dressed like majestic dragons, their shimmering costumes reflecting in the sunlight. As you approach them, you\'re hit by the scorching heat of the flames and the deafening cheers of the mesmerized crowd. The performers move with remarkable agility, their bodies resembling the mythical beasts they\'re portraying, spewing fire high into the sky. The flames twirl, dance, and coalesce into stunning patterns and shapes, captivating your attention. The crowd roars in excitement, and you can feel the adrenaline rushing through your veins. Suddenly, the performers halt in their tracks, staring up at the sky with a mix of fear and wonder. A profound silence falls over the audience, and you follow their gaze, feeling a knot of anxiety in your stomach.',
         options: [
             {
                 text: 'Continue',
@@ -2966,7 +2966,7 @@ const textNodes = [
     {
         // act: 6B
         id: 193,
-        text: 'A vast cloud looms ominously in the distance, covering much of the horizon. Its size and darkness leave you uneasy, you step forward, hoping to get a better view, and your heart sinks at the sight before you. The cloud is a massive, swirling mass of black and red, resembling a furious inferno. The edges are jagged and menacing, and the sound of an explosion reverberates through your bones. As the boom dies off, pandemonium breaks loose throughout the city. People panic, scrambling over each other to escape the impending disaster. You can hear screams and cries of terror all around you. Without a second thought, you sprint for the gates and make it out just as they close behind you, sealing the city off from the outside world.',
+        text: 'A vast cloud looms ominously in the distance, covering much of the horizon. Its size and darkness leave you uneasy, you step forward, hoping to get a better view, and your heart sinks at the sight before you. The cloud is an immense, swirling mass of black and red, resembling a furious inferno. The edges are jagged and menacing, and the sound of an explosion reverberates through your bones. As the boom dies off, pandemonium breaks loose throughout the city. People panic, scrambling over each other to escape the impending disaster. You can hear screams and cries of terror all around you. Without a second thought, you sprint for the gates and make it out just as they close behind you, sealing the city off from the outside world.',
         options: [
             {
                 text: 'Continue',
@@ -2977,7 +2977,7 @@ const textNodes = [
     {
         // act: 6B
         id: 194,
-        text: 'The cloud is a fearsome sight to behold, stretching far and wide across the sky with an ominous presence that chills you to the bone. As you gaze up at it, you can see that the its top is rounded and massive, with a texture that seems to writhe and twist resembling flames of hellfire, like it\'s alive with some terrible force that threatens to consume everything in its path. You can tell that something catastrophic has happened and your mind races with worry for the safety of your loved ones back home. You feel torn between investigating the source of the cloud and hurrying back to your village to make sure they\'re okay. What will you decide to do?',
+        text: 'The cloud is a fearsome sight to behold, stretching across the sky with an ominous presence that chills you to the bone. As you gaze up at it, you can see that its top is rounded and massive, with a texture that seems to writhe and twist resembling flames of hellfire, like it\'s alive with some terrible force that threatens to consume everything in its path. You can tell that something catastrophic has happened and your mind races with worry for the safety of your loved ones back home. You feel torn between investigating the source of the cloud and hurrying back to your village to make sure they\'re okay. What will you decide to do?',
         options: [
             {
                 text: 'Investigate the cloud',
@@ -3038,7 +3038,7 @@ const textNodes = [
     {
         // act: 7
         id: 198,
-        text: 'As you set on your journey, the urgency to reach your destination quickly consumes you. With every step you take, the sky above grows darker, and the vast cloud seems to devour the sun. As the darkness spreads, thick flakes of ash start to fall, blanketing the ground with a thin layer of grey. The air becomes thick and heavy, carrying with it an acrid smell that makes you wrinkle your nose in disgust while you continue to walk. The landscape around you is shrouded in an eerie silence, with no sign of life, and the only sound you can hear is the crunch of ash under your feet.',
+        text: 'As you set on your journey, the urgency to reach your destination quickly consumes you. With every step you take, the sky above grows darker, and the vast cloud seems to devour the sun. As the darkness spreads, fat flakes of ash start to fall, blanketing the ground with a thin layer of grey. The air becomes thick and heavy, carrying with it an acrid smell that makes you wrinkle your nose in disgust while you continue to walk. The landscape around you is shrouded in an eerie silence, with no sign of life, and the only sound you can hear is the crunch of ash under your feet.',
         options: [
             {
                 text: 'Continue',
@@ -3320,22 +3320,22 @@ const textNodes = [
         // act: 7
         // Camp
         id: 216,
-        text: 'As the day progresses, a cold wind blows in, along with the realization dawns upon you that continuing your journey safely will soon become impossible due to the blackening sky. Your quest for a suitable place to set up camp leads you to scan the surroundings in search of any signs of shelter or resources. While searching for a suitable place to make camp, your attention is drawn to a clearing in the distance that boasts an abundance of firewood. However, the location\'s exposure raises concerns. As you continue your quest for a secure option, a nearby cave entrance catches your eye, offering sturdy shelter and protection from the elements. Despite its promising attributes, the uncertainty of what could be lurking inside makes you hesitant and prompts you to meticulously evaluate your options.',
+        text: 'As the day progresses, a cold wind blows in, along with the realization that continuing your journey safely will soon become impossible due to the blackening sky. Your quest for a suitable place to set up camp leads you to scan the surroundings in search of any signs of shelter or resources. While searching for a suitable place to make camp, your attention is drawn to a clearing in the distance that boasts an abundance of firewood. However, the location\'s exposure raises concerns. As you continue your quest for a secure option, a nearby cave entrance catches your eye, offering sturdy shelter and protection from the elements. Despite its promising attributes, the uncertainty of what could be lurking inside makes you hesitant and prompts you to meticulously evaluate your options.',
         options: [
             {
                 text: 'Camp in the clearing',
                 nextText: 217
             },
             {
-                text: 'Camp by the cave',
-                nextText: 217
+                text: 'Camp in the cave',
+                nextText: 218
             }
         ]
     },
     {
         // act: 7
         id: 217,
-        text: 'You weigh your options carefully, but as the light begins to fade, you decide to take a chance and camp in the clearing. You gather wood and start a fire, basking in the warmth it provides. As the night progresses, you feel a chill in the air, but ignore it. However, as the fire dies down, the temperature drops rapidly, and soon you find yourself shivering uncontrollably. You huddle up and try to stay warm, but it\'s no use. The cold seeps through your clothes, chilling you to the bone. Exhaustion sets in, and you start to feel drowsy, you you succumb to darkness.',
+        text: 'You weigh your options carefully, but as the light begins to fade, you decide to take a chance and camp in the clearing. You gather wood and start a fire, basking in the warmth it provides. As the night progresses, you feel a chill in the air, but ignore it. However, as the fire dies down, the temperature drops rapidly, and soon you find yourself shivering uncontrollably. You huddle up and try to stay warm, but it\'s no use. The cold seeps through your clothes, chilling you to the bone. Exhaustion sets in, and you start to feel drowsy, you succumb to darkness.',
         options: [
             {
                 text: 'RESTART FROM LAST CHECKPOINT',
@@ -3471,7 +3471,7 @@ const textNodes = [
         // act: 8
         // No wolf fren
         id: 226,
-        text: 'As you journey om, you come across a clearing that offers a moment of respite. The open space provides a welcome break from the dense forest that surrounds you, and you take a moment to catch your breath and assess your surroundings. But before you can fully relax, a group of bandits emerges from the tree line, brandishing weapons and demanding that you hand over your valuables. Fear grips you as you stand frozen in place, unsure of how to react. The bandits grow increasingly agitated, shouting and waving their weapons menacingly. It\'s clear that they won\'t take no for an answer.',
+        text: 'As you journey on, you come across a clearing that offers a moment of respite. The open space provides a welcome break from the dense forest that surrounds you, and you take a moment to catch your breath and assess your surroundings. But before you can fully relax, a group of bandits emerges from the tree line, brandishing weapons and demanding that you hand over your valuables. Fear grips you as you stand frozen in place, unsure of how to react. The bandits grow increasingly agitated, shouting and waving their weapons menacingly. It\'s clear that they won\'t take no for an answer.',
         options: [
             {
                 text: 'Fight them!',
@@ -3502,7 +3502,7 @@ const textNodes = [
     {
         // act: 8
         id: 228,
-        text: 'With quick thinking, you reach into your backpack and pull out a hammer that you had brought along for emergencies. You swing the hammer with all your might, aiming for the closest bandit. The blow connects, and the bandit falls to the ground, stunned. The other bandits pause momentarily in shock, giving you the opening you need. With adrenaline pumping through your veins, you continue to swing the hammer, taking down the bandits one by one. Despite their numbers, you manage to hold your ground, fighting with all your might. In the end, you emerge victorious, standing tall amidst the fallen bandits. Your heart is pounding in your chest, and you feel a sense of triumph and relief wash over you. You gather your belongings and continue on your journey.',
+        text: 'With quick thinking, you reach into your backpack and pull out your hammer. You swing the hammer with all your might, aiming for the closest bandit. The blow connects, and the bandit falls to the ground, stunned. The other bandits pause momentarily in shock, giving you the opening you need. With adrenaline pumping through your veins, you continue to swing the hammer, taking down the bandits one by one. Despite their numbers, you manage to hold your ground, fighting with all your might. In the end, you emerge victorious, standing tall amidst the fallen bandits. Your heart is pounding in your chest, and you feel a sense of triumph and relief wash over you. You gather your belongings and continue on your journey.',
         options: [
             {
                 text: 'Continue',
@@ -3662,11 +3662,11 @@ const textNodes = [
             },
             {
                 text: 'Eat both',
-                nextText: 240
+                nextText: 48
             },
             {
                 text: 'Eat the mushrooms',
-                nextText: 240
+                nextText: 48
             },
             {
                 text: 'Eat the berries',
@@ -3688,7 +3688,7 @@ const textNodes = [
     {
         // act: 8
         // Ending
-        id: 240,
+        id: 48,
         text: 'You lean back, feeling content after a satisfying belch. Your hunger has been satiated and your efforts have paid off. Taking a moment to bask in the feeling, you pack up your campsite and resume your journey. As you trek on and make good headway, an unpleasant sensation starts building up in your gut. Your body is wracked with cramps and your stomach begins to churn. Soon, you find yourself emptying the contents of your stomach in violent spasms. The pain becomes unbearable, and you feel yourself slipping into unconsciousness.',
         options: [
             {
@@ -3704,7 +3704,7 @@ const textNodes = [
     {
         // act: 8
         id: 240,
-        text: 'As you resume your journey, your mind races with anticipation of what lies ahead. You can\'t help but wonder what you will discover as you draw closer to your destination. As you make your way through the trees, you stumble upon a familiar sight: a lean-to constructed under the branches. Beneath its shelter, a lone bard sits, draped in a flowing red cloak adorned with white trimmings. His hood is drawn low, hiding his eyes from view, but you can see the bushy beard sprouting from his cheeks and chin. As he strums his lute, a haunting melody fills the air, calming your weary soul. The bard looks just as exhausted as you are, but the warmth of his roaring campfire and the comfort of his lean-to call out to you, tempting you to take a moment\'s rest and warm your chilled bones.',
+        text: 'As you resume your journey, your mind races with anticipation of what lies ahead. You can\'t help but wonder what you will discover as you draw closer to your destination. As you make your way through the trees, you stumble upon a familiar sight: a lean-to constructed under the tree branches. Beneath its shelter, a lone bard sits, draped in a flowing red cloak adorned with white trimmings. His hood is drawn low, hiding his eyes from view, but you can see the bushy beard sprouting from his cheeks and chin. As he strums his lute, a haunting melody fills the air, calming your weary soul. The bard looks just as exhausted as you are, but the warmth of his roaring campfire and the comfort of his lean-to call out to you, tempting you to take a moment\'s rest and warm your chilled bones.',
         options: [
             {
                 text: 'Rob the bard',
@@ -3716,7 +3716,7 @@ const textNodes = [
             },
             {
                 text: 'Continue on your journey',
-                nextText: 79
+                nextText: 251
             },
         ]
     },
@@ -3800,7 +3800,7 @@ const textNodes = [
     {
         // act: 8
         id: 245,
-        text: 'The bard sits up, his eyes distant as he speaks. "The dragons were magnificent creatures, feared and revered by all who knew of them. They once ruled the skies, casting their mighty shadows across the land. In the early days of civilization, people worshipped them as divine beings, believing they had the power to bless the land with abundance and protect the people from harm. The Empire built grand temples and shrines to honor them, and it was believed that the dragons would answer the prayers of the faithful. But now, they are gone."',
+        text: 'The bard sits up, his eyes distant as he speaks. "The dragons were magnificent creatures, feared and revered by all who knew of them. They once ruled the skies, casting their mighty shadows across the land. In the early days of civilization, people worshipped them as divine beings, believing they had the power to bless the land with abundant harvests and protect the people from harm. The Empire built grand temples and shrines to honor them, and it was believed that the dragons would answer the prayers of the faithful. But now, they are gone."',
         options: [
             {
                 text: 'Continue',
@@ -3877,13 +3877,13 @@ const textNodes = [
             {
                 text: 'Continue',
                 setState: {id: 251},
-                nextText: 5000,
+                nextText: 254,
                 requiredState: (currentState) => currentState.brokenCitadel === true 
             },
             {
                 text: 'Continue',
                 setState: {id: 251},
-                nextText: 5000,
+                nextText: 257,
                 requiredState: (currentState) => currentState.brokenHome === true 
             }
         ]
@@ -3892,18 +3892,7 @@ const textNodes = [
     {
         // act: 9A
         id: 252,
-        text: 'As you continue on your way, the dense foliage gradually clears, revealing the awe-inspiring sight of the massive fortified gates towering atop a rocky hill, overlooking the road. However, as you draw closer, your heart sinks at the sight of the gates standing open, a symbol of the destruction that has befallen the once-great city. The plume of thick smoke rising from the city center is ominous, while rubble and debris are scattered haphazardly about the streets. he air is stagnant and oppressive, filled with ash particles that dance like snowflakes around you. The only sound the crunch of debris underfoot as you venture deeper into the ruins. The once-bustling city is now a desolate wasteland, devoid of any sign of life. The eerie silence sends shivers down your spine, and you move cautiously, ever-alert for any sign of danger.',
-        options: [
-            {
-                text: 'Continue',
-                nextText: 253
-            }
-        ]
-    },
-    {
-        // act: 9A
-        id: 252,
-        text: 'Ahead of you, the castle stands in ruins, like some great beast had burst from within, shattering the once-great structure. You can\'t help feeling sick at the destruction that surrounds you, but your curiosity drives you forward, and you venture inside, crawling through cracks and under rubble. As you make your way deeper into the ruins, you reach a giant crater, and the magnitude of the devastation takes your breath away. The heat emanating from its center is intense, a stark contrast to the cold weather outside. You make your way down into it and struggle to keep your balance as bubbling liquid fire before you dances evilly, a malevolent force that seems to suck the very life out of you.',
+        text: 'As you continue on your way, the dense foliage gradually clears, revealing the awe-inspiring sight of the massive fortified gates towering atop a rocky hill, overlooking the road. However, as you draw closer, your heart sinks at the sight of the gates standing open, a symbol of the destruction that has befallen the once-great city. The plume of thick smoke rising from the city center is ominous, while rubble and debris are scattered haphazardly about the streets. The air is stagnant and oppressive, filled with ash particles that dance like snowflakes around you. The only sound the crunch of debris underfoot as you venture deeper into the ruins. The once-bustling city is now a desolate wasteland, devoid of any sign of life. The eerie silence sends shivers down your spine, and you move cautiously, ever-alert for any sign of danger.',
         options: [
             {
                 text: 'Continue',
@@ -3914,6 +3903,17 @@ const textNodes = [
     {
         // act: 9A
         id: 253,
+        text: 'Ahead of you, the castle stands in ruins, like some great beast had burst from within, shattering the once-great structure. You can\'t help feeling sick at the destruction that surrounds you, but your curiosity drives you forward, and you venture inside, crawling through cracks and under rubble. As you make your way deeper into the ruins, you reach a giant crater, and the magnitude of the devastation takes your breath away. The heat emanating from its center is intense, a stark contrast to the cold weather outside. You make your way down into it and struggle to keep your balance as bubbling liquid fire before you dances evilly, a malevolent force that seems to suck the very life out of you.',
+        options: [
+            {
+                text: 'Continue',
+                nextText: 254
+            }
+        ]
+    },
+    {
+        // act: 9A
+        id: 254,
         text: 'Your head spins, and your legs feel weak as you struggle to climb out of the crater. But it\'s no use; your strength fails you, and you collapse, helpless and powerless. The darkness around you seems to grow deeper, more oppressive with each passing moment, suffocating you until you can barely draw breath. You try to move, to stand up and fight back against the darkness, but your body refuses to obey your commands. Finally, you succumb to the all-consuming darkness that surrounds you.',
         options: [
             {
@@ -3936,30 +3936,8 @@ const textNodes = [
     },
     {
         // act: 9B
-        id: 254,
+        id: 255,
         text: 'The dense foliage gradually clears, revealing the remnants of a once-majestic tower that now stands in ruins. As you climb up the winding path to the top of the rocky cliff, your eyes can\'t help but be drawn to the towering pile of rubble at its peak. But as you near the top, your heart sinks as you realize that the once-great tower is now destroyed beyond recognition. The plume of smoke rising from its center is ominous, and the debris that is scattered haphazardly about the area paints a picture of utter devastation. The air is thick and heavy, and a suffocating stillness hangs over the ruins. The only sound is the crunch of debris underfoot as you make your way towards the tower. The once-bustling citadel is now a lifeless wasteland, and the eerie silence sends shivers down your spine. You move cautiously, ever-alert for any sign of danger.',
-        options: [
-            {
-                text: 'Continue',
-                nextText: 255
-            }
-        ]
-    },
-    {
-        // act: 9B
-        id: 255,
-        text: 'As you venture toward the ruins, your eyes scan the area, searching for any sign of life. It\'s then that you catch a glimpse of a figure amongst the rubble, dressed in frayed clothing that seems to have melted into their skin. The remains of a green hood cover their head, and as you approach, you hear them muttering to themselves in a low, mournful voice. "If I had known, and they had not known, I could have wrought this destruction on them instead," they mutter, their eyes glazed and distant. You try to speak to them, but they seem to be lost in their own thoughts, completely unaware of your presence. They continue to mutter to themselves, lost in their own despair and regret. As you stand there, watching the figure in silence, you can\'t help but wonder what could have driven them to this point. You leave the figure behind, lost in their own world of pain and regret, and continue on, determined to find the answers that you seek.',
-        options: [
-            {
-                text: 'Continue',
-                nextText: 256
-            }
-        ]
-    },
-    {
-        // act: 9B
-        id: 255,
-        text: 'As you approach the tower, the full extent of the destruction comes into view. The structure lies in ruins, like a great force had burst from within and shattered it into pieces. The devastation makes you feel sick, but your curiosity drives you forward, and you begin to crawl through cracks and under rubble, hoping to uncover some clue as to what happened. Deeper into the ruins, you come across a massive crater, and the magnitude of the destruction takes your breath away. The heat emanating from the crater is intense, and it\'s a stark contrast to the cold weather outside. At its center, bubbling liquid fire dances and shimmers malevolently, like a living entity that wants to consume everything in its path. You inch towards it, trying to see it more clearly.',
         options: [
             {
                 text: 'Continue',
@@ -3970,7 +3948,29 @@ const textNodes = [
     {
         // act: 9B
         id: 256,
-        text: 'The boiling fire seems to suck the very life out of you and your head spins with dizziness as the heat and fumes overwhelm you. You struggle to maintain your balance as you slip into the crater, but your legs feel weak, and your strength fails you. You collapse, helpless and powerless, surrounded by the all-consuming darkness that seems to want to swallow you whole. The molten froth casts a flickering glow on your face as you slip into unconsciousness.',
+        text: 'As you venture toward the ruins, your eyes scan the area, searching for any sign of life. It\'s then that you catch a glimpse of a figure amongst the rubble, dressed in frayed clothing that seems to have melted into their skin. The remains of a green hood cover their head, and as you approach, you hear them muttering to themselves in a low, mournful voice. "If I had known, and they had not known, I could have wrought this destruction on them instead," they mutter, their eyes glazed and distant. You try to speak to them, but they seem to be lost in their own thoughts, completely unaware of your presence. They continue to mutter to themselves, lost in their own despair and regret. As you stand there, watching the figure in silence, you can\'t help but wonder what could have driven them to this point. You leave the figure behind, in their own world of pain and regret, and continue on, determined to find the answers that you seek.',
+        options: [
+            {
+                text: 'Continue',
+                nextText: 257
+            }
+        ]
+    },
+    {
+        // act: 9B
+        id: 257,
+        text: 'As you approach the tower, the full extent of the destruction comes into view. The structure lies in ruins, like a great beast had burst from within and shattered it into pieces. The devastation makes you feel sick, but your curiosity drives you forward, and you begin to crawl through cracks and under rubble, hoping to uncover some clue as to what happened. Deeper into the ruins, you come across a massive crater, and the magnitude of the destruction takes your breath away. The heat emanating from the crater is intense, and it\'s a stark contrast to the cold weather outside. At its center, bubbling liquid fire dances and shimmers malevolently, like a living entity that wants to consume everything in its path. You inch towards it, trying to see it more clearly.',
+        options: [
+            {
+                text: 'Continue',
+                nextText: 258
+            }
+        ]
+    },
+    {
+        // act: 9B
+        id: 258,
+        text: 'The boiling fire seems to suck the very life out of you and your head spins with dizziness as the heat and fumes overwhelm you. You struggle to maintain your balance as you slip into the crater, but your legs feel weak, and your strength fails you. You collapse, helpless and powerless, surrounded by the all-consuming darkness that seems to want to swallow you whole. The molten center casts a flickering glow on your face as you slip into unconsciousness.',
         options: [
             {
                 text: 'RESTART FROM MIDPOINT',
@@ -3992,29 +3992,29 @@ const textNodes = [
     },
     {
         // act: 9C
-        id: 257,
+        id: 259,
         text: 'As you approach the village,  your heart pounding with excitement and relief. The familiar sight of the cottages and the sound of the children\'s laughter are like music to your ears. The streets seem to welcome you back like an old friend. The people greet you with warm smiles and open arms, glad to have you home after your long journey. You spend the first few days catching up on the latest news, listening to stories of the goings-on in your absence. Everyone is concerned about the strange weather, the late chill that threatens to delay the planting season.',
         options: [
             {
                 text: 'Continue',
-                nextText: 258
+                nextText: 260
             }
         ]
     },
     {
         // act: 9C
-        id: 258,
+        id: 260,
         text: 'As the days pass, the sky grows darker and darker, and ash falls heavier and heavier. It\'s as if a blizzard has descended upon the village, soot instead of snow falls from the sky, covering everything in a gray layer of dust. The air is thick with the acrid smell of burning, and your eyes itch and water constantly. Despite your efforts to stay warm, the cold seeps into your bones, and your food supply dwindles rapidly. You huddle close to your fire, desperate for warmth and sustenance. The constant fall of ash makes it nearly impossible to venture outside, and the world beyond your cabin seems like a distant memory.',
         options: [
             {
                 text: 'Continue',
-                nextText: 259
+                nextText: 261
             }
         ]
     },
     {
         // act: 9C
-        id: 259,
+        id: 261,
         text: 'As the weeks drag on, the weather shows no signs of letting up. You grow weaker by the day, suffering from the effects of exposure and malnutrition. The once-thriving village now resembles a ghost town, its people huddled indoors, afraid to venture out into the harsh world outside. One night, as you lie in your bed, listening to the eerie silence outside, you realize that your time has run out. You know that you won\'t survive much longer in this harsh and unforgiving world. With a heavy heart, you slip away into the quiet embrace of the snowstorm, the ash-covered world fading away as you drift into an eternal sleep.',
         options: [
             {
@@ -4036,12 +4036,11 @@ const textNodes = [
         ]
     },
 
-
 // CREDITS
     {
         // Credits
         id: 1000,
-        text:`For Sarah, Michael, and Nicole- You are the goblins to my mode... WRITTEN AND CODED BY: Katelyn Collins... A huge thank you to James Law for being the scientific consultant`,
+        text:`For Sarah, Michael, and Nicole- You are the goblins to my mode... WRITTEN AND CODED BY: Katelyn Collins... A huge thank you to James Law for being my scientific consultant`,
         options: [
             {
                 text: 'RESTART FROM MIDPOINT',
