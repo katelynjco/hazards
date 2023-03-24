@@ -8,6 +8,7 @@ const musicSwitch = document.querySelector('.music-switch input[type="checkbox"]
 const themeSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
 const audioElement = document.getElementById('audio');
 const iframe = document.querySelector('iframe');
+const creditsBtn = document.getElementById("credits-btn");
 
 
 let state = {id: 1};
@@ -183,6 +184,9 @@ function switchTheme(event) {
 themeSwitch.addEventListener('change', switchTheme);
 title.addEventListener('click', showMenu);
 backButton.addEventListener('click', hideMenu);
+creditsBtn.addEventListener("click", () => {
+    window.open("https://github.com/katelynjco", "_blank");
+  });
 
 const textNodes = [
     // ACT 1
@@ -198,6 +202,7 @@ const textNodes = [
             },
             {
                 text: 'Find food',
+                setState: {id: 1},
                 nextText: 3,
             }
         ]
@@ -358,6 +363,7 @@ const textNodes = [
         options: [
             {
                 text: 'Continue',
+                setState: {yellowPath: false},
                 nextText: 13 
             }
         ]
@@ -2082,7 +2088,7 @@ const textNodes = [
     {
         // act: 6A
         id: 131,
-        text: 'You can\'t help but feel a sense of disappointment as you realize there won\'t be a chance to speak to the archmage before departing. With a heavy heart, you allow yourself to be escorted outside and down the path. As you reach the bottom of the path, an elegant carriage awaits by the roadside, ready to transport you to the capital. You climb inside and wait for the queen, feeling a mix of excitement and nervousness. Eventually, she joins you, her warm smile putting you at ease. The two of you set off on the journey towards the capital, the carriage rolling along the winding roads. However, the weariness from your long journey catches up with you, causing you to drift off to sleep for much of the journey. You wake up intermittently, catching glimpses of the passing scenery and her majesty\'s regal form beside you.',
+        text: 'You can\'t help but feel a sense of disappointment as you realize there won\'t be a chance to speak to the archmage before departing. With a heavy heart, you allow yourself to be escorted outside and down the path. As you reach the bottom of the path, an elegant carriage awaits by the roadside, ready to transport you to the capital. You climb inside and wait for the queen, feeling a mix of excitement and nervousness. Eventually, she joins you, her warm smile putting you at ease. The two of you set off towards the capital, the carriage rolling along the winding roads. However, the weariness from your long journey catches up with you, causing you to drift off to sleep for much of the journey. You wake up intermittently, catching glimpses of the passing scenery and her majesty\'s regal form beside you.',
         options: [
             {
                 text: 'Continue',
@@ -2093,7 +2099,7 @@ const textNodes = [
     {
         // act: 6A
         id: 132,
-        text: 'As the carriage pulls through the castle gate, a full day has passed, and the sky has turned dark once again. You feel a sense of awe as you are escorted inside the castle, marveling at the grandeur of the place. Your escort leads you to a large, elaborate room, where you find a comfortable, oversized bed and a warm plate of food waiting on the table. Despite sleeping for most of the journey, you still feel drowsy, and the idea of sinking into the soft mattress and feasting on the delicious meal is irresistible. After satisfying your hunger, you drift off into a deep sleep, enveloped in the luxurious comforts of the room. In the morning, you are awoken by a gentle knock on your door, and a page invites you to take part in the opening festivities of the festival. He passes along the queen\'s condolences for not being able to accompany you this morning and her promise to join you later in the day.',
+        text: 'As the carriage pulls through the castle gate, a full day has passed, and the sky has turned dark once again. You feel a sense of awe as you are escorted inside the castle, marveling at the grandeur of the place. Your escort leads you to a large, elaborate room, where you find a comfortable, oversized bed and a warm plate of food waiting on a table. Despite sleeping for most of the journey, you still feel drowsy, and the idea of sinking into the soft mattress and feasting on the delicious meal is irresistible. After satisfying your hunger, you drift off into a deep sleep, enveloped in the luxurious comforts of the room. In the morning, you are awoken by a gentle knock on your door, and a page invites you to take part in the opening festivities of the festival. He passes along the queen\'s condolences for not being able to accompany you this morning and her promise to join you later in the day.',
         options: [
             {
                 text: 'Continue',
@@ -3004,7 +3010,7 @@ const textNodes = [
     {
         // act: 6B
         id: 195,
-        text: 'As you stroll through the bustling market, your senses are bombarded with an assortment of colors, scents, and sounds. The air is heavy with the aroma of spices and grilled meats, and the chatter of vendors and shoppers blends together into a lively hum. You pass by stalls overflowing with fresh produce, artisanal cheeses, and intricate jewelry. As you wander deeper into the maze of tents and stalls, a kind-faced woman in a flowing dress beckons you over with a smile. She offers you a small, warm tart and as you take a bite, you\'re enraptured by its tangy burst of flavor. However, as you finish and turn to thank her, you see her eyes widen in terror as she stares over your shoulder. You spin around to see what\'s causing her alarm, feeling a knot of anxiety in your own stomach.',
+        text: 'As you stroll through the bustling market, your senses are bombarded with an assortment of colors, scents, and sounds. The air is heavy with the aroma of spices and grilled meats, and the chatter of vendors and shoppers blends together into a lively hum. You pass by stalls overflowing with fresh produce, artisanal cheeses, and intricate jewelry. As you wander deeper into the maze of tents and stalls, a kind-faced woman in a flowing dress beckons you over with a smile. She offers you a small, warm tart and as you take a bite, you\'re enraptured by its tangy burst of flavor. However, as you finish and turn to thank her, you see her eyes widen in terror as she stares over your shoulder. You spin around to see what\'s causing her alarm, feeling a knot of anxiety in your stomach.',
         options: [
             {
                 text: 'Continue',
@@ -3536,7 +3542,7 @@ const textNodes = [
         // act: 8
         // wolf fren
         id: 230,
-        text: 'Just as you\'re about to make your move, a pack of wolves run up, snarling and growling at the bandits. The sudden appearance of the wild animals takes everyone by surprise, and the bandits falter for a moment, unsure of what to do. But the wolves don\'t hesitate. They launch themselves at the bandits, fangs bared and claws slashing. The bandits are taken aback by the ferocity of the animals, and they scramble to defend themselves.The battle is short but brutal. The bandits are outnumbered and outmatched by the pack of wolves, and soon they are retreating, their weapons abandoned on the ground. The wolves stand watch as the bandits run off into the forest, growling and snarling until they are out of sight. You are left in shock, watching as the wolves pad back into the forest, disappearing as quickly as they had appeared.',
+        text: 'Just as you\'re about to make your move, a pack of wolves run up, snarling and growling at the bandits. The sudden appearance of the wild animals takes everyone by surprise, and the bandits falter for a moment, unsure of what to do. But the wolves don\'t hesitate. They launch themselves at the bandits, fangs bared and claws slashing. The bandits are taken aback by the ferocity of the animals, and they scramble to defend themselves. The battle is short but brutal. The bandits are outnumbered and outmatched by the pack of wolves, and soon they are retreating, their weapons abandoned on the ground. The wolves stand watch as the bandits run off into the forest, growling and snarling until they are out of sight. You are left in shock, watching as the wolves pad back into the forest, disappearing as quickly as they had appeared.',
         options: [
             {
                 text: 'Continue',
@@ -3554,7 +3560,7 @@ const textNodes = [
         // act: 8
         // Camp
         id: 231,
-        text: 'As you journey on, the weariness begins to take hold, weighing down on you heavily. With the black above you, you start to feel the urgency of finding a safe place to make camp. You scan the surroundings, looking for any signs of shelter or resources that could aid you. You come across an abandoned shack. It seems like a stroke of luck, but you can\'t be sure of its structural integrity. Your eyes continue to roam until they land on a nearby cave entrance. It offers a promising option for sturdy shelter and protection from the elements. But the uncertainty about what might lurk inside causes you to hesitate. You take a moment to carefully consider your choices.',
+        text: 'As you journey on, the weariness begins to take hold, weighing down on you heavily. With the darkness above you, you start to feel the urgency of finding a safe place to make camp. You scan the surroundings, looking for any signs of shelter or resources that could aid you. You come across an abandoned shack. It seems like a stroke of luck, but you can\'t be sure of its structural integrity. Your eyes continue to roam until they land on a nearby cave entrance. It offers a promising option for sturdy shelter and protection from the elements. But the uncertainty about what might lurk inside causes you to hesitate. You take a moment to carefully consider your choices.',
         options: [
             {
                 text: 'Camp in the cave',
@@ -3589,19 +3595,34 @@ const textNodes = [
         options: [
             {
                 text: 'Fight them!',
-                nextText: 234
+                nextText: 49
             },
             {
                 text: 'Question them!',
-                nextText: 235
+                nextText: 234
             }
         ]
     },
     {
         // act: 8
         // ENDING
+        id: 49,
+        text: 'As you glare back, memories of your last encounter with mages flood your mind. Despite your fear, you steel yourself and reach for your trusty hammer, ready to fight for the shelter. The mages react swiftly, standing up. One of them retrieves a glass vial from his pocket, hurling it at you. The vial shatters on impact, and the unknown liquid splatters across your skin, causing it to burn and melt. You collapse, writhing in agony, before succumbing to unconsciousness.',
+        options: [
+            {
+                text: 'RESTART FROM LAST CHECKPOINT',
+                nextText: 198
+            },
+            {
+                text: 'RESTART FROM BEGINNING',
+                nextText: 1
+            }
+        ]
+    },
+    {
+        // act: 8
         id: 234,
-        text: 'As you glare back, memories of your last encounter with mages flood your mind, but you can\'t help feeling that they may have valuable information. Before you can speak, one of the mages quickly retrieves a glass vial from his pocket and hurls it to the ground, causing a cloud of smoke to fill the room. When the smoke clears, the mages are gone, leaving behind scattered papers covered in strange symbols that you cannot decipher. Despite your frustration, you realize that you will have to seek answers elsewhere. You pass the night in the shack, feeling thankful for the refuge it provided from the chilly temperatures. As you awaken, the sky remains dark, making it difficult to discern the time of day. You gather your belongings and prepare to resume your journey.',
+        text: 'As you glare back, memories of your last encounter with mages flood your mind, but you can\'t help feeling that they may have valuable information. Before you can speak, one of the mages quickly retrieves a glass vial from his pocket and hurls it to the ground, causing a cloud of smoke to fill the room. When the smoke clears, the mages are gone, leaving behind scattered papers covered in strange symbols that you cannot decipher. Despite your frustration, you realize that you will have to seek answers elsewhere. You pass the night in the shack, feeling thankful for the refuge it provids from the chilly temperatures. As you awaken, the sky remains dark, making it difficult to discern the time of day. You gather your belongings and prepare to resume your journey.',
         options: [
             {
                 text: 'Continue',
@@ -3647,7 +3668,7 @@ const textNodes = [
         options: [
             {
                 text: 'Continue',
-                nextText: 225
+                nextText: 240
             },
         ]
     },
@@ -3704,7 +3725,7 @@ const textNodes = [
     {
         // act: 8
         id: 240,
-        text: 'As you resume your journey, your mind races with anticipation of what lies ahead. You can\'t help but wonder what you will discover as you draw closer to your destination. As you make your way through the trees, you stumble upon a familiar sight: a lean-to constructed under the tree branches. Beneath its shelter, a lone bard sits, draped in a flowing red cloak adorned with white trimmings. His hood is drawn low, hiding his eyes from view, but you can see the bushy beard sprouting from his cheeks and chin. As he strums his lute, a haunting melody fills the air, calming your weary soul. The bard looks just as exhausted as you are, but the warmth of his roaring campfire and the comfort of his lean-to call out to you, tempting you to take a moment\'s rest and warm your chilled bones.',
+        text: 'As you resume your journey, your mind races with anticipation of what lies ahead. You can\'t help but wonder what you will discover as you draw closer to your destination. As you make your way through the trees, you stumble upon a familiar sight: a lean-to constructed under tree branches. Beneath its shelter, a lone bard sits, draped in a flowing red cloak adorned with white trimmings. His hood is drawn low, hiding his eyes from view, but you can see the bushy beard sprouting from his cheeks and chin. As he strums his lute, a haunting melody fills the air, calming your weary soul. The bard looks just as exhausted as you are, but the warmth of his roaring campfire and the comfort of his lean-to call out to you, tempting you to take a moment\'s rest and warm your chilled bones.',
         options: [
             {
                 text: 'Rob the bard',
@@ -3877,13 +3898,13 @@ const textNodes = [
             {
                 text: 'Continue',
                 setState: {id: 251},
-                nextText: 254,
+                nextText: 255,
                 requiredState: (currentState) => currentState.brokenCitadel === true 
             },
             {
                 text: 'Continue',
                 setState: {id: 251},
-                nextText: 257,
+                nextText: 259,
                 requiredState: (currentState) => currentState.brokenHome === true 
             }
         ]
@@ -3903,7 +3924,7 @@ const textNodes = [
     {
         // act: 9A
         id: 253,
-        text: 'Ahead of you, the castle stands in ruins, like some great beast had burst from within, shattering the once-great structure. You can\'t help feeling sick at the destruction that surrounds you, but your curiosity drives you forward, and you venture inside, crawling through cracks and under rubble. As you make your way deeper into the ruins, you reach a giant crater, and the magnitude of the devastation takes your breath away. The heat emanating from its center is intense, a stark contrast to the cold weather outside. You make your way down into it and struggle to keep your balance as bubbling liquid fire before you dances evilly, a malevolent force that seems to suck the very life out of you.',
+        text: 'Ahead of you, the castle stands in ruins, like some great beast had burst from within, shattering the once-great structure. You can\'t help feeling sick at the destruction that surrounds you, but your curiosity drives you forward, and you venture inside, crawling through cracks and under rubble. As you make your way deeper into the ruins, you reach a giant crater, and the magnitude of the devastation takes your breath away. The heat emanating from its center is intense, a stark contrast to the cold weather outside. You make your way down into it and struggle to keep your balance as bubbling liquid fire before you, at the crator\'s center, dances evilly, a malevolent force that seems to suck the very life out of you.',
         options: [
             {
                 text: 'Continue',
@@ -3918,14 +3939,17 @@ const textNodes = [
         options: [
             {
                 text: 'RESTART FROM MIDPOINT',
+                setState: {id: 113},
                 nextText: 113
             },
             {
                 text: 'RESTART FROM BEGINNING',
+                setState: {id: 1},
                 nextText: 1
             },
             {
                 text: 'RESTART FROM LAST CHECKPOINT',
+                setState: {id: 198},
                 nextText: 198
             },
             {
@@ -3974,14 +3998,17 @@ const textNodes = [
         options: [
             {
                 text: 'RESTART FROM MIDPOINT',
+                setState: {id: 113},
                 nextText: 113
             },
             {
                 text: 'RESTART FROM BEGINNING',
+                setState: {id: 1},
                 nextText: 1
             },
             {
                 text: 'RESTART FROM LAST CHECKPOINT',
+                setState: {id: 198},
                 nextText: 198
             },
             {
@@ -4015,18 +4042,21 @@ const textNodes = [
     {
         // act: 9C
         id: 261,
-        text: 'As the weeks drag on, the weather shows no signs of letting up. You grow weaker by the day, suffering from the effects of exposure and malnutrition. The once-thriving village now resembles a ghost town, its people huddled indoors, afraid to venture out into the harsh world outside. One night, as you lie in your bed, listening to the eerie silence outside, you realize that your time has run out. You know that you won\'t survive much longer in this harsh and unforgiving world. With a heavy heart, you slip away into the quiet embrace of the snowstorm, the ash-covered world fading away as you drift into an eternal sleep.',
+        text: 'As the weeks drag on, the weather shows no signs of letting up. You grow weaker by the day, suffering from the effects of exposure and malnutrition. The once-thriving village now resembles a ghost town, its people huddled indoors, afraid to venture out into the harsh world outside. One night, as you lie in your bed, listening to the eerie silence outside, you realize that your time has run out. You know that you won\'t survive much longer in this harsh and unforgiving world. With a heavy heart, you slip away into the quiet embrace of darkness, the ash-covered world fading away as you drift into an eternal sleep.',
         options: [
             {
                 text: 'RESTART FROM MIDPOINT',
+                setState: {id: 113},
                 nextText: 113
             },
             {
                 text: 'RESTART FROM BEGINNING',
+                setState: {id: 1},
                 nextText: 1
             },
             {
                 text: 'RESTART FROM LAST CHECKPOINT',
+                setState: {id: 198},
                 nextText: 198
             },
             {
@@ -4044,14 +4074,17 @@ const textNodes = [
         options: [
             {
                 text: 'RESTART FROM MIDPOINT',
+                setState: {id: 113},
                 nextText: 113
             },
             {
                 text: 'RESTART FROM BEGINNING',
+                setState: {id: 1},
                 nextText: 1
             },
             {
                 text: 'RESTART FROM LAST CHECKPOINT',
+                setState: {id: 198},
                 nextText: 198
             }
         ]
@@ -4064,7 +4097,7 @@ const textNodes = [
         options: [
             {
                 text: 'RESTART FROM LAST CHECKPOINT',
-                nextText: 113
+                nextText: 1000
             },
             {
                 text: 'RESTART FROM BEGINNING',

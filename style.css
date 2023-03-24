@@ -278,4 +278,19 @@ body {
     box-shadow: 0 0 1px 1px var(--secondary-color);
     font-style: inherit;
 }
+
+@media screen and (max-width: 800px) {
+    .menu-container {
+        width: 110%;
+    }
+    .story-container {
+        width: 110%;
+    }
+    .title {
+        font-size: 2rem;
+    }
+    #text {
+        font-size: 1rem;
+    }
+}
   
