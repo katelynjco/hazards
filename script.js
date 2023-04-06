@@ -2249,13 +2249,13 @@ const textNodes = [
         options: [
             {
                 text: 'Continue',
-                nextText: 146
+                nextText: 262
             }
         ]
     },
     {
         // act: 6A
-        id: 145,
+        id: 262,
         text: '"I mean it, the less you know of it, the better. You\'re to go back to your village and forget you ever came here. Or better yet, there\'s a festival happening soon in the capital. You can attend and tell your village that\'s what you went to do in the first place." Disappointed, you sit silently, but the thought of a festival and seeing the capital cheers you up slightly. However, the woman with the braid steps in and suggests that you be allowed to rest from your long journey before setting out again. "It would be cruel to kick them out at this time of night," she stammers out. The archmage sighs and eventually agrees, but warns you sternly that if you mention the object again, you will no longer be welcome.',
         options: [
             {
@@ -3702,7 +3702,7 @@ const textNodes = [
         options: [
             {
                 text: 'Continue',
-                nextText: 241
+                nextText: 240
             },
         ]
     },
