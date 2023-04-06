@@ -4070,7 +4070,7 @@ const textNodes = [
     {
         // Credits
         id: 1000,
-        text:`For Sarah, Michael, and Nicole- You are the goblins to my mode... WRITTEN AND CODED BY: Katelyn Collins... A huge thank you to James Law for being my scientific consultant`,
+        text:`For Sarah, Michael, and Nicole- You are the goblins to my mode... WRITTEN AND CODED BY: Katelyn Collins... A huge thank you to Jams for being my scientific consultant`,
         options: [
             {
                 text: 'RESTART FROM MIDPOINT',
